@@ -400,38 +400,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-01-24",
-    "date_display": "January 24",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Santa Monica",
-    "location": null,
-    "result": "W",
-    "sets": "3-1",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": "/links/2j0yhx",
-    "platform": "presto"
-  },
-  {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-01-24",
-    "date_display": "January 24",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Long Beach",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": "/links/2j0yhx",
-    "platform": "presto"
-  },
-  {
     "player": "Ben DeVos",
     "school": "UW-Stevens Point",
     "date_iso": "2026-01-25",
@@ -462,22 +430,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-01-27",
-    "date_display": "January 27",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Moorpark",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": "/links/2j0yhx",
-    "platform": "presto"
   },
   {
     "player": "Drew Demarais",
@@ -640,22 +592,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-01-30",
-    "date_display": "January 30",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Santa Barbara",
-    "location": null,
-    "result": "W",
-    "sets": "3-1",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Ben DeVos",
     "school": "UW-Stevens Point",
     "date_iso": "2026-01-31",
@@ -816,22 +752,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-02-04",
-    "date_display": "February 4",
-    "time": null,
-    "home_away": "home",
-    "opponent": "El Camino",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": "/links/2j0yhx",
-    "platform": "presto"
-  },
-  {
     "player": "Drew Demarais",
     "school": "Long Island University",
     "date_iso": "2026-02-06",
@@ -894,22 +814,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-02-06",
-    "date_display": "February 6",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Fullerton",
-    "location": null,
-    "result": "W",
-    "sets": "3-1",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
   },
   {
     "player": "Ryan Michalak",
@@ -992,22 +896,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-02-11",
-    "date_display": "February 11",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Long Beach",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": "/links/2j0yhx",
-    "platform": "presto"
-  },
-  {
     "player": "Drew Demarais",
     "school": "Long Island University",
     "date_iso": "2026-02-12",
@@ -1054,22 +942,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-02-13",
-    "date_display": "February 13",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Santa Monica",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
   },
   {
     "player": "Ben DeVos",
@@ -1184,22 +1056,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-02-18",
-    "date_display": "February 18",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Antelope Valley",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": "/links/2j0yhx",
-    "platform": "presto"
-  },
-  {
     "player": "Drew Demarais",
     "school": "Long Island University",
     "date_iso": "2026-02-20",
@@ -1246,22 +1102,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-02-20",
-    "date_display": "February 20",
-    "time": null,
-    "home_away": "away",
-    "opponent": "LA Pierce",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
   },
   {
     "player": "Drew Demarais",
@@ -1440,22 +1280,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-02-25",
-    "date_display": "February 25",
-    "time": null,
-    "home_away": "away",
-    "opponent": "San Diego Mesa",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Drew Demarais",
     "school": "Long Island University",
     "date_iso": "2026-02-27",
@@ -1502,22 +1326,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-02-27",
-    "date_display": "February 27",
-    "time": null,
-    "home_away": "home",
-    "opponent": "San Diego Miramar",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": "/links/2j0yhx",
-    "platform": "presto"
   },
   {
     "player": "Drew Demarais",
@@ -1664,22 +1472,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-03-04",
-    "date_display": "March 4",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Grossmont",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Henry Hudson",
     "school": "Park University (Gilbert)",
     "date_iso": "2026-03-06",
@@ -1742,22 +1534,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-03-06",
-    "date_display": "March 6",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Palomar",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": "/links/2j0yhx",
-    "platform": "presto"
   },
   {
     "player": "Henry Hudson",
@@ -1888,22 +1664,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-03-11",
-    "date_display": "March 11",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Santiago Canyon",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Drew Demarais",
     "school": "Long Island University",
     "date_iso": "2026-03-12",
@@ -1968,22 +1728,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-03-13",
-    "date_display": "March 13",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Irvine Valley",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Ben DeVos",
     "school": "UW-Stevens Point",
     "date_iso": "2026-03-14",
@@ -2046,22 +1790,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-03-18",
-    "date_display": "March 18",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Golden West",
-    "location": null,
-    "result": "W",
-    "sets": "3-1",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
   },
   {
     "player": "Henry Hudson",
@@ -2142,22 +1870,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-03-20",
-    "date_display": "March 20",
-    "time": null,
-    "home_away": "home",
-    "opponent": "San Diego Mesa",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": "/links/2j0yhx",
-    "platform": "presto"
   },
   {
     "player": "Drew Demarais",
@@ -2288,22 +2000,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-03-25",
-    "date_display": "March 25",
-    "time": null,
-    "home_away": "away",
-    "opponent": "San Diego Miramar",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Drew Demarais",
     "school": "Long Island University",
     "date_iso": "2026-03-27",
@@ -2382,22 +2078,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-03-27",
-    "date_display": "March 27",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Grossmont",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": "/links/2j0yhx",
-    "platform": "presto"
   },
   {
     "player": "Drew Demarais",
@@ -2528,22 +2208,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-04-01",
-    "date_display": "April 1",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Palomar",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Henry Hudson",
     "school": "Park University (Gilbert)",
     "date_iso": "2026-04-02",
@@ -2656,22 +2320,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-04-03",
-    "date_display": "April 3",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Santiago Canyon",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Drew Demarais",
     "school": "Long Island University",
     "date_iso": "2026-04-04",
@@ -2768,22 +2416,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-04-08",
-    "date_display": "April 8",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Irvine Valley",
-    "location": null,
-    "result": "W",
-    "sets": "3-0",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": "/links/2j0yhx",
-    "platform": "presto"
-  },
-  {
     "player": "Drew Demarais",
     "school": "Long Island University",
     "date_iso": "2026-04-10",
@@ -2846,22 +2478,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-04-10",
-    "date_display": "April 10",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Golden West",
-    "location": null,
-    "result": "L",
-    "sets": "3-1",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": "/links/2j0yhx",
-    "platform": "presto"
   },
   {
     "player": "Drew Demarais",
@@ -2992,22 +2608,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Connor Voss",
-    "school": "Orange Coast College",
-    "date_iso": "2026-04-17",
-    "date_display": "April 17",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Fullerton",
-    "location": null,
-    "result": "L",
-    "sets": "3-2",
-    "status": "Final",
-    "streaming_label": null,
-    "streaming_url": "/links/2j0yhx",
-    "platform": "presto"
-  },
-  {
     "player": "Drew Demarais",
     "school": "Long Island University",
     "date_iso": "2026-04-18",
@@ -3136,54 +2736,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-01-15",
-    "date_display": "January 15",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Dordt (IA) @ Missouri Valley Tournament",
-    "location": "",
-    "result": null,
-    "sets": null,
-    "status": "TBA",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-01-15",
-    "date_display": "January 15",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Ottawa @ Missouri Valley Tournament",
-    "location": "",
-    "result": null,
-    "sets": null,
-    "status": "TBA",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-01-16",
-    "date_display": "January 16",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Morningside @ Missouri Valley Tournament",
-    "location": "",
-    "result": null,
-    "sets": null,
-    "status": "TBA",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Colson Pearce",
     "school": "North Park University",
     "date_iso": "2027-01-19",
@@ -3216,54 +2768,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-01-22",
-    "date_display": "January 22",
-    "time": null,
-    "home_away": "home",
-    "opponent": "USHP @ Tournament",
-    "location": "",
-    "result": null,
-    "sets": null,
-    "status": "7:00 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-01-23",
-    "date_display": "January 23",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Central Christian @ Tournament",
-    "location": "",
-    "result": null,
-    "sets": null,
-    "status": "12:30 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-01-23",
-    "date_display": "January 23",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Missouri Baptist @ Tournament",
-    "location": "",
-    "result": null,
-    "sets": null,
-    "status": "3:00 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Colson Pearce",
     "school": "North Park University",
     "date_iso": "2027-01-26",
@@ -3278,22 +2782,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-01-26",
-    "date_display": "January 26",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Clarke (IA)",
-    "location": "McHie Arena | Bourbonnais, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "5:30 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
   },
   {
     "player": "Colson Pearce",
@@ -3312,22 +2800,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-01-29",
-    "date_display": "January 29",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Cornerstone (MI)",
-    "location": "McHie Arena | Bourbonnais, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "7:00 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Colson Pearce",
     "school": "North Park University",
     "date_iso": "2027-01-30",
@@ -3342,22 +2814,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-01-30",
-    "date_display": "January 30",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Park",
-    "location": "McHie Arena | Bourbonnais, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "1:00 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
   },
   {
     "player": "Colson Pearce",
@@ -3376,22 +2832,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-02-02",
-    "date_display": "February 2",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Calumet (IN)",
-    "location": "Rittenmeyer Center | Whiting, Ind.",
-    "result": null,
-    "sets": null,
-    "status": "7:00 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Colson Pearce",
     "school": "North Park University",
     "date_iso": "2027-02-04",
@@ -3406,22 +2846,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-02-05",
-    "date_display": "February 5",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Defiance College (OH)",
-    "location": "McHie Arena | Bourbonnais, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "7:00 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
   },
   {
     "player": "Colson Pearce",
@@ -3440,22 +2864,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-02-09",
-    "date_display": "February 9",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Saint Francis",
-    "location": "McHie Arena | Bourbonnais, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "7:00 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Colson Pearce",
     "school": "North Park University",
     "date_iso": "2027-02-11",
@@ -3470,22 +2878,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-02-13",
-    "date_display": "February 13",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Hope International",
-    "location": "McHie Arena | Bourbonnais, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "12:00 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
   },
   {
     "player": "Colson Pearce",
@@ -3504,38 +2896,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-02-16",
-    "date_display": "February 16",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Saint Xavier (IL)",
-    "location": "Shannon Center | Chicago, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "7:00 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-02-18",
-    "date_display": "February 18",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Judson (IL)",
-    "location": "McHie Arena | Bourbonnais, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "7:00 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Colson Pearce",
     "school": "North Park University",
     "date_iso": "2027-02-20",
@@ -3550,22 +2910,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-02-22",
-    "date_display": "February 22",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Governors State",
-    "location": "McHie Arena | Bourbonnais, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "7:00 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
   },
   {
     "player": "Colson Pearce",
@@ -3600,54 +2944,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-02-27",
-    "date_display": "February 27",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Bethel (IN) @ Tournament",
-    "location": "",
-    "result": null,
-    "sets": null,
-    "status": "TBA",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-02-27",
-    "date_display": "February 27",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Campbellsville (KY) @ Tournament",
-    "location": "",
-    "result": null,
-    "sets": null,
-    "status": "TBA",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-03-02",
-    "date_display": "March 2",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Indiana Wesleyan",
-    "location": "McHie Arena | Bourbonnais, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "6:00 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Colson Pearce",
     "school": "North Park University",
     "date_iso": "2027-03-03",
@@ -3662,54 +2958,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-03-08",
-    "date_display": "March 8",
-    "time": null,
-    "home_away": "away",
-    "opponent": "La Sierra",
-    "location": "",
-    "result": null,
-    "sets": null,
-    "status": "8:00 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-03-09",
-    "date_display": "March 9",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Hope International",
-    "location": "",
-    "result": null,
-    "sets": null,
-    "status": "9:30 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-03-12",
-    "date_display": "March 12",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Soka (CA)",
-    "location": "",
-    "result": null,
-    "sets": null,
-    "status": "6:00 PM CST",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
   },
   {
     "player": "Colson Pearce",
@@ -3744,22 +2992,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-03-18",
-    "date_display": "March 18",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Governors State",
-    "location": "The ARC | University Park, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "7:00 PM CDT",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Colson Pearce",
     "school": "North Park University",
     "date_iso": "2027-03-20",
@@ -3774,38 +3006,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-03-20",
-    "date_display": "March 20",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Viterbo",
-    "location": "R.W. Beggs Sr. Gymnasium | La Crosse, Wis.",
-    "result": null,
-    "sets": null,
-    "status": "7:00 PM CDT",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-03-23",
-    "date_display": "March 23",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Judson (IL)",
-    "location": "Lindner Fitness Center | Elgin, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "7:00 PM CDT",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
   },
   {
     "player": "Colson Pearce",
@@ -3824,22 +3024,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-03-25",
-    "date_display": "March 25",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Calumet (IN)",
-    "location": "McHie Arena | Bourbonnais, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "7:00 PM CDT",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Colson Pearce",
     "school": "North Park University",
     "date_iso": "2027-03-27",
@@ -3854,22 +3038,6 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-03-30",
-    "date_display": "March 30",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Saint Xavier (IL)",
-    "location": "McHie Arena | Bourbonnais, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "7:00 PM CDT",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
   },
   {
     "player": "Colson Pearce",
@@ -3888,22 +3056,6 @@
     "platform": "sidearm"
   },
   {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-04-01",
-    "date_display": "April 1",
-    "time": null,
-    "home_away": "away",
-    "opponent": "Saint Francis",
-    "location": "Pat Sullivan Center | Joliet, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "7:00 PM CDT",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
-  },
-  {
     "player": "Colson Pearce",
     "school": "North Park University",
     "date_iso": "2027-04-03",
@@ -3918,21 +3070,5 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "sidearm"
-  },
-  {
-    "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University",
-    "date_iso": "2027-04-09",
-    "date_display": "April 9",
-    "time": null,
-    "home_away": "home",
-    "opponent": "Viterbo",
-    "location": "McHie Arena | Bourbonnais, Ill.",
-    "result": null,
-    "sets": null,
-    "status": "7:00 PM CDT",
-    "streaming_label": null,
-    "streaming_url": null,
-    "platform": "presto"
   }
 ]
