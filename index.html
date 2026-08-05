@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MN Select Alumni — This Week</title>
+<style>
+  :root {
+    --ink: #0e1a26;
+    --panel: #142433;
+    --line: rgba(255,255,255,0.08);
+    --text: #eef2f5;
+    --text-dim: #9fb0bd;
+    --amber: #e8a33d;
+    --win: #4caf7d;
+    --loss: #d9695f;
+    --home: #4c8fe0;
+    --away: #b58ae0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 16px 60px;
+  }
+  header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.2px;
+  }
+  .subtitle {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-top: 2px;
+  }
+  .range-controls {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  .range-btn {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    color: var(--text-dim);
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .range-btn.active {
+    color: var(--ink);
+    background: var(--amber);
+    border-color: var(--amber);
+    font-weight: 600;
+  }
+  .day-group { margin-bottom: 22px; }
+  .day-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+    padding-left: 4px;
+  }
+  .game-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--panel);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 6px;
+    border-left: 3px solid var(--home);
+  }
+  .game-row.away { border-left-color: var(--away); }
+  .game-row.neutral { border-left-color: var(--text-dim); }
+  .time-col {
+    font-variant-numeric: tabular-nums;
+    font-size: 13px;
+    color: var(--text-dim);
+    width: 68px;
+    flex-shrink: 0;
+  }
+  .main-col { flex: 1; min-width: 0; }
+  .player-line {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .player-line .school {
+    font-weight: 400;
+    color: var(--text-dim);
+  }
+  .matchup-line {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .side-tag {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    margin-right: 5px;
+  }
+  .result-col {
+    flex-shrink: 0;
+    text-align: right;
+    min-width: 64px;
+  }
+  .score {
+    font-size: 14px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .score.win { color: var(--win); }
+  .score.loss { color: var(--loss); }
+  .watch-link {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--amber);
+    text-decoration: none;
+    border: 1px solid var(--amber);
+    border-radius: 5px;
+    padding: 3px 8px;
+    margin-top: 2px;
+  }
+  .empty-state {
+    text-align: center;
+    color: var(--text-dim);
+    padding: 60px 20px;
+    font-size: 14px;
+  }
+  .error-state {
+    text-align: center;
+    color: var(--loss);
+    padding: 40px 20px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>This week</h1>
+      <div class="subtitle" id="range-label">Loading schedule...</div>
+    </div>
+  </header>
+  <div class="range-controls">
+    <button class="range-btn active" data-days="7">This week</button>
+    <button class="range-btn" data-days="14">Next 2 weeks</button>
+    <button class="range-btn" data-days="30">Next month</button>
+    <button class="range-btn" data-days="all">All available games</button>
+  </div>
+  <div id="content"></div>
+</div>
+
+<script>
+let allGames = [];
+let currentDays = 7;
+
+function formatDayLabel(dateIso) {
+  const d = new Date(dateIso + "T00:00:00");
+  return d.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" });
+}
+
+function getDataRange() {
+  const dated = allGames.filter(g => g.date_iso).map(g => g.date_iso).sort();
+  if (dated.length === 0) return null;
+  return { min: dated[0], max: dated[dated.length - 1] };
+}
+
+function render() {
+  const content = document.getElementById("content");
+  const rangeLabel = document.getElementById("range-label");
+  const today = new Date();
+  today.setHours(0,0,0,0);
+
+  let inRange;
+  if (currentDays === "all") {
+    inRange = allGames.filter(g => g.date_iso);
+    rangeLabel.textContent = `All available games \u00b7 ${inRange.length} game${inRange.length === 1 ? "" : "s"}`;
+  } else {
+    const end = new Date(today);
+    end.setDate(end.getDate() + currentDays - 1);
+    inRange = allGames.filter(g => {
+      if (!g.date_iso) return false;
+      const d = new Date(g.date_iso + "T00:00:00");
+      return d >= today && d <= end;
+    });
+    rangeLabel.textContent = `${today.toLocaleDateString(undefined, {month:"short", day:"numeric"})} \u2013 ${end.toLocaleDateString(undefined, {month:"short", day:"numeric"})} \u00b7 ${inRange.length} game${inRange.length === 1 ? "" : "s"}`;
+  }
+
+  if (inRange.length === 0) {
+    const range = getDataRange();
+    if (range) {
+      const minLabel = new Date(range.min + "T00:00:00").toLocaleDateString(undefined, {month:"long", day:"numeric", year:"numeric"});
+      const maxLabel = new Date(range.max + "T00:00:00").toLocaleDateString(undefined, {month:"long", day:"numeric", year:"numeric"});
+      content.innerHTML = `<div class="empty-state">No games in this range.<br>The data on hand covers ${minLabel} \u2013 ${maxLabel}.<br><br><button class="range-btn" onclick="jumpToAll()">Show all available games</button></div>`;
+    } else {
+      content.innerHTML = '<div class="empty-state">No game data loaded yet.</div>';
+    }
+    return;
+  }
+
+  const byDay = {};
+  for (const g of inRange) {
+    (byDay[g.date_iso] = byDay[g.date_iso] || []).push(g);
+  }
+  const days = Object.keys(byDay).sort();
+
+  content.innerHTML = days.map(day => {
+    const games = byDay[day].sort((a, b) => (a.time || "").localeCompare(b.time || ""));
+    const rows = games.map(g => renderRow(g)).join("");
+    return `<div class="day-group"><div class="day-label">${formatDayLabel(day)}</div>${rows}</div>`;
+  }).join("");
+}
+
+function renderRow(g) {
+  const sideTag = g.home_away === "home" ? "vs" : g.home_away === "away" ? "@" : "vs";
+  const played = !!g.result;
+  const timeDisplay = played ? "Final" : (g.time || "TBA");
+
+  let resultHtml = "";
+  if (played) {
+    const cls = g.result === "W" ? "win" : "loss";
+    resultHtml = `<div class="score ${cls}">${g.result} ${g.sets || ""}</div>`;
+  } else if (g.streaming_label) {
+    resultHtml = `<span class="watch-link">${escapeHtml(g.streaming_label)}</span>`;
+  } else if (g.streaming_url) {
+    resultHtml = `<a class="watch-link" href="${escapeAttr(g.streaming_url)}" target="_blank" rel="noopener">Watch</a>`;
+  }
+
+  return `
+    <div class="game-row ${g.home_away}">
+      <div class="time-col">${timeDisplay}</div>
+      <div class="main-col">
+        <div class="player-line">${escapeHtml(g.player)} <span class="school">\u00b7 ${escapeHtml(g.school)}</span></div>
+        <div class="matchup-line"><span class="side-tag">${sideTag}</span>${escapeHtml(g.opponent || "TBD")}</div>
+      </div>
+      <div class="result-col">${resultHtml}</div>
+    </div>
+  `;
+}
+
+function escapeHtml(s) {
+  if (!s) return "";
+  return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+function escapeAttr(s) {
+  return escapeHtml(s).replace(/"/g,"&quot;");
+}
+
+document.querySelectorAll(".range-btn[data-days]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".range-btn[data-days]").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    const val = btn.dataset.days;
+    currentDays = val === "all" ? "all" : parseInt(val, 10);
+    render();
+  });
+});
+
+function jumpToAll() {
+  document.querySelectorAll(".range-btn[data-days]").forEach(b => b.classList.remove("active"));
+  document.querySelector('.range-btn[data-days="all"]').classList.add("active");
+  currentDays = "all";
+  render();
+}
+
+fetch("unified_schedule.json")
+  .then(r => {
+    if (!r.ok) throw new Error("Could not load unified_schedule.json (" + r.status + ")");
+    return r.json();
+  })
+  .then(data => {
+    allGames = data;
+    render();
+  })
+  .catch(err => {
+    document.getElementById("content").innerHTML =
+      `<div class="error-state">Couldn't load the schedule.<br>${escapeHtml(err.message)}<br><br>Make sure unified_schedule.json is in the same folder as this page.</div>`;
+    document.getElementById("range-label").textContent = "Error loading data";
+  });
+</script>
+</body>
+</html>
