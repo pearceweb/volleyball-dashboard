@@ -72,6 +72,40 @@
   }
   .day-group { margin-bottom: 22px; }
   .day-group.past { opacity: 0.6; }
+  .filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .player-select {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    color: var(--text);
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-family: inherit;
+    max-width: 100%;
+  }
+  #site-footer {
+    max-width: 720px;
+    margin: 40px auto 0;
+    padding: 20px 16px 10px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+  #site-footer a {
+    color: var(--amber);
+    text-decoration: none;
+  }
+  #site-footer a:hover {
+    text-decoration: underline;
+  }
   .quick-jump {
     margin-bottom: 18px;
   }
@@ -173,6 +207,62 @@
     padding: 3px 8px;
     margin-top: 2px;
   }
+  .cal-link {
+    display: inline-block;
+    font-size: 11px;
+    color: var(--text-dim);
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 2px 7px;
+    margin-top: 6px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .cal-link:hover {
+    color: var(--text);
+    border-color: var(--text-dim);
+  }
+  .print-only { display: none; }
+
+  @media print {
+    body {
+      background: #fff !important;
+      color: #111 !important;
+    }
+    .range-controls,
+    .player-select,
+    #print-btn,
+    .quick-jump,
+    .watch-link,
+    .cal-link,
+    #site-footer {
+      display: none !important;
+    }
+    .print-only {
+      display: block;
+      font-size: 12px;
+      color: #444;
+      margin-bottom: 14px;
+    }
+    h1 { color: #111; }
+    .subtitle { display: none; }
+    .day-label { color: #555; }
+    .day-group.past { opacity: 1 !important; }
+    .game-row {
+      background: #fff !important;
+      border: 1px solid #ccc;
+      border-left-width: 3px;
+      break-inside: avoid;
+    }
+    .time-col, .matchup-line { color: #444 !important; }
+    .player-line .school { color: #555 !important; }
+    .score.win { color: #1a7a3f !important; }
+    .score.loss { color: #b3261e !important; }
+    .today-divider { color: #b3261e; }
+    .today-divider::before,
+    .today-divider::after { background: #b3261e; }
+  }
   .empty-state {
     text-align: center;
     color: var(--text-dim);
@@ -195,26 +285,36 @@
       <div class="subtitle" id="range-label">Loading schedule...</div>
     </div>
   </header>
-  <div class="range-controls">
-    <button class="range-btn active" data-days="7">This week</button>
-    <button class="range-btn" data-days="14">Next 2 weeks</button>
-    <button class="range-btn" data-days="30">Next month</button>
-    <button class="range-btn" data-days="all">All available games</button>
+  <div id="print-context" class="print-only"></div>
+  <div class="filter-row">
+    <div class="range-controls">
+      <button class="range-btn active" data-days="7">This week</button>
+      <button class="range-btn" data-days="14">Next 2 weeks</button>
+      <button class="range-btn" data-days="30">Next month</button>
+      <button class="range-btn" data-days="all">All available games</button>
+    </div>
+    <select id="player-filter" class="player-select">
+      <option value="">All players</option>
+    </select>
+    <button id="print-btn" class="range-btn" onclick="window.print()">Print / Save as PDF</button>
   </div>
   <div id="content"></div>
 </div>
+<footer id="site-footer"></footer>
 
 <script>
 let allGames = [];
 let currentDays = 7;
+let currentPlayer = "";
+let renderedGames = [];
 
 function formatDayLabel(dateIso) {
   const d = new Date(dateIso + "T00:00:00");
   return d.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" });
 }
 
-function getDataRange() {
-  const dated = allGames.filter(g => g.date_iso).map(g => g.date_iso).sort();
+function getDataRange(games) {
+  const dated = (games || allGames).filter(g => g.date_iso).map(g => g.date_iso).sort();
   if (dated.length === 0) return null;
   return { min: dated[0], max: dated[dated.length - 1] };
 }
@@ -224,24 +324,31 @@ function render() {
   const rangeLabel = document.getElementById("range-label");
   const today = new Date();
   today.setHours(0,0,0,0);
+  renderedGames = [];
+
+  const playerFiltered = currentPlayer
+    ? allGames.filter(g => `${g.player} - ${g.school}` === currentPlayer)
+    : allGames;
+  const playerSuffix = currentPlayer ? ` \u00b7 ${currentPlayer}` : "";
 
   let inRange;
   if (currentDays === "all") {
-    inRange = allGames.filter(g => g.date_iso);
-    rangeLabel.textContent = `All available games \u00b7 ${inRange.length} game${inRange.length === 1 ? "" : "s"}`;
+    inRange = playerFiltered.filter(g => g.date_iso);
+    rangeLabel.textContent = `All available games${playerSuffix} \u00b7 ${inRange.length} game${inRange.length === 1 ? "" : "s"}`;
   } else {
     const end = new Date(today);
     end.setDate(end.getDate() + currentDays - 1);
-    inRange = allGames.filter(g => {
+    inRange = playerFiltered.filter(g => {
       if (!g.date_iso) return false;
       const d = new Date(g.date_iso + "T00:00:00");
       return d >= today && d <= end;
     });
-    rangeLabel.textContent = `${today.toLocaleDateString(undefined, {month:"short", day:"numeric"})} \u2013 ${end.toLocaleDateString(undefined, {month:"short", day:"numeric"})} \u00b7 ${inRange.length} game${inRange.length === 1 ? "" : "s"}`;
+    rangeLabel.textContent = `${today.toLocaleDateString(undefined, {month:"short", day:"numeric"})} \u2013 ${end.toLocaleDateString(undefined, {month:"short", day:"numeric"})}${playerSuffix} \u00b7 ${inRange.length} game${inRange.length === 1 ? "" : "s"}`;
   }
+  document.getElementById("print-context").textContent = rangeLabel.textContent;
 
   if (inRange.length === 0) {
-    const range = getDataRange();
+    const range = getDataRange(playerFiltered);
     if (range) {
       const minLabel = new Date(range.min + "T00:00:00").toLocaleDateString(undefined, {month:"long", day:"numeric", year:"numeric"});
       const maxLabel = new Date(range.max + "T00:00:00").toLocaleDateString(undefined, {month:"long", day:"numeric", year:"numeric"});
@@ -273,7 +380,10 @@ function render() {
       dividerInserted = true;
     }
     const games = byDay[day].sort((a, b) => (a.time || "").localeCompare(b.time || ""));
-    const rows = games.map(g => renderRow(g)).join("");
+    const rows = games.map(g => {
+      const idx = renderedGames.push(g) - 1;
+      return renderRow(g, idx);
+    }).join("");
     const isPast = day < todayStr;
     pieces.push(`<div class="day-group${isPast ? " past" : ""}"><div class="day-label">${formatDayLabel(day)}</div>${rows}</div>`);
   }
@@ -285,7 +395,7 @@ function jumpToUpcoming() {
   if (marker) marker.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-function renderRow(g) {
+function renderRow(g, idx) {
   const sideTag = g.home_away === "home" ? "vs" : g.home_away === "away" ? "@" : "vs";
   const played = !!g.result;
   const timeDisplay = played ? "Final" : (g.time || "TBA");
@@ -300,12 +410,17 @@ function renderRow(g) {
     resultHtml = `<a class="watch-link" href="${escapeAttr(g.streaming_url)}" target="_blank" rel="noopener">Watch</a>`;
   }
 
+  const calendarLink = (!played && g.date_iso)
+    ? `<button class="cal-link" onclick="addToCalendar(${idx})" title="Add to calendar">+ Calendar</button>`
+    : "";
+
   return `
     <div class="game-row ${g.home_away}">
       <div class="time-col">${timeDisplay}</div>
       <div class="main-col">
         <div class="player-line">${escapeHtml(g.player)} <span class="school">\u00b7 ${escapeHtml(g.school)}</span></div>
         <div class="matchup-line"><span class="side-tag">${sideTag}</span>${escapeHtml(g.opponent || "TBD")}</div>
+        ${calendarLink}
       </div>
       <div class="result-col">${resultHtml}</div>
     </div>
@@ -318,6 +433,92 @@ function escapeHtml(s) {
 }
 function escapeAttr(s) {
   return escapeHtml(s).replace(/"/g,"&quot;");
+}
+
+function pad2(n) { return String(n).padStart(2, "0"); }
+
+function parseGameTime(g) {
+  // Sidearm games have a clean g.time field ("6 p.m.", "9:00 PM"). Presto
+  // games don't have a separate time field - if a real time is showing,
+  // it's sitting in g.status instead (e.g. "7:00 PM CST"). Either way we
+  // just need to find an hour/am-pm pattern somewhere in the text.
+  const raw = g.time || (g.status && /\d/.test(g.status) ? g.status : null);
+  if (!raw) return null;
+  const m = raw.match(/(\d{1,2})(?::(\d{2}))?\s*([ap])\.?m\.?/i);
+  if (!m) return null;
+  let hour = parseInt(m[1], 10);
+  const min = m[2] ? parseInt(m[2], 10) : 0;
+  const ap = m[3].toLowerCase();
+  if (ap === "p" && hour !== 12) hour += 12;
+  if (ap === "a" && hour === 12) hour = 0;
+  return { hour, min };
+}
+
+function icsEscape(s) {
+  return (s || "").replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
+}
+
+function icsNowUTC() {
+  const d = new Date();
+  return `${d.getUTCFullYear()}${pad2(d.getUTCMonth() + 1)}${pad2(d.getUTCDate())}T${pad2(d.getUTCHours())}${pad2(d.getUTCMinutes())}${pad2(d.getUTCSeconds())}Z`;
+}
+
+function buildICS(g) {
+  const [y, mo, d] = g.date_iso.split("-");
+  const hm = parseGameTime(g);
+  let dtStartLine, dtEndLine;
+
+  if (!hm) {
+    // No resolvable time - make it an all-day event (iCal end date = next day)
+    dtStartLine = `DTSTART;VALUE=DATE:${y}${mo}${d}`;
+    const end = new Date(g.date_iso + "T00:00:00");
+    end.setDate(end.getDate() + 1);
+    dtEndLine = `DTEND;VALUE=DATE:${end.getFullYear()}${pad2(end.getMonth() + 1)}${pad2(end.getDate())}`;
+  } else {
+    const start = new Date(`${g.date_iso}T${pad2(hm.hour)}:${pad2(hm.min)}:00`);
+    dtStartLine = `DTSTART:${start.getFullYear()}${pad2(start.getMonth() + 1)}${pad2(start.getDate())}T${pad2(start.getHours())}${pad2(start.getMinutes())}00`;
+    const end = new Date(start);
+    end.setHours(end.getHours() + 2); // default 2-hour match duration
+    dtEndLine = `DTEND:${end.getFullYear()}${pad2(end.getMonth() + 1)}${pad2(end.getDate())}T${pad2(end.getHours())}${pad2(end.getMinutes())}00`;
+  }
+
+  const sideTag = g.home_away === "home" ? "vs" : g.home_away === "away" ? "@" : "vs";
+  const summary = `${g.player} (${g.school}) ${sideTag} ${g.opponent || "TBD"}`;
+  const descParts = [g.school];
+  if (g.streaming_label) descParts.push(`Watch: ${g.streaming_label}`);
+  if (g.streaming_url) descParts.push(`Watch: ${g.streaming_url}`);
+  const uid = `${g.player}-${g.school}-${g.date_iso}-${g.opponent || ""}`.replace(/[^a-zA-Z0-9]/g, "") + "@volleyball-dashboard";
+
+  return [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Volleyball Dashboard//EN",
+    "BEGIN:VEVENT",
+    `UID:${uid}`,
+    `DTSTAMP:${icsNowUTC()}`,
+    dtStartLine,
+    dtEndLine,
+    `SUMMARY:${icsEscape(summary)}`,
+    `DESCRIPTION:${icsEscape(descParts.join("\n"))}`,
+    `LOCATION:${icsEscape(g.location || "")}`,
+    "END:VEVENT",
+    "END:VCALENDAR",
+  ].join("\r\n");
+}
+
+function addToCalendar(idx) {
+  const g = renderedGames[idx];
+  if (!g) return;
+  const ics = buildICS(g);
+  const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `${g.player.replace(/\s+/g, "-")}-vs-${(g.opponent || "TBD").replace(/\s+/g, "-")}.ics`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
 
 document.querySelectorAll(".range-btn[data-days]").forEach(btn => {
@@ -337,6 +538,30 @@ function jumpToAll() {
   render();
 }
 
+function populatePlayerFilter() {
+  const select = document.getElementById("player-filter");
+  const labels = [...new Set(allGames.map(g => `${g.player} - ${g.school}`))];
+  labels.sort((a, b) => a.localeCompare(b));
+  for (const label of labels) {
+    const opt = document.createElement("option");
+    opt.value = label;
+    opt.textContent = label;
+    select.appendChild(opt);
+  }
+}
+
+document.getElementById("player-filter").addEventListener("change", (e) => {
+  currentPlayer = e.target.value;
+  render();
+});
+
+function renderFooter() {
+  const year = new Date().getFullYear();
+  document.getElementById("site-footer").innerHTML =
+    `&copy; ${year} <a href="https://tuckerpearcecreative.com" target="_blank" rel="noopener">Tucker Pearce Creative</a>`;
+}
+renderFooter();
+
 fetch("unified_schedule.json")
   .then(r => {
     if (!r.ok) throw new Error("Could not load unified_schedule.json (" + r.status + ")");
@@ -344,6 +569,7 @@ fetch("unified_schedule.json")
   })
   .then(data => {
     allGames = data;
+    populatePlayerFilter();
     render();
   })
   .catch(err => {
