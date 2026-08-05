@@ -71,6 +71,36 @@
     font-weight: 600;
   }
   .day-group { margin-bottom: 22px; }
+  .day-group.past { opacity: 0.6; }
+  .quick-jump {
+    margin-bottom: 18px;
+  }
+  .quick-jump .range-btn {
+    width: 100%;
+    text-align: center;
+    background: var(--amber);
+    color: var(--ink);
+    font-weight: 600;
+    border-color: var(--amber);
+  }
+  .today-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0 22px;
+    color: var(--amber);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .today-divider::before,
+  .today-divider::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: var(--amber);
+  }
   .day-label {
     font-size: 12px;
     text-transform: uppercase;
@@ -227,12 +257,32 @@ function render() {
     (byDay[g.date_iso] = byDay[g.date_iso] || []).push(g);
   }
   const days = Object.keys(byDay).sort();
+  const todayStr = today.toISOString().slice(0, 10);
+  const hasPast = days.some(d => d < todayStr);
+  const hasFuture = days.some(d => d >= todayStr);
+  const upcomingCount = inRange.filter(g => g.date_iso >= todayStr).length;
 
-  content.innerHTML = days.map(day => {
+  let dividerInserted = false;
+  const pieces = [];
+  if (hasPast && hasFuture) {
+    pieces.push(`<div class="quick-jump"><button class="range-btn" onclick="jumpToUpcoming()">Jump to upcoming games (${upcomingCount})</button></div>`);
+  }
+  for (const day of days) {
+    if (!dividerInserted && day >= todayStr && hasPast) {
+      pieces.push(`<div class="today-divider" id="today-marker"><span>Today</span></div>`);
+      dividerInserted = true;
+    }
     const games = byDay[day].sort((a, b) => (a.time || "").localeCompare(b.time || ""));
     const rows = games.map(g => renderRow(g)).join("");
-    return `<div class="day-group"><div class="day-label">${formatDayLabel(day)}</div>${rows}</div>`;
-  }).join("");
+    const isPast = day < todayStr;
+    pieces.push(`<div class="day-group${isPast ? " past" : ""}"><div class="day-label">${formatDayLabel(day)}</div>${rows}</div>`);
+  }
+  content.innerHTML = pieces.join("");
+}
+
+function jumpToUpcoming() {
+  const marker = document.getElementById("today-marker");
+  if (marker) marker.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function renderRow(g) {
