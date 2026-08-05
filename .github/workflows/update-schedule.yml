@@ -1,0 +1,50 @@
+name: Update volleyball schedule
+
+on:
+  schedule:
+    # Runs every 6 hours (UTC). Adjust the cron expression if you want a
+    # different cadence - e.g. '0 */2 * * *' for every 2 hours during the
+    # season, or '0 8,20 * * *' for twice a day at 8am/8pm UTC.
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    # Lets you trigger this manually from the Actions tab on GitHub, for
+    # testing without waiting for the schedule.
+
+permissions:
+  contents: write
+  # Required so this workflow can commit the updated JSON files back to
+  # the repo. If this step fails with a permissions error, check
+  # Settings -> Actions -> General -> Workflow permissions on GitHub and
+  # make sure "Read and write permissions" is selected.
+
+jobs:
+  update-schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Fetch Sidearm schedules
+        run: python3 fetch_sidearm_schedules.py
+
+      - name: Fetch PrestoSports schedules
+        run: python3 fetch_presto_schedules.py
+
+      - name: Build unified schedule
+        run: python3 build_unified_schedule.py
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sidearm_games.json presto_games.json unified_schedule.json
+          git diff --staged --quiet || git commit -m "Auto-update schedule data"
+          git push
