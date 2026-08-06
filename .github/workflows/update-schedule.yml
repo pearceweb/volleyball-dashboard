@@ -40,16 +40,18 @@ jobs:
       - name: Fetch Sidearm schedules
         run: python3 fetch_sidearm_schedules.py
 
-      # Trying RSS instead of the HTML table here - the HTML page returns
-      # 405 from GitHub Actions' IP ranges (confirmed working fine from a
-      # home connection), but RSS/syndication endpoints are sometimes
-      # exempted from that kind of bot-protection rule since they're
-      # built for automated consumption. This step will tell us whether
-      # that's true here too. If it starts failing the same way, revert
-      # to the manual-run routine (fetch_rss_schedules.py or
-      # fetch_presto_schedules.py from a home connection).
-      - name: Fetch PrestoSports schedules (via RSS)
-        run: python3 fetch_rss_schedules.py
+      # PrestoSports fetch is intentionally NOT run here right now.
+      # RSS DOES dodge the IP block that hits the regular HTML page from
+      # GitHub Actions (confirmed working - real data came back, no 405).
+      # BUT Olivet Nazarene's RSS composite feed hasn't been updated with
+      # the current 2026-27 season yet (same lag problem Orange Coast's
+      # feed has, just less severe) - so automating it right now would
+      # keep overwriting good manually-fetched data with stale RSS data
+      # every 6 hours. presto_games.json is updated manually for BOTH
+      # schools - run `python3 fetch_presto_schedules.py` on your own
+      # machine, then commit and push. Worth re-enabling
+      # fetch_rss_schedules.py here once Olivet Nazarene's admin adds the
+      # new season to their composite feed - check back periodically.
 
       - name: Build unified schedule
         run: python3 build_unified_schedule.py

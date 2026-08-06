@@ -223,6 +223,62 @@
     color: var(--text);
     border-color: var(--text-dim);
   }
+  .cal-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .cal-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 4px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    min-width: 170px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+    z-index: 20;
+    overflow: hidden;
+  }
+  .cal-menu.open {
+    display: block;
+  }
+  .cal-menu button,
+  .cal-menu a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 12.5px;
+    font-family: inherit;
+    padding: 8px 10px;
+    cursor: pointer;
+  }
+  .cal-menu button:hover,
+  .cal-menu a:hover {
+    background: rgba(255,255,255,0.06);
+  }
+  .cal-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .cal-icon-ical { background: #6b7280; }
+  .cal-icon-google { background: #4285F4; }
+  .cal-icon-outlook { background: #0078D4; }
   .print-only { display: none; }
 
   @media print {
@@ -235,7 +291,7 @@
     #print-btn,
     .quick-jump,
     .watch-link,
-    .cal-link,
+    .cal-dropdown,
     #site-footer {
       display: none !important;
     }
@@ -376,7 +432,7 @@ function render() {
   }
   for (const day of days) {
     if (!dividerInserted && day >= todayStr && hasPast) {
-      pieces.push(`<div class="today-divider" id="today-marker"><span>Today</span></div>`);
+      pieces.push(`<div class="today-divider" id="today-marker"><span>Upcoming</span></div>`);
       dividerInserted = true;
     }
     const games = byDay[day].sort((a, b) => (a.time || "").localeCompare(b.time || ""));
@@ -410,8 +466,24 @@ function renderRow(g, idx) {
     resultHtml = `<a class="watch-link" href="${escapeAttr(g.streaming_url)}" target="_blank" rel="noopener">Watch</a>`;
   }
 
-  const calendarLink = (!played && g.date_iso)
-    ? `<button class="cal-link" onclick="addToCalendar(${idx})" title="Add to calendar">+ Calendar</button>`
+  const todayStr = new Date().toISOString().slice(0, 10);
+  const isFutureUnplayed = !played && g.date_iso && g.date_iso >= todayStr;
+
+  const calendarLink = isFutureUnplayed
+    ? `<div class="cal-dropdown">
+        <button class="cal-link" onclick="toggleCalMenu(${idx}, event)" title="Add to calendar">+ Calendar</button>
+        <div class="cal-menu" id="cal-menu-${idx}">
+          <button onclick="addToCalendar(${idx}); closeCalMenu();">
+            <span class="cal-icon cal-icon-ical">i</span> Apple / iCal
+          </button>
+          <a href="${escapeAttr(getGoogleCalendarUrl(g))}" target="_blank" rel="noopener" onclick="closeCalMenu();">
+            <span class="cal-icon cal-icon-google">G</span> Google Calendar
+          </a>
+          <a href="${escapeAttr(getOutlookCalendarUrl(g))}" target="_blank" rel="noopener" onclick="closeCalMenu();">
+            <span class="cal-icon cal-icon-outlook">O</span> Outlook
+          </a>
+        </div>
+      </div>`
     : "";
 
   return `
@@ -463,30 +535,42 @@ function icsNowUTC() {
   return `${d.getUTCFullYear()}${pad2(d.getUTCMonth() + 1)}${pad2(d.getUTCDate())}T${pad2(d.getUTCHours())}${pad2(d.getUTCMinutes())}${pad2(d.getUTCSeconds())}Z`;
 }
 
-function buildICS(g) {
-  const [y, mo, d] = g.date_iso.split("-");
+function getEventTimes(g) {
   const hm = parseGameTime(g);
-  let dtStartLine, dtEndLine;
-
   if (!hm) {
-    // No resolvable time - make it an all-day event (iCal end date = next day)
-    dtStartLine = `DTSTART;VALUE=DATE:${y}${mo}${d}`;
-    const end = new Date(g.date_iso + "T00:00:00");
-    end.setDate(end.getDate() + 1);
-    dtEndLine = `DTEND;VALUE=DATE:${end.getFullYear()}${pad2(end.getMonth() + 1)}${pad2(end.getDate())}`;
-  } else {
-    const start = new Date(`${g.date_iso}T${pad2(hm.hour)}:${pad2(hm.min)}:00`);
-    dtStartLine = `DTSTART:${start.getFullYear()}${pad2(start.getMonth() + 1)}${pad2(start.getDate())}T${pad2(start.getHours())}${pad2(start.getMinutes())}00`;
+    const start = new Date(g.date_iso + "T00:00:00");
     const end = new Date(start);
-    end.setHours(end.getHours() + 2); // default 2-hour match duration
-    dtEndLine = `DTEND:${end.getFullYear()}${pad2(end.getMonth() + 1)}${pad2(end.getDate())}T${pad2(end.getHours())}${pad2(end.getMinutes())}00`;
+    end.setDate(end.getDate() + 1);
+    return { start, end, allDay: true };
   }
+  const start = new Date(`${g.date_iso}T${pad2(hm.hour)}:${pad2(hm.min)}:00`);
+  const end = new Date(start);
+  end.setHours(end.getHours() + 2); // default 2-hour match duration
+  return { start, end, allDay: false };
+}
 
+function getEventDetails(g) {
   const sideTag = g.home_away === "home" ? "vs" : g.home_away === "away" ? "@" : "vs";
   const summary = `${g.school} (${g.player}) ${sideTag} ${g.opponent || "TBD"}`;
   const descParts = [g.school];
   if (g.streaming_label) descParts.push(`Watch: ${g.streaming_label}`);
   if (g.streaming_url) descParts.push(`Watch: ${g.streaming_url}`);
+  return { summary, description: descParts.join("\n"), location: g.location || "" };
+}
+
+function buildICS(g) {
+  const { start, end, allDay } = getEventTimes(g);
+  const { summary, description, location } = getEventDetails(g);
+  let dtStartLine, dtEndLine;
+
+  if (allDay) {
+    dtStartLine = `DTSTART;VALUE=DATE:${start.getFullYear()}${pad2(start.getMonth() + 1)}${pad2(start.getDate())}`;
+    dtEndLine = `DTEND;VALUE=DATE:${end.getFullYear()}${pad2(end.getMonth() + 1)}${pad2(end.getDate())}`;
+  } else {
+    dtStartLine = `DTSTART:${start.getFullYear()}${pad2(start.getMonth() + 1)}${pad2(start.getDate())}T${pad2(start.getHours())}${pad2(start.getMinutes())}00`;
+    dtEndLine = `DTEND:${end.getFullYear()}${pad2(end.getMonth() + 1)}${pad2(end.getDate())}T${pad2(end.getHours())}${pad2(end.getMinutes())}00`;
+  }
+
   const uid = `${g.player}-${g.school}-${g.date_iso}-${g.opponent || ""}`.replace(/[^a-zA-Z0-9]/g, "") + "@volleyball-dashboard";
 
   return [
@@ -499,11 +583,50 @@ function buildICS(g) {
     dtStartLine,
     dtEndLine,
     `SUMMARY:${icsEscape(summary)}`,
-    `DESCRIPTION:${icsEscape(descParts.join("\n"))}`,
-    `LOCATION:${icsEscape(g.location || "")}`,
+    `DESCRIPTION:${icsEscape(description)}`,
+    `LOCATION:${icsEscape(location)}`,
     "END:VEVENT",
     "END:VCALENDAR",
   ].join("\r\n");
+}
+
+function toGoogleDate(d, allDay) {
+  if (allDay) return `${d.getFullYear()}${pad2(d.getMonth() + 1)}${pad2(d.getDate())}`;
+  return `${d.getFullYear()}${pad2(d.getMonth() + 1)}${pad2(d.getDate())}T${pad2(d.getHours())}${pad2(d.getMinutes())}00`;
+}
+
+function getGoogleCalendarUrl(g) {
+  const { start, end, allDay } = getEventTimes(g);
+  const { summary, description, location } = getEventDetails(g);
+  const params = new URLSearchParams({
+    action: "TEMPLATE",
+    text: summary,
+    dates: `${toGoogleDate(start, allDay)}/${toGoogleDate(end, allDay)}`,
+    details: description,
+    location: location,
+  });
+  return `https://calendar.google.com/calendar/render?${params.toString()}`;
+}
+
+function toOutlookDate(d, allDay) {
+  if (allDay) return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
+  return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}T${pad2(d.getHours())}:${pad2(d.getMinutes())}:00`;
+}
+
+function getOutlookCalendarUrl(g) {
+  const { start, end, allDay } = getEventTimes(g);
+  const { summary, description, location } = getEventDetails(g);
+  const params = new URLSearchParams({
+    path: "/calendar/action/compose",
+    rru: "addevent",
+    subject: summary,
+    startdt: toOutlookDate(start, allDay),
+    enddt: toOutlookDate(end, allDay),
+    body: description,
+    location: location,
+    allday: allDay ? "true" : "false",
+  });
+  return `https://outlook.office.com/calendar/0/deeplink/compose?${params.toString()}`;
 }
 
 function addToCalendar(idx) {
@@ -520,6 +643,31 @@ function addToCalendar(idx) {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
+
+let openCalMenuIdx = null;
+
+function toggleCalMenu(idx, event) {
+  event.stopPropagation();
+  const menu = document.getElementById(`cal-menu-${idx}`);
+  if (!menu) return;
+  if (openCalMenuIdx === idx) {
+    menu.classList.remove("open");
+    openCalMenuIdx = null;
+  } else {
+    closeCalMenu();
+    menu.classList.add("open");
+    openCalMenuIdx = idx;
+  }
+}
+
+function closeCalMenu() {
+  if (openCalMenuIdx === null) return;
+  const menu = document.getElementById(`cal-menu-${openCalMenuIdx}`);
+  if (menu) menu.classList.remove("open");
+  openCalMenuIdx = null;
+}
+
+document.addEventListener("click", closeCalMenu);
 
 function updateUrl() {
   const params = new URLSearchParams();
