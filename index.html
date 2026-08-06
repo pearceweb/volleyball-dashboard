@@ -126,6 +126,16 @@
     font-family: inherit;
     max-width: 100%;
   }
+  #season-download-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .season-download-note {
+    font-size: 11px;
+    color: var(--text-dim);
+    max-width: 220px;
+  }
   #site-footer {
     max-width: 720px;
     margin: 40px auto 0;
@@ -389,6 +399,10 @@
     <select id="player-filter" class="player-select">
       <option value="">All players</option>
     </select>
+    <div id="season-download-wrap" style="display:none;">
+      <button id="season-download-btn" class="range-btn" onclick="downloadFullSeason()" title="Downloads one file with every remaining game as a separate calendar entry">Download Full Season</button>
+      <div class="season-download-note">Apple Calendar: opens directly. Google/Outlook: import via Settings.</div>
+    </div>
     <button id="print-btn" class="range-btn" onclick="window.print()">Print / Save as PDF</button>
   </div>
   <div id="content"></div>
@@ -640,7 +654,7 @@ function getEventDetails(g) {
   return { summary, description: descParts.join("\n"), location: g.location || "" };
 }
 
-function buildICS(g) {
+function buildVEventLines(g) {
   const { start, end, allDay } = getEventTimes(g);
   const { summary, description, location } = getEventDetails(g);
   let dtStartLine, dtEndLine;
@@ -656,9 +670,6 @@ function buildICS(g) {
   const uid = `${g.player}-${g.school}-${g.date_iso}-${g.opponent || ""}`.replace(/[^a-zA-Z0-9]/g, "") + "@volleyball-dashboard";
 
   return [
-    "BEGIN:VCALENDAR",
-    "VERSION:2.0",
-    "PRODID:-//Volleyball Dashboard//EN",
     "BEGIN:VEVENT",
     `UID:${uid}`,
     `DTSTAMP:${icsNowUTC()}`,
@@ -668,6 +679,26 @@ function buildICS(g) {
     `DESCRIPTION:${icsEscape(description)}`,
     `LOCATION:${icsEscape(location)}`,
     "END:VEVENT",
+  ];
+}
+
+function buildICS(g) {
+  return [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Volleyball Dashboard//EN",
+    ...buildVEventLines(g),
+    "END:VCALENDAR",
+  ].join("\r\n");
+}
+
+function buildFullSeasonICS(games) {
+  const events = games.flatMap(g => buildVEventLines(g));
+  return [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Volleyball Dashboard//EN",
+    ...events,
     "END:VCALENDAR",
   ].join("\r\n");
 }
@@ -720,6 +751,27 @@ function addToCalendar(idx) {
   const a = document.createElement("a");
   a.href = url;
   a.download = `${g.player.replace(/\s+/g, "-")}-vs-${(g.opponent || "TBD").replace(/\s+/g, "-")}.ics`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function downloadFullSeason() {
+  if (!currentPlayer) return;
+  const todayStr = new Date().toISOString().slice(0, 10);
+  const games = allGames
+    .filter(g => `${g.player} - ${g.school}` === currentPlayer && !g.result && g.date_iso && g.date_iso >= todayStr)
+    .sort((a, b) => (a.date_iso + (a.time || "")).localeCompare(b.date_iso + (b.time || "")));
+
+  if (games.length === 0) return;
+
+  const ics = buildFullSeasonICS(games);
+  const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `${games[0].player.replace(/\s+/g, "-")}-full-season.ics`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
@@ -791,8 +843,14 @@ function populatePlayerFilter() {
   }
 }
 
+function updateSeasonDownloadVisibility() {
+  const wrap = document.getElementById("season-download-wrap");
+  wrap.style.display = currentPlayer ? "flex" : "none";
+}
+
 document.getElementById("player-filter").addEventListener("change", (e) => {
   currentPlayer = e.target.value;
+  updateSeasonDownloadVisibility();
   updateUrl();
   render();
 });
@@ -828,6 +886,8 @@ function applyUrlState() {
     document.querySelector('.range-btn[data-days="all"]').classList.add("active");
     currentDays = "all";
   }
+
+  updateSeasonDownloadVisibility();
 }
 
 function renderFooter() {
