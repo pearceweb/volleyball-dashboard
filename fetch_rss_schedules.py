@@ -31,11 +31,11 @@ SCHOOLS = [
         "school": "Olivet Nazarene University",
         "url": "https://www.onutigers.com/sports/mvball/composite?print=rss",
     },
-    {
-        "player": "Connor Voss",
-        "school": "Orange Coast College",
-        "url": "https://www.occpirateathletics.com/sports/mvball/composite?print=rss",
-    },
+    # Orange Coast's RSS composite feed is stale (stuck around 2015 -
+    # the school's site admin never added recent seasons to it, per
+    # PrestoSports' own docs that say this requires manual curation on
+    # their end). So Connor's data stays on the manual HTML-table method
+    # (fetch_presto_schedules.py, run locally) instead of RSS here.
 ]
 
 HEADERS = {
@@ -64,13 +64,13 @@ def fetch_and_parse(url):
 
 
 def main():
-    all_results = []
+    fresh_results = []
     for entry in SCHOOLS:
         print(f"Fetching {entry['school']} ({entry['player']})...")
         try:
             games = fetch_and_parse(entry["url"])
             print(f"  -> parsed {len(games)} games")
-            all_results.append({
+            fresh_results.append({
                 "player": entry["player"],
                 "school": entry["school"],
                 "url": entry["url"],
@@ -79,7 +79,7 @@ def main():
             })
         except Exception as e:
             print(f"  -> ERROR: {e}")
-            all_results.append({
+            fresh_results.append({
                 "player": entry["player"],
                 "school": entry["school"],
                 "url": entry["url"],
@@ -88,8 +88,24 @@ def main():
             })
         time.sleep(1)
 
+    # Merge into the existing presto_games.json rather than overwriting it -
+    # this file may also contain schools updated by the manual HTML-table
+    # method (fetch_presto_schedules.py), and we don't want to wipe those
+    # out just because this run only covers a subset of schools.
+    try:
+        with open("presto_games.json", encoding="utf-8") as f:
+            existing = json.load(f)
+    except FileNotFoundError:
+        existing = []
+
+    by_school = {e["school"]: e for e in existing}
+    for fresh in fresh_results:
+        by_school[fresh["school"]] = fresh
+
+    merged = list(by_school.values())
+
     with open("presto_games.json", "w", encoding="utf-8") as f:
-        json.dump(all_results, f, indent=2)
+        json.dump(merged, f, indent=2)
 
     print("\nSaved to presto_games.json")
 
