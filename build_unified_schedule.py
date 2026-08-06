@@ -68,7 +68,19 @@ def resolve_year(url, platform):
 
 
 def parse_iso_date(date_display, year):
-    if not date_display or not year:
+    if not date_display:
+        return None
+
+    # RSS-sourced dates already include their own year (e.g. "Jan 22, 2026") -
+    # try that shape first so we don't need a URL-based year guess at all.
+    for fmt in ("%b %d, %Y", "%B %d, %Y"):
+        try:
+            dt = datetime.strptime(date_display, fmt)
+            return dt.strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+
+    if not year:
         return None
     for fmt in ("%b %d %Y", "%B %d %Y"):
         try:
@@ -76,6 +88,7 @@ def parse_iso_date(date_display, year):
             return dt.strftime("%Y-%m-%d")
         except ValueError:
             continue
+    return None
     return None
 
 
@@ -111,7 +124,7 @@ def normalize_presto(entry):
             "school": entry["school"],
             "date_iso": parse_iso_date(g.get("date"), year),
             "date_display": g.get("date"),
-            "time": None,
+            "time": g.get("time"),
             "home_away": g.get("home_away", "neutral"),
             "opponent": g.get("opponent"),
             "location": g.get("location"),
