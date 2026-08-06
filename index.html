@@ -17,6 +17,7 @@
     --home: #4c8fe0;
     --away: #b58ae0;
   }
+  html { scroll-behavior: smooth; }
   * { box-sizing: border-box; }
   body {
     margin: 0;
@@ -116,6 +117,12 @@
     gap: 10px;
     margin-bottom: 20px;
   }
+  .secondary-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
   .player-select {
     background: var(--panel);
     border: 1px solid var(--line);
@@ -126,15 +133,27 @@
     font-family: inherit;
     max-width: 100%;
   }
-  #season-download-wrap {
+  #season-download-link {
+    font-size: 12.5px;
+    color: var(--amber);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  #season-download-link:hover {
+    text-decoration: underline;
+  }
+  #season-download-bottom {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    align-items: flex-start;
+    gap: 6px;
   }
   .season-download-note {
-    font-size: 11px;
+    font-size: 12px;
     color: var(--text-dim);
-    max-width: 220px;
   }
   #site-footer {
     max-width: 720px;
@@ -335,6 +354,8 @@
     .range-controls,
     .player-select,
     #print-btn,
+    #season-download-link,
+    #season-download-bottom,
     .quick-jump,
     .watch-link,
     .cal-dropdown,
@@ -396,16 +417,19 @@
       <button class="range-btn" data-days="30">Next month</button>
       <button class="range-btn" data-days="all">All available games</button>
     </div>
-    <select id="player-filter" class="player-select">
-      <option value="">All players</option>
-    </select>
-    <div id="season-download-wrap" style="display:none;">
-      <button id="season-download-btn" class="range-btn" onclick="downloadFullSeason()" title="Downloads one file with every remaining game as a separate calendar entry">Download Full Season</button>
-      <div class="season-download-note">Apple Calendar: opens directly. Google/Outlook: import via Settings.</div>
+    <div class="secondary-controls">
+      <select id="player-filter" class="player-select">
+        <option value="">All players</option>
+      </select>
+      <a id="season-download-link" href="#season-download-bottom" style="display:none;">&darr; Download full season</a>
+      <button id="print-btn" class="range-btn" onclick="window.print()">Print / Save as PDF</button>
     </div>
-    <button id="print-btn" class="range-btn" onclick="window.print()">Print / Save as PDF</button>
   </div>
   <div id="content"></div>
+  <div id="season-download-bottom" style="display:none;">
+    <button id="season-download-btn" class="range-btn" onclick="downloadFullSeason()" title="Downloads one file with every remaining game as a separate calendar entry">Download Full Season</button>
+    <div class="season-download-note">Apple Calendar: opens directly. Google/Outlook: import via Settings.</div>
+  </div>
 </div>
 <footer id="site-footer"></footer>
 
@@ -844,8 +868,10 @@ function populatePlayerFilter() {
 }
 
 function updateSeasonDownloadVisibility() {
-  const wrap = document.getElementById("season-download-wrap");
-  wrap.style.display = currentPlayer ? "flex" : "none";
+  const link = document.getElementById("season-download-link");
+  const bottom = document.getElementById("season-download-bottom");
+  link.style.display = currentPlayer ? "inline" : "none";
+  bottom.style.display = currentPlayer ? "flex" : "none";
 }
 
 document.getElementById("player-filter").addEventListener("change", (e) => {
