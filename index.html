@@ -73,6 +73,41 @@
   }
   .day-group { margin-bottom: 22px; }
   .day-group.past { opacity: 0.6; }
+  .next-up-wrap {
+    margin-bottom: 20px;
+  }
+  .next-up-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 10px;
+  }
+  .next-up-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--home);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+  }
+  .next-up-card.away { border-left-color: var(--away); }
+  .next-up-card.neutral { border-left-color: var(--text-dim); }
+  .next-up-card:last-child { margin-bottom: 0; }
+  .next-up-player {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .next-up-player .school {
+    font-weight: 400;
+    color: var(--text-dim);
+  }
+  .next-up-matchup {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-top: 3px;
+  }
   .filter-row {
     display: flex;
     flex-wrap: wrap;
@@ -343,6 +378,7 @@
     </div>
   </header>
   <div id="print-context" class="print-only"></div>
+  <div id="next-up"></div>
   <div class="filter-row">
     <div class="range-controls">
       <button class="range-btn active" data-days="7">This week</button>
@@ -376,7 +412,52 @@ function getDataRange(games) {
   return { min: dated[0], max: dated[dated.length - 1] };
 }
 
+function renderNextUp() {
+  const wrap = document.getElementById("next-up");
+
+  if (currentPlayer) {
+    wrap.innerHTML = "";
+    return;
+  }
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const todayStr = today.toISOString().slice(0, 10);
+
+  const upcoming = allGames.filter(g => !g.result && g.date_iso && g.date_iso >= todayStr);
+  if (upcoming.length === 0) {
+    wrap.innerHTML = "";
+    return;
+  }
+
+  const nextDate = upcoming.map(g => g.date_iso).sort()[0];
+  const gamesOnNextDate = upcoming.filter(g => g.date_iso === nextDate)
+    .sort((a, b) => (a.time || "").localeCompare(b.time || ""));
+
+  const diffDays = Math.round((new Date(nextDate + "T00:00:00") - today) / 86400000);
+  const countdown = diffDays === 0 ? "today" : diffDays === 1 ? "tomorrow" : `in ${diffDays} days`;
+
+  const cards = gamesOnNextDate.map(g => {
+    const sideTag = g.home_away === "home" ? "vs" : g.home_away === "away" ? "@" : "vs";
+    const timeText = g.time ? ` &middot; ${escapeHtml(g.time)}` : "";
+    return `
+      <div class="next-up-card ${g.home_away}">
+        <div class="next-up-player">${escapeHtml(g.player)} <span class="school">\u00b7 ${escapeHtml(g.school)}</span></div>
+        <div class="next-up-matchup"><span class="side-tag">${sideTag}</span>${escapeHtml(g.opponent || "TBD")}${timeText}</div>
+      </div>
+    `;
+  }).join("");
+
+  wrap.innerHTML = `
+    <div class="next-up-wrap">
+      <div class="next-up-label">Next up \u00b7 ${formatDayLabel(nextDate)} \u00b7 ${countdown}</div>
+      ${cards}
+    </div>
+  `;
+}
+
 function render() {
+  renderNextUp();
   const content = document.getElementById("content");
   const rangeLabel = document.getElementById("range-label");
   const today = new Date();
