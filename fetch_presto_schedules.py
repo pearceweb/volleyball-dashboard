@@ -61,10 +61,11 @@ def fetch_and_parse(url):
     last_error = None
     for attempt in range(3):
         try:
-            resp = requests.get(url, headers=HEADERS, timeout=20)
+            resp = requests.get(url, headers=HEADERS, timeout=30)
             resp.raise_for_status()
             return parse_presto_schedule(resp.text)
-        except requests.exceptions.HTTPError as e:
+        except (requests.exceptions.Timeout, requests.exceptions.ConnectionError,
+                requests.exceptions.HTTPError) as e:
             last_error = e
             if attempt < 2:
                 time.sleep(5 * (attempt + 1))  # 5s, then 10s before retrying

@@ -81,11 +81,20 @@ HEADERS = {
 
 
 def fetch_and_parse(url):
-    resp = requests.get(url, headers=HEADERS, timeout=20)
-    resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "html.parser")
-    text = soup.get_text(separator="\n")
-    return parse_sidearm_schedule(text)
+    last_error = None
+    for attempt in range(3):
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=30)
+            resp.raise_for_status()
+            soup = BeautifulSoup(resp.text, "html.parser")
+            text = soup.get_text(separator="\n")
+            return parse_sidearm_schedule(text)
+        except (requests.exceptions.Timeout, requests.exceptions.ConnectionError,
+                requests.exceptions.HTTPError) as e:
+            last_error = e
+            if attempt < 2:
+                time.sleep(5 * (attempt + 1))  # 5s, then 10s before retrying
+    raise last_error
 
 
 def main():
