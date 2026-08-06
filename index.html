@@ -483,7 +483,7 @@ function buildICS(g) {
   }
 
   const sideTag = g.home_away === "home" ? "vs" : g.home_away === "away" ? "@" : "vs";
-  const summary = `${g.player} (${g.school}) ${sideTag} ${g.opponent || "TBD"}`;
+  const summary = `${g.school} (${g.player}) ${sideTag} ${g.opponent || "TBD"}`;
   const descParts = [g.school];
   if (g.streaming_label) descParts.push(`Watch: ${g.streaming_label}`);
   if (g.streaming_url) descParts.push(`Watch: ${g.streaming_url}`);
@@ -521,12 +521,22 @@ function addToCalendar(idx) {
   URL.revokeObjectURL(url);
 }
 
+function updateUrl() {
+  const params = new URLSearchParams();
+  if (currentPlayer) params.set("player", currentPlayer);
+  if (currentDays !== 7) params.set("range", String(currentDays));
+  const qs = params.toString();
+  const newUrl = window.location.pathname + (qs ? "?" + qs : "");
+  history.replaceState(null, "", newUrl);
+}
+
 document.querySelectorAll(".range-btn[data-days]").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".range-btn[data-days]").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
     const val = btn.dataset.days;
     currentDays = val === "all" ? "all" : parseInt(val, 10);
+    updateUrl();
     render();
   });
 });
@@ -535,6 +545,7 @@ function jumpToAll() {
   document.querySelectorAll(".range-btn[data-days]").forEach(b => b.classList.remove("active"));
   document.querySelector('.range-btn[data-days="all"]').classList.add("active");
   currentDays = "all";
+  updateUrl();
   render();
 }
 
@@ -552,8 +563,42 @@ function populatePlayerFilter() {
 
 document.getElementById("player-filter").addEventListener("change", (e) => {
   currentPlayer = e.target.value;
+  updateUrl();
   render();
 });
+
+function applyUrlState() {
+  const params = new URLSearchParams(window.location.search);
+  const playerParam = params.get("player");
+  const rangeParam = params.get("range");
+  const select = document.getElementById("player-filter");
+
+  let playerApplied = false;
+  if (playerParam) {
+    const match = [...select.options].find(o => o.value === playerParam);
+    if (match) {
+      select.value = playerParam;
+      currentPlayer = playerParam;
+      playerApplied = true;
+    }
+  }
+
+  if (rangeParam) {
+    const validDays = rangeParam === "all" ? "all" : parseInt(rangeParam, 10);
+    const btn = document.querySelector(`.range-btn[data-days="${rangeParam}"]`);
+    if (btn && (validDays === "all" || !isNaN(validDays))) {
+      document.querySelectorAll(".range-btn[data-days]").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentDays = validDays;
+    }
+  } else if (playerApplied) {
+    // A shared player link with no explicit range is more useful showing
+    // their whole season than a possibly-empty "this week" view.
+    document.querySelectorAll(".range-btn[data-days]").forEach(b => b.classList.remove("active"));
+    document.querySelector('.range-btn[data-days="all"]').classList.add("active");
+    currentDays = "all";
+  }
+}
 
 function renderFooter() {
   const year = new Date().getFullYear();
@@ -570,6 +615,7 @@ fetch("unified_schedule.json")
   .then(data => {
     allGames = data;
     populatePlayerFilter();
+    applyUrlState();
     render();
   })
   .catch(err => {
