@@ -32,14 +32,42 @@ jobs:
       - name: Install dependencies
         run: pip install requests beautifulsoup4
 
+      - name: Snapshot previous run's data (for health check comparison)
+        run: |
+          cp sidearm_games.json sidearm_games_previous.json 2>/dev/null || true
+          cp presto_games.json presto_games_previous.json 2>/dev/null || true
+
       - name: Fetch Sidearm schedules
         run: python3 fetch_sidearm_schedules.py
 
-      - name: Fetch PrestoSports schedules
-        run: python3 fetch_presto_schedules.py
+      # PrestoSports fetch is intentionally NOT run here. GitHub Actions'
+      # IP ranges are blocked by PrestoSports (returns 405 for both
+      # Olivet Nazarene and Orange Coast, confirmed working fine when run
+      # from a home connection). presto_games.json is updated manually -
+      # run `python3 fetch_presto_schedules.py` on your own machine, then
+      # commit and push the result. This step is skipped so the automated
+      # run here doesn't overwrite that manual data with a 405 error.
 
       - name: Build unified schedule
         run: python3 build_unified_schedule.py
+
+      - name: Check schedule health
+        id: healthcheck
+        continue-on-error: true
+        run: python3 check_health.py
+
+      - name: Send alert email/text if health check failed
+        if: steps.healthcheck.outcome == 'failure'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Volleyball dashboard: schedule check found issues"
+          to: ${{ secrets.NOTIFY_TO }}
+          from: Volleyball Dashboard
+          body: file://health_alerts.txt
 
       - name: Commit and push updated data
         run: |
