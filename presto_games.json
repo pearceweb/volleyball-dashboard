@@ -3,14 +3,536 @@
     "player": "Ethan Jordheim",
     "school": "Olivet Nazarene University",
     "url": "https://www.onutigers.com/sports/mvball/2026-27/schedule",
-    "games": [],
-    "error": "405 Client Error: Not Allowed for url: https://www.onutigers.com/sports/mvball/2026-27/schedule"
+    "games": [
+      {
+        "date": "January 15",
+        "home_away": "home",
+        "opponent": "Dordt (IA) @ Missouri Valley Tournament",
+        "location": "",
+        "result": null,
+        "sets": null,
+        "status": "TBA",
+        "video_url": null
+      },
+      {
+        "date": "January 15",
+        "home_away": "home",
+        "opponent": "Ottawa @ Missouri Valley Tournament",
+        "location": "",
+        "result": null,
+        "sets": null,
+        "status": "TBA",
+        "video_url": null
+      },
+      {
+        "date": "January 16",
+        "home_away": "home",
+        "opponent": "Morningside @ Missouri Valley Tournament",
+        "location": "",
+        "result": null,
+        "sets": null,
+        "status": "TBA",
+        "video_url": null
+      },
+      {
+        "date": "January 22",
+        "home_away": "home",
+        "opponent": "USHP @ Tournament",
+        "location": "",
+        "result": null,
+        "sets": null,
+        "status": "7:00 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "January 23",
+        "home_away": "home",
+        "opponent": "Central Christian @ Tournament",
+        "location": "",
+        "result": null,
+        "sets": null,
+        "status": "12:30 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "January 23",
+        "home_away": "home",
+        "opponent": "Missouri Baptist @ Tournament",
+        "location": "",
+        "result": null,
+        "sets": null,
+        "status": "3:00 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "January 26",
+        "home_away": "home",
+        "opponent": "Clarke (IA)",
+        "location": "McHie Arena | Bourbonnais, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "5:30 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "January 29",
+        "home_away": "home",
+        "opponent": "Cornerstone (MI)",
+        "location": "McHie Arena | Bourbonnais, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "7:00 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "January 30",
+        "home_away": "home",
+        "opponent": "Park",
+        "location": "McHie Arena | Bourbonnais, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "1:00 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "February 2",
+        "home_away": "away",
+        "opponent": "Calumet (IN)",
+        "location": "Rittenmeyer Center | Whiting, Ind.",
+        "result": null,
+        "sets": null,
+        "status": "7:00 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "February 5",
+        "home_away": "home",
+        "opponent": "Defiance College (OH)",
+        "location": "McHie Arena | Bourbonnais, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "7:00 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "February 13",
+        "home_away": "home",
+        "opponent": "Hope International",
+        "location": "McHie Arena | Bourbonnais, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "12:00 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "February 16",
+        "home_away": "away",
+        "opponent": "Saint Xavier (IL)",
+        "location": "Shannon Center | Chicago, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "7:00 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "February 18",
+        "home_away": "home",
+        "opponent": "Judson (IL)",
+        "location": "McHie Arena | Bourbonnais, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "7:00 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "February 22",
+        "home_away": "home",
+        "opponent": "Governors State",
+        "location": "McHie Arena | Bourbonnais, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "7:00 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "February 27",
+        "home_away": "home",
+        "opponent": "Bethel (IN) @ Tournament",
+        "location": "",
+        "result": null,
+        "sets": null,
+        "status": "TBA",
+        "video_url": null
+      },
+      {
+        "date": "February 27",
+        "home_away": "home",
+        "opponent": "Campbellsville (KY) @ Tournament",
+        "location": "",
+        "result": null,
+        "sets": null,
+        "status": "TBA",
+        "video_url": null
+      },
+      {
+        "date": "March 2",
+        "home_away": "home",
+        "opponent": "Indiana Wesleyan",
+        "location": "McHie Arena | Bourbonnais, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "6:00 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "March 8",
+        "home_away": "away",
+        "opponent": "La Sierra",
+        "location": "",
+        "result": null,
+        "sets": null,
+        "status": "8:00 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "March 9",
+        "home_away": "away",
+        "opponent": "Hope International",
+        "location": "",
+        "result": null,
+        "sets": null,
+        "status": "9:30 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "March 12",
+        "home_away": "away",
+        "opponent": "Soka (CA)",
+        "location": "",
+        "result": null,
+        "sets": null,
+        "status": "6:00 PM CST",
+        "video_url": null
+      },
+      {
+        "date": "March 18",
+        "home_away": "away",
+        "opponent": "Governors State",
+        "location": "The ARC | University Park, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "7:00 PM CDT",
+        "video_url": null
+      },
+      {
+        "date": "March 20",
+        "home_away": "away",
+        "opponent": "Viterbo",
+        "location": "R.W. Beggs Sr. Gymnasium | La Crosse, Wis.",
+        "result": null,
+        "sets": null,
+        "status": "7:00 PM CDT",
+        "video_url": null
+      },
+      {
+        "date": "March 23",
+        "home_away": "away",
+        "opponent": "Judson (IL)",
+        "location": "Lindner Fitness Center | Elgin, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "7:00 PM CDT",
+        "video_url": null
+      },
+      {
+        "date": "March 25",
+        "home_away": "home",
+        "opponent": "Calumet (IN)",
+        "location": "McHie Arena | Bourbonnais, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "7:00 PM CDT",
+        "video_url": null
+      },
+      {
+        "date": "March 30",
+        "home_away": "home",
+        "opponent": "Saint Xavier (IL)",
+        "location": "McHie Arena | Bourbonnais, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "7:00 PM CDT",
+        "video_url": null
+      },
+      {
+        "date": "April 9",
+        "home_away": "home",
+        "opponent": "Viterbo",
+        "location": "McHie Arena | Bourbonnais, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "7:00 PM CDT",
+        "video_url": null
+      }
+    ],
+    "error": null
   },
   {
     "player": "Connor Voss",
     "school": "Orange Coast College",
     "url": "https://www.occpirateathletics.com/sports/mvball/2025-26/schedule",
-    "games": [],
-    "error": "405 Client Error: Not Allowed for url: https://www.occpirateathletics.com/sports/mvball/2025-26/schedule"
+    "games": [
+      {
+        "date": "January 24",
+        "home_away": "home",
+        "opponent": "Santa Monica",
+        "location": null,
+        "result": "W",
+        "sets": "3-1",
+        "status": "Final",
+        "video_url": "/links/2j0yhx"
+      },
+      {
+        "date": "January 24",
+        "home_away": "home",
+        "opponent": "Long Beach",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": "/links/2j0yhx"
+      },
+      {
+        "date": "January 27",
+        "home_away": "home",
+        "opponent": "Moorpark",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": "/links/2j0yhx"
+      },
+      {
+        "date": "January 30",
+        "home_away": "away",
+        "opponent": "Santa Barbara",
+        "location": null,
+        "result": "W",
+        "sets": "3-1",
+        "status": "Final",
+        "video_url": null
+      },
+      {
+        "date": "February 4",
+        "home_away": "home",
+        "opponent": "El Camino",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": "/links/2j0yhx"
+      },
+      {
+        "date": "February 6",
+        "home_away": "away",
+        "opponent": "Fullerton",
+        "location": null,
+        "result": "W",
+        "sets": "3-1",
+        "status": "Final",
+        "video_url": null
+      },
+      {
+        "date": "February 11",
+        "home_away": "home",
+        "opponent": "Long Beach",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": "/links/2j0yhx"
+      },
+      {
+        "date": "February 13",
+        "home_away": "away",
+        "opponent": "Santa Monica",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": null
+      },
+      {
+        "date": "February 18",
+        "home_away": "home",
+        "opponent": "Antelope Valley",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": "/links/2j0yhx"
+      },
+      {
+        "date": "February 20",
+        "home_away": "away",
+        "opponent": "LA Pierce",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": null
+      },
+      {
+        "date": "February 25",
+        "home_away": "away",
+        "opponent": "San Diego Mesa",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": null
+      },
+      {
+        "date": "February 27",
+        "home_away": "home",
+        "opponent": "San Diego Miramar",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": "/links/2j0yhx"
+      },
+      {
+        "date": "March 4",
+        "home_away": "away",
+        "opponent": "Grossmont",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": null
+      },
+      {
+        "date": "March 6",
+        "home_away": "home",
+        "opponent": "Palomar",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": "/links/2j0yhx"
+      },
+      {
+        "date": "March 11",
+        "home_away": "home",
+        "opponent": "Santiago Canyon",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": null
+      },
+      {
+        "date": "March 13",
+        "home_away": "away",
+        "opponent": "Irvine Valley",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": null
+      },
+      {
+        "date": "March 18",
+        "home_away": "away",
+        "opponent": "Golden West",
+        "location": null,
+        "result": "W",
+        "sets": "3-1",
+        "status": "Final",
+        "video_url": null
+      },
+      {
+        "date": "March 20",
+        "home_away": "home",
+        "opponent": "San Diego Mesa",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": "/links/2j0yhx"
+      },
+      {
+        "date": "March 25",
+        "home_away": "away",
+        "opponent": "San Diego Miramar",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": null
+      },
+      {
+        "date": "March 27",
+        "home_away": "home",
+        "opponent": "Grossmont",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": "/links/2j0yhx"
+      },
+      {
+        "date": "April 1",
+        "home_away": "away",
+        "opponent": "Palomar",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": null
+      },
+      {
+        "date": "April 3",
+        "home_away": "away",
+        "opponent": "Santiago Canyon",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": null
+      },
+      {
+        "date": "April 8",
+        "home_away": "home",
+        "opponent": "Irvine Valley",
+        "location": null,
+        "result": "W",
+        "sets": "3-0",
+        "status": "Final",
+        "video_url": "/links/2j0yhx"
+      },
+      {
+        "date": "April 10",
+        "home_away": "home",
+        "opponent": "Golden West",
+        "location": null,
+        "result": "L",
+        "sets": "3-1",
+        "status": "Final",
+        "video_url": "/links/2j0yhx"
+      },
+      {
+        "date": "April 17",
+        "home_away": "home",
+        "opponent": "Fullerton",
+        "location": null,
+        "result": "L",
+        "sets": "3-2",
+        "status": "Final",
+        "video_url": "/links/2j0yhx"
+      }
+    ],
+    "error": null
   }
 ]
