@@ -48,6 +48,7 @@ guessing - date_display is still populated so nothing is silently dropped.
 
 import json
 import re
+from urllib.parse import urljoin
 from datetime import datetime
 
 SIDEARM_YEAR_RE = re.compile(r"/schedule/(\d{4})/?$")
@@ -132,7 +133,9 @@ def normalize_presto(entry):
             "sets": g.get("sets"),
             "status": g.get("status"),
             "streaming_label": None,
-            "streaming_url": g.get("video_url"),
+            # Presto links are often relative ("/links/abc") - make them
+            # absolute against the school's site or they 404 on our page.
+            "streaming_url": urljoin(entry["url"], g["video_url"]) if g.get("video_url") else None,
             "platform": "presto",
         })
     return out
