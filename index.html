@@ -151,6 +151,11 @@
     align-items: flex-start;
     gap: 6px;
   }
+  .waiting-note {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin: 0 0 16px;
+  }
   .season-download-note {
     font-size: 12px;
     color: var(--text-dim);
@@ -438,6 +443,28 @@ let allGames = [];
 let currentDays = 7;
 let currentPlayer = "";
 let renderedGames = [];
+// Players whose last season is over and whose next schedule isn't posted
+// yet. Their old games are hidden so last year's results don't show up
+// mixed in with upcoming games; they reappear automatically once the new
+// season's schedule is fetched.
+let waitingPlayers = [];
+
+function localTodayStr() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+function splitFinishedSeasons(data) {
+  const todayStr = localTodayStr();
+  const lastDate = {};
+  for (const g of data) {
+    const label = `${g.player} - ${g.school}`;
+    if (!(label in lastDate)) lastDate[label] = null;
+    if (g.date_iso && (!lastDate[label] || g.date_iso > lastDate[label])) lastDate[label] = g.date_iso;
+  }
+  waitingPlayers = Object.keys(lastDate).filter(l => !lastDate[l] || lastDate[l] < todayStr).sort();
+  return data.filter(g => !waitingPlayers.includes(`${g.player} - ${g.school}`));
+}
 
 function formatDayLabel(dateIso) {
   const d = new Date(dateIso + "T00:00:00");
@@ -507,6 +534,16 @@ function render() {
     : allGames;
   const playerSuffix = currentPlayer ? ` \u00b7 ${currentPlayer}` : "";
 
+  if (currentPlayer && waitingPlayers.includes(currentPlayer)) {
+    rangeLabel.textContent = currentPlayer;
+    document.getElementById("print-context").textContent = rangeLabel.textContent;
+    content.innerHTML = `<div class="empty-state">The next season's schedule for ${escapeHtml(currentPlayer)} hasn't been posted yet.<br>Games will show up here as soon as it is.</div>`;
+    return;
+  }
+  const waitingNote = !currentPlayer && waitingPlayers.length
+    ? `<div class="waiting-note">Waiting on new schedules: ${waitingPlayers.map(escapeHtml).join(", ")}</div>`
+    : "";
+
   let inRange;
   if (currentDays === "all") {
     inRange = playerFiltered.filter(g => g.date_iso);
@@ -546,7 +583,7 @@ function render() {
   const upcomingCount = inRange.filter(g => g.date_iso >= todayStr).length;
 
   let dividerInserted = false;
-  const pieces = [];
+  const pieces = [waitingNote];
   if (hasPast && hasFuture) {
     pieces.push(`<div class="quick-jump"><button class="range-btn" onclick="jumpToUpcoming()">Jump to upcoming games (${upcomingCount})</button></div>`);
   }
@@ -855,9 +892,9 @@ function jumpToAll() {
   render();
 }
 
-function populatePlayerFilter() {
+function populatePlayerFilter(data) {
   const select = document.getElementById("player-filter");
-  const labels = [...new Set(allGames.map(g => `${g.player} - ${g.school}`))];
+  const labels = [...new Set(data.map(g => `${g.player} - ${g.school}`))];
   labels.sort((a, b) => a.localeCompare(b));
   for (const label of labels) {
     const opt = document.createElement("option");
@@ -870,8 +907,9 @@ function populatePlayerFilter() {
 function updateSeasonDownloadVisibility() {
   const link = document.getElementById("season-download-link");
   const bottom = document.getElementById("season-download-bottom");
-  link.style.display = currentPlayer ? "inline" : "none";
-  bottom.style.display = currentPlayer ? "flex" : "none";
+  const show = currentPlayer && !waitingPlayers.includes(currentPlayer);
+  link.style.display = show ? "inline" : "none";
+  bottom.style.display = show ? "flex" : "none";
 }
 
 document.getElementById("player-filter").addEventListener("change", (e) => {
@@ -929,8 +967,8 @@ fetch("unified_schedule.json")
     return r.json();
   })
   .then(data => {
-    allGames = data;
-    populatePlayerFilter();
+    allGames = splitFinishedSeasons(data);
+    populatePlayerFilter(data);
     applyUrlState();
     render();
   })
