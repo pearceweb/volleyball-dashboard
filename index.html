@@ -448,6 +448,9 @@ let renderedGames = [];
 // mixed in with upcoming games; they reappear automatically once the new
 // season's schedule is fetched.
 let waitingPlayers = [];
+// Subset of waitingPlayers with no games at all yet - a brand-new program
+// (e.g. Mercy) that hasn't published its first schedule.
+let newProgramPlayers = [];
 
 function localTodayStr() {
   const d = new Date();
@@ -464,6 +467,7 @@ function splitFinishedSeasons(data, players) {
     if (g.date_iso && (!lastDate[label] || g.date_iso > lastDate[label])) lastDate[label] = g.date_iso;
   }
   waitingPlayers = Object.keys(lastDate).filter(l => !lastDate[l] || lastDate[l] < todayStr).sort();
+  newProgramPlayers = Object.keys(lastDate).filter(l => !lastDate[l]);
   return data.filter(g => !waitingPlayers.includes(`${g.player} - ${g.school}`));
 }
 
@@ -538,7 +542,11 @@ function render() {
   if (currentPlayer && waitingPlayers.includes(currentPlayer)) {
     rangeLabel.textContent = currentPlayer;
     document.getElementById("print-context").textContent = rangeLabel.textContent;
-    content.innerHTML = `<div class="empty-state">The next season's schedule for ${escapeHtml(currentPlayer)} hasn't been posted yet.<br>Games will show up here as soon as it is.</div>`;
+    const school = currentPlayer.split(" - ").slice(1).join(" - ");
+    const message = newProgramPlayers.includes(currentPlayer)
+      ? `${escapeHtml(school)}'s first schedule hasn't been posted yet.`
+      : `The next season's schedule for ${escapeHtml(currentPlayer)} hasn't been posted yet.`;
+    content.innerHTML = `<div class="empty-state">${message}<br>Games will show up here as soon as it is.</div>`;
     return;
   }
   const waitingNote = !currentPlayer && waitingPlayers.length
