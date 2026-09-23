@@ -141,12 +141,16 @@ def normalize_presto(entry):
 def main():
     all_games = []
     unresolved_dates = []
+    # Every configured player, including ones with no games yet (e.g. a
+    # school that hasn't posted its schedule) so the page can still list them.
+    players = []
 
     try:
         with open("sidearm_games.json", encoding="utf-8") as f:
             sidearm_data = json.load(f)
         for entry in sidearm_data:
             all_games.extend(normalize_sidearm(entry))
+            players.append({"player": entry["player"], "school": entry["school"]})
     except FileNotFoundError:
         print("sidearm_games.json not found - skipping (run fetch_sidearm_schedules.py first)")
 
@@ -155,6 +159,7 @@ def main():
             presto_data = json.load(f)
         for entry in presto_data:
             all_games.extend(normalize_presto(entry))
+            players.append({"player": entry["player"], "school": entry["school"]})
     except FileNotFoundError:
         print("presto_games.json not found - skipping (run fetch_presto_schedules.py first)")
 
@@ -169,6 +174,10 @@ def main():
         json.dump(all_games, f, indent=2)
 
     print(f"Wrote {len(all_games)} games to unified_schedule.json")
+
+    with open("players.json", "w", encoding="utf-8") as f:
+        json.dump(players, f, indent=2)
+    print(f"Wrote {len(players)} players to players.json")
     if unresolved_dates:
         print(f"\n{len(unresolved_dates)} games had a date but couldn't resolve a year "
               f"(check the URL year patterns):")

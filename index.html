@@ -454,9 +454,10 @@ function localTodayStr() {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 
-function splitFinishedSeasons(data) {
+function splitFinishedSeasons(data, players) {
   const todayStr = localTodayStr();
   const lastDate = {};
+  for (const p of players) lastDate[`${p.player} - ${p.school}`] = null;
   for (const g of data) {
     const label = `${g.player} - ${g.school}`;
     if (!(label in lastDate)) lastDate[label] = null;
@@ -892,9 +893,9 @@ function jumpToAll() {
   render();
 }
 
-function populatePlayerFilter(data) {
+function populatePlayerFilter(data, players) {
   const select = document.getElementById("player-filter");
-  const labels = [...new Set(data.map(g => `${g.player} - ${g.school}`))];
+  const labels = [...new Set([...players, ...data].map(g => `${g.player} - ${g.school}`))];
   labels.sort((a, b) => a.localeCompare(b));
   for (const label of labels) {
     const opt = document.createElement("option");
@@ -963,14 +964,21 @@ renderFooter();
 
 // "no-cache" makes the browser revalidate every load, so visitors never see
 // a stale copy of the schedule after the 6-hourly update job runs.
+// players.json lists every player, including ones whose school hasn't
+// posted a schedule yet. It's optional - the page still works without it.
+const playersRequest = fetch("players.json", { cache: "no-cache" })
+  .then(r => r.ok ? r.json() : [])
+  .catch(() => []);
+
 fetch("unified_schedule.json", { cache: "no-cache" })
   .then(r => {
     if (!r.ok) throw new Error("Could not load unified_schedule.json (" + r.status + ")");
     return r.json();
   })
-  .then(data => {
-    allGames = splitFinishedSeasons(data);
-    populatePlayerFilter(data);
+  .then(data => playersRequest.then(players => [data, players]))
+  .then(([data, players]) => {
+    allGames = splitFinishedSeasons(data, players);
+    populatePlayerFilter(data, players);
     applyUrlState();
     render();
   })
