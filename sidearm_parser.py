@@ -41,7 +41,7 @@ PHOTO_CREDIT_RE = re.compile(r"\bphoto\b|\binc\.?$", re.IGNORECASE)
 HIDE_SHOW_MARKER = "Hide/Show Additional Information For"
 NOISE_LINES = {
     "/", "final", "recap", "box score", "scheduled games",
-    "history", "game program",
+    "history", "game program", "-", "live stats",
 }
 STATUS_WORDS = {"canceled", "cancelled", "ppd", "postponed"}
 
@@ -235,6 +235,20 @@ def _parse_block(block):
             game["opponent"] = RANK_PREFIX_RE.sub("", candidate).strip()
             opponent_idx = j
             break
+
+    # Strategy 3: upcoming neutral-site game (no vs/at, no result yet -
+    # e.g. Vassar's 2027 tournament matches). The opponent is the first
+    # substantive line after the date/time line.
+    if game["opponent"] is None and result_idx is None:
+        date_idx = next((k for k, ln in enumerate(block) if DATE_RE.match(ln)), None)
+        if date_idx is not None:
+            for j in range(date_idx + 1, len(block)):
+                candidate = block[j]
+                if _is_noise(candidate) or "," in candidate:
+                    continue
+                game["opponent"] = RANK_PREFIX_RE.sub("", candidate).strip()
+                opponent_idx = j
+                break
 
     # location: first comma-containing line anywhere in the block, excluding
     # the date line, the result line, and whichever line we used as opponent

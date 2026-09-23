@@ -50,7 +50,7 @@ SCHOOLS = [
     {
         "player": "Colin Nathan",
         "school": "Vassar College",
-        "url": "https://www.vassarathletics.com/sports/mens-volleyball/schedule/2026",
+        "url": "https://www.vassarathletics.com/sports/mens-volleyball/schedule/2027",
     },
     {
         "player": "Colson Pearce",
