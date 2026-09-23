@@ -53,6 +53,24 @@ jobs:
       # fetch_rss_schedules.py here once Olivet Nazarene's admin adds the
       # new season to their composite feed - check back periodically.
 
+      - name: Check for newly posted seasons
+        id: seasons
+        run: |
+          if [ -s season_updates.txt ]; then echo "found=true" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Send email if a school posted a new season
+        if: steps.seasons.outputs.found == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Volleyball dashboard: new season schedule posted"
+          to: ${{ secrets.NOTIFY_TO }}
+          from: Volleyball Dashboard
+          body: file://season_updates.txt
+
       - name: Build unified schedule
         run: python3 build_unified_schedule.py
 

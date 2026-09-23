@@ -14,6 +14,7 @@ Output: prints parsed JSON for each school, and saves to sidearm_games.json
 """
 
 import json
+import re
 import time
 
 import requests
@@ -24,7 +25,10 @@ from sidearm_parser import parse_sidearm_schedule
 # ---------------------------------------------------------------------------
 # CONFIG - one entry per Sidearm-powered school.
 # `year` is the schedule page's year segment (e.g. .../schedule/2026).
-# Update this each year once the new season's page goes live.
+# You no longer need to bump this by hand: each run also checks the next
+# year's page and moves forward automatically once the school posts a real
+# new schedule there (see resolve_current_season). Bumping it is still fine
+# - it just saves one extra request per run.
 # ---------------------------------------------------------------------------
 SCHOOLS = [
     {
@@ -97,17 +101,69 @@ def fetch_and_parse(url):
     raise last_error
 
 
+YEAR_URL_RE = re.compile(r"^(.*/schedule/)(\d{4})/?$")
+MAX_YEARS_AHEAD = 2  # safety cap on how far we'll walk forward in one run
+
+
+def _signature(games):
+    return [(g.get("date"), g.get("opponent")) for g in games]
+
+
+def resolve_current_season(url, games):
+    """
+    Walk forward from the configured year while the next year's page has
+    its own schedule. A school that hasn't posted next season yet still
+    serves a page at /schedule/<next year>, but it just repeats the current
+    season's games - so we only advance when the next page has games AND
+    they differ from what we already have.
+    """
+    m = YEAR_URL_RE.match(url)
+    if not m:
+        return url, games  # no year in the URL (e.g. Mercy) - nothing to advance
+    base, year = m.group(1), int(m.group(2))
+    for _ in range(MAX_YEARS_AHEAD):
+        next_url = f"{base}{year + 1}"
+        try:
+            next_games = fetch_and_parse(next_url)
+        except Exception:
+            break
+        if not next_games or _signature(next_games) == _signature(games):
+            break
+        url, games, year = next_url, next_games, year + 1
+        time.sleep(1)
+    return url, games
+
+
+def load_previous_urls():
+    try:
+        with open("sidearm_games.json", encoding="utf-8") as f:
+            return {e["player"]: e["url"] for e in json.load(f)}
+    except (FileNotFoundError, json.JSONDecodeError, KeyError):
+        return {}
+
+
 def main():
+    previous_urls = load_previous_urls()
+    season_updates = []
     all_results = []
     for entry in SCHOOLS:
         print(f"Fetching {entry['school']} ({entry['player']})...")
         try:
             games = fetch_and_parse(entry["url"])
+            url, games = resolve_current_season(entry["url"], games)
+            if url != entry["url"]:
+                print(f"  -> newer season found: {url}")
+            prev = previous_urls.get(entry["player"])
+            if prev and prev != url:
+                season_updates.append(
+                    f"{entry['player']} - {entry['school']}: new schedule posted "
+                    f"({len(games)} games). Now using {url}"
+                )
             print(f"  -> parsed {len(games)} games")
             all_results.append({
                 "player": entry["player"],
                 "school": entry["school"],
-                "url": entry["url"],
+                "url": url,
                 "games": games,
                 "error": None,
             })
@@ -126,6 +182,14 @@ def main():
         json.dump(all_results, f, indent=2)
 
     print("\nSaved to sidearm_games.json")
+
+    # The workflow emails this file's contents when it's non-empty.
+    with open("season_updates.txt", "w", encoding="utf-8") as f:
+        f.write("\n".join(season_updates))
+    if season_updates:
+        print("\nNEW SEASONS DETECTED:")
+        for u in season_updates:
+            print(f"  - {u}")
 
 
 if __name__ == "__main__":
