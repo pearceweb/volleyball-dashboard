@@ -59,6 +59,9 @@ jobs:
           if [ -s season_updates.txt ]; then echo "found=true" >> "$GITHUB_OUTPUT"; fi
 
       - name: Send email if a school posted a new season
+        # An email problem (e.g. missing secrets) must never stop the data
+        # from being committed below.
+        continue-on-error: true
         if: steps.seasons.outputs.found == 'true'
         uses: dawidd6/action-send-mail@v3
         with:
@@ -80,6 +83,9 @@ jobs:
         run: python3 check_health.py
 
       - name: Send alert email/text if health check failed
+        # An email problem (e.g. missing secrets) must never stop the data
+        # from being committed below.
+        continue-on-error: true
         if: steps.healthcheck.outcome == 'failure'
         uses: dawidd6/action-send-mail@v3
         with:
