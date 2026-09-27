@@ -9,6 +9,11 @@ on:
   workflow_dispatch:
     # Lets you trigger this manually from the Actions tab on GitHub, for
     # testing without waiting for the schedule.
+    inputs:
+      send_test_email:
+        description: "Send a test email to check the alert setup"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -31,6 +36,19 @@ jobs:
 
       - name: Install dependencies
         run: pip install requests beautifulsoup4
+
+      - name: Send test email (manual runs only)
+        if: inputs.send_test_email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Volleyball dashboard: test email"
+          to: ${{ secrets.NOTIFY_TO }}
+          from: Volleyball Dashboard
+          body: "Alerts are set up correctly. You'll get an email like this if a schedule check finds a problem or a school posts a new season."
 
       - name: Snapshot previous run's data (for health check comparison)
         run: |
