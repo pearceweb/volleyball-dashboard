@@ -134,16 +134,17 @@ def resolve_current_season(url, games):
     return url, games
 
 
-def load_previous_urls():
+def load_previous():
+    """Last run's entries, keyed by player."""
     try:
         with open("sidearm_games.json", encoding="utf-8") as f:
-            return {e["player"]: e["url"] for e in json.load(f)}
+            return {e["player"]: e for e in json.load(f)}
     except (FileNotFoundError, json.JSONDecodeError, KeyError):
         return {}
 
 
 def main():
-    previous_urls = load_previous_urls()
+    previous = load_previous()
     season_updates = []
     all_results = []
     for entry in SCHOOLS:
@@ -153,7 +154,7 @@ def main():
             url, games = resolve_current_season(entry["url"], games)
             if url != entry["url"]:
                 print(f"  -> newer season found: {url}")
-            prev = previous_urls.get(entry["player"])
+            prev = previous.get(entry["player"], {}).get("url")
             if prev and prev != url:
                 season_updates.append(
                     f"{entry['player']} - {entry['school']}: new schedule posted "
@@ -168,12 +169,17 @@ def main():
                 "error": None,
             })
         except Exception as e:
-            print(f"  -> ERROR: {e}")
+            # Keep last run's games so a temporary outage (e.g. a site
+            # timing out) doesn't wipe that player's schedule off the page.
+            # The error is still recorded, so the health check flags it.
+            prev = previous.get(entry["player"], {})
+            kept = prev.get("games", [])
+            print(f"  -> ERROR: {e} (keeping {len(kept)} games from last run)")
             all_results.append({
                 "player": entry["player"],
                 "school": entry["school"],
-                "url": entry["url"],
-                "games": [],
+                "url": prev.get("url", entry["url"]),
+                "games": kept,
                 "error": str(e),
             })
         time.sleep(1)  # be polite between requests
