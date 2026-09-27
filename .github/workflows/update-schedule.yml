@@ -14,6 +14,10 @@ on:
         description: "Send a test email to check the alert setup"
         type: boolean
         default: false
+      notify_message:
+        description: "Email this message (used by the Mac's daily PrestoSports job)"
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -50,6 +54,20 @@ jobs:
           from: Volleyball Dashboard
           body: "Alerts are set up correctly. You'll get an email like this if a schedule check finds a problem or a school posts a new season."
 
+      - name: Send notice from the Mac's PrestoSports job
+        if: inputs.notify_message != ''
+        continue-on-error: true
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Volleyball dashboard: new season schedule posted"
+          to: ${{ secrets.NOTIFY_TO }}
+          from: Volleyball Dashboard
+          body: ${{ inputs.notify_message }}
+
       - name: Snapshot previous run's data (for health check comparison)
         run: |
           cp sidearm_games.json sidearm_games_previous.json 2>/dev/null || true
@@ -65,9 +83,9 @@ jobs:
       # the current 2026-27 season yet (same lag problem Orange Coast's
       # feed has, just less severe) - so automating it right now would
       # keep overwriting good manually-fetched data with stale RSS data
-      # every 6 hours. presto_games.json is updated manually for BOTH
-      # schools - run `python3 fetch_presto_schedules.py` on your own
-      # machine, then commit and push. Worth re-enabling
+      # every 6 hours. presto_games.json is updated for BOTH schools by
+      # scripts/local_presto_update.sh, which runs twice a day on Tucker's
+      # Mac (launchd) and pushes any changes. Worth re-enabling
       # fetch_rss_schedules.py here once Olivet Nazarene's admin adds the
       # new season to their composite feed - check back periodically.
 
