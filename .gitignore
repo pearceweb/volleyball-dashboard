@@ -1,0 +1,12 @@
+# macOS folder settings
+.DS_Store
+
+# Python bytecode cache
+__pycache__/
+*.pyc
+
+# Scratch files written by the fetch / health-check scripts during a run
+*_previous.json
+health_alerts.txt
+season_updates.txt
+presto_season_updates.txt
