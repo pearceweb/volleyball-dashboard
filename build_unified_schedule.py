@@ -49,6 +49,7 @@ guessing - date_display is still populated so nothing is silently dropped.
 import json
 import re
 from urllib.parse import urljoin
+from zoneinfo import ZoneInfo
 from datetime import datetime
 
 SIDEARM_YEAR_RE = re.compile(r"/schedule/(\d{4})/?$")
@@ -93,16 +94,77 @@ def parse_iso_date(date_display, year):
     return None
 
 
+# ---------------------------------------------------------------------------
+# TIME ZONES: schools list times in their own zone unless a game is
+# labelled otherwise (North Park's "Noon ET" at Calvin; Presto's
+# "7:00 PM CST"). Add each new school here - unknown schools fall back to
+# Central with a warning.
+# ---------------------------------------------------------------------------
+SCHOOL_TZ = {
+    "Long Island University": "America/New_York",
+    "UW-Stevens Point": "America/Chicago",
+    "Park University (Gilbert)": "America/Phoenix",  # Arizona - no DST
+    "Rockhurst University": "America/Chicago",
+    "Vassar College": "America/New_York",
+    "North Park University": "America/Chicago",
+    "Mercy University": "America/New_York",
+    "Central State University": "America/New_York",
+    "Olivet Nazarene University": "America/Chicago",
+    "Orange Coast College": "America/Los_Angeles",
+}
+DEFAULT_TZ = "America/Chicago"
+TZ_BY_LETTER = {
+    "E": "America/New_York",
+    "C": "America/Chicago",
+    "M": "America/Denver",
+    "P": "America/Los_Angeles",
+}
+TIME_RE = re.compile(
+    r"^\s*(\d{1,2})(?::(\d{2}))?\s*([ap])\.?\s*m\.?\s*(?:([ECMP])[SD]?T)?\s*$", re.IGNORECASE)
+missing_tz_schools = set()
+
+
+def split_time(text):
+    """'7:00 PM CST' -> ('7:00 PM', 'C'); anything else -> (None, None)."""
+    m = TIME_RE.match(text or "")
+    if not m:
+        return None, None
+    hour, minute, ap, letter = m.groups()
+    return f"{int(hour)}:{minute or '00'} {ap.upper()}M", (letter.upper() if letter else None)
+
+
+def resolve_tz(school, label):
+    """label is a zone letter/abbreviation like 'E' or 'ET', or None."""
+    if label:
+        return TZ_BY_LETTER.get(label[0].upper(), DEFAULT_TZ)
+    if school not in SCHOOL_TZ:
+        missing_tz_schools.add(school)
+    return SCHOOL_TZ.get(school, DEFAULT_TZ)
+
+
+def start_utc(date_iso, time_text, tz):
+    """Exact start as a UTC ISO string, or None if date/time unknown."""
+    t, _ = split_time(time_text)
+    if not (date_iso and t):
+        return None
+    local = datetime.strptime(f"{date_iso} {t}", "%Y-%m-%d %I:%M %p").replace(tzinfo=ZoneInfo(tz))
+    return local.astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
 def normalize_sidearm(entry):
     year = resolve_year(entry["url"], "sidearm")
     out = []
     for g in entry.get("games", []):
+        date_iso = parse_iso_date(g.get("date"), year)
+        tz = resolve_tz(entry["school"], g.get("tz"))
         out.append({
             "player": entry["player"],
             "school": entry["school"],
-            "date_iso": parse_iso_date(g.get("date"), year),
+            "date_iso": date_iso,
             "date_display": g.get("date"),
             "time": g.get("time"),
+            "tz": tz,
+            "start_utc": start_utc(date_iso, g.get("time"), tz),
             "home_away": g.get("home_away", "neutral"),
             "opponent": g.get("opponent"),
             "location": g.get("location"),
@@ -120,18 +182,30 @@ def normalize_presto(entry):
     year = resolve_year(entry["url"], "presto")
     out = []
     for g in entry.get("games", []):
+        date_iso = parse_iso_date(g.get("date"), year)
+        # Presto puts upcoming game times in the status column
+        # ("7:00 PM CST"); pull them out into time + zone.
+        status = g.get("status")
+        time, label = g.get("time"), None
+        if not time:
+            time, label = split_time(status)
+            if time:
+                status = None
+        tz = resolve_tz(entry["school"], label)
         out.append({
             "player": entry["player"],
             "school": entry["school"],
-            "date_iso": parse_iso_date(g.get("date"), year),
+            "date_iso": date_iso,
             "date_display": g.get("date"),
-            "time": g.get("time"),
+            "time": time,
+            "tz": tz,
+            "start_utc": start_utc(date_iso, time, tz),
             "home_away": g.get("home_away", "neutral"),
             "opponent": g.get("opponent"),
             "location": g.get("location"),
             "result": g.get("result"),
             "sets": g.get("sets"),
-            "status": g.get("status"),
+            "status": status,
             "streaming_label": None,
             # Presto links are often relative ("/links/abc") - make them
             # absolute against the school's site or they 404 on our page.
@@ -177,6 +251,9 @@ def main():
         json.dump(all_games, f, indent=2)
 
     print(f"Wrote {len(all_games)} games to unified_schedule.json")
+    if missing_tz_schools:
+        print(f"WARNING: no time zone set for {sorted(missing_tz_schools)} - "
+              f"assumed Central. Add them to SCHOOL_TZ.")
 
     with open("players.json", "w", encoding="utf-8") as f:
         json.dump(players, f, indent=2)

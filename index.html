@@ -229,8 +229,16 @@
     font-variant-numeric: tabular-nums;
     font-size: 13px;
     color: var(--text-dim);
-    width: 68px;
+    width: 80px;
     flex-shrink: 0;
+  }
+  .time-col .main-time { white-space: nowrap; }
+  .time-col .zone { font-size: 11px; }
+  .time-col .venue-time {
+    display: block;
+    margin-top: 2px;
+    font-size: 11px;
+    opacity: 0.75;
   }
   .main-col { flex: 1; min-width: 0; }
   .player-line {
@@ -502,14 +510,15 @@ function renderNextUp() {
 
   const nextDate = upcoming.map(g => g.date_iso).sort()[0];
   const gamesOnNextDate = upcoming.filter(g => g.date_iso === nextDate)
-    .sort((a, b) => (a.time || "").localeCompare(b.time || ""));
+    .sort(byStartTime);
 
   const diffDays = Math.round((new Date(nextDate + "T00:00:00") - today) / 86400000);
   const countdown = diffDays === 0 ? "today" : diffDays === 1 ? "tomorrow" : `in ${diffDays} days`;
 
   const cards = gamesOnNextDate.map(g => {
     const sideTag = g.home_away === "home" ? "vs" : g.home_away === "away" ? "@" : "vs";
-    const timeText = g.time ? ` &middot; ${escapeHtml(g.time)}` : "";
+    const t = formatGameTime(g);
+    const timeText = t ? ` &middot; ${t.viewer}${t.venue ? ` (${t.venue} local)` : ""}` : "";
     return `
       <div class="next-up-card ${g.home_away}">
         <div class="next-up-player">${escapeHtml(g.player)} <span class="school">\u00b7 ${escapeHtml(g.school)}</span></div>
@@ -601,7 +610,7 @@ function render() {
       pieces.push(`<div class="today-divider" id="today-marker"><span>Upcoming</span></div>`);
       dividerInserted = true;
     }
-    const games = byDay[day].sort((a, b) => (a.time || "").localeCompare(b.time || ""));
+    const games = byDay[day].sort(byStartTime);
     const rows = games.map(g => {
       const idx = renderedGames.push(g) - 1;
       return renderRow(g, idx);
@@ -620,7 +629,10 @@ function jumpToUpcoming() {
 function renderRow(g, idx) {
   const sideTag = g.home_away === "home" ? "vs" : g.home_away === "away" ? "@" : "vs";
   const played = !!g.result;
-  const timeDisplay = played ? "Final" : (g.time || "TBA");
+  const t = played ? null : formatGameTime(g);
+  const timeDisplay = played ? "Final"
+    : t ? `${t.viewerHtml}${t.venue ? `<span class="venue-time">${t.venue} local</span>` : ""}`
+    : "TBA";
 
   let resultHtml = "";
   if (played) {
@@ -675,6 +687,41 @@ function escapeAttr(s) {
 
 function pad2(n) { return String(n).padStart(2, "0"); }
 
+// ---- Time zones ----------------------------------------------------------
+// The build step gives each game an exact start (g.start_utc) and the zone
+// it's played in (g.tz). We show the time in the visitor's own zone, plus
+// the local time at the game when that's different.
+const viewerTz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+function zoneLabel(date, tz) {
+  const name = new Intl.DateTimeFormat("en-US", { timeZone: tz, timeZoneName: "short" })
+    .formatToParts(date).find(p => p.type === "timeZoneName").value;
+  // "CST"/"CDT" -> "CT" etc; leave anything else (e.g. "GMT+1") as-is.
+  return name.replace(/^([ECMP])[SD]T$/, "$1T");
+}
+
+function clockTime(date, tz) {
+  return date.toLocaleTimeString("en-US", { timeZone: tz, hour: "numeric", minute: "2-digit" });
+}
+
+function formatGameTime(g) {
+  if (!g.start_utc) return g.time ? { viewer: escapeHtml(g.time), viewerHtml: escapeHtml(g.time), venue: null } : null;
+  const d = new Date(g.start_utc);
+  const viewer = `${clockTime(d, viewerTz)} ${zoneLabel(d, viewerTz)}`;
+  const viewerHtml = `<span class="main-time">${clockTime(d, viewerTz)} <span class="zone">${zoneLabel(d, viewerTz)}</span></span>`;
+  const venueText = `${clockTime(d, g.tz)} ${zoneLabel(d, g.tz)}`;
+  return { viewer, viewerHtml, venue: venueText === viewer ? null : venueText };
+}
+
+function byStartTime(a, b) {
+  const key = g => g.start_utc || `${g.date_iso || ""}T99`;  // unknown times last
+  return key(a).localeCompare(key(b));
+}
+
+function utcStamp(d) {
+  return `${d.getUTCFullYear()}${pad2(d.getUTCMonth() + 1)}${pad2(d.getUTCDate())}T${pad2(d.getUTCHours())}${pad2(d.getUTCMinutes())}00Z`;
+}
+
 function parseGameTime(g) {
   // Sidearm games have a clean g.time field ("6 p.m.", "9:00 PM"). Presto
   // games don't have a separate time field - if a real time is showing,
@@ -702,6 +749,11 @@ function icsNowUTC() {
 }
 
 function getEventTimes(g) {
+  if (g.start_utc) {
+    const start = new Date(g.start_utc);
+    const end = new Date(start.getTime() + 2 * 3600 * 1000); // default 2-hour match
+    return { start, end, allDay: false };
+  }
   const hm = parseGameTime(g);
   if (!hm) {
     const start = new Date(g.date_iso + "T00:00:00");
@@ -733,8 +785,9 @@ function buildVEventLines(g) {
     dtStartLine = `DTSTART;VALUE=DATE:${start.getFullYear()}${pad2(start.getMonth() + 1)}${pad2(start.getDate())}`;
     dtEndLine = `DTEND;VALUE=DATE:${end.getFullYear()}${pad2(end.getMonth() + 1)}${pad2(end.getDate())}`;
   } else {
-    dtStartLine = `DTSTART:${start.getFullYear()}${pad2(start.getMonth() + 1)}${pad2(start.getDate())}T${pad2(start.getHours())}${pad2(start.getMinutes())}00`;
-    dtEndLine = `DTEND:${end.getFullYear()}${pad2(end.getMonth() + 1)}${pad2(end.getDate())}T${pad2(end.getHours())}${pad2(end.getMinutes())}00`;
+    // UTC ("...Z") so calendars place the game correctly in any time zone.
+    dtStartLine = `DTSTART:${utcStamp(start)}`;
+    dtEndLine = `DTEND:${utcStamp(end)}`;
   }
 
   const uid = `${g.player}-${g.school}-${g.date_iso}-${g.opponent || ""}`.replace(/[^a-zA-Z0-9]/g, "") + "@volleyball-dashboard";
@@ -775,7 +828,7 @@ function buildFullSeasonICS(games) {
 
 function toGoogleDate(d, allDay) {
   if (allDay) return `${d.getFullYear()}${pad2(d.getMonth() + 1)}${pad2(d.getDate())}`;
-  return `${d.getFullYear()}${pad2(d.getMonth() + 1)}${pad2(d.getDate())}T${pad2(d.getHours())}${pad2(d.getMinutes())}00`;
+  return utcStamp(d);
 }
 
 function getGoogleCalendarUrl(g) {
@@ -793,7 +846,7 @@ function getGoogleCalendarUrl(g) {
 
 function toOutlookDate(d, allDay) {
   if (allDay) return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
-  return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}T${pad2(d.getHours())}:${pad2(d.getMinutes())}:00`;
+  return d.toISOString().replace(/\.\d{3}Z$/, "Z");
 }
 
 function getOutlookCalendarUrl(g) {
@@ -832,7 +885,7 @@ function downloadFullSeason() {
   const todayStr = new Date().toISOString().slice(0, 10);
   const games = allGames
     .filter(g => `${g.player} - ${g.school}` === currentPlayer && !g.result && g.date_iso && g.date_iso >= todayStr)
-    .sort((a, b) => (a.date_iso + (a.time || "")).localeCompare(b.date_iso + (b.time || "")));
+    .sort(byStartTime);
 
   if (games.length === 0) return;
 

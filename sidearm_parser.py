@@ -30,6 +30,11 @@ MONTHS = "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 DATE_RE = re.compile(rf"^({MONTHS})\s+(\d{{1,2}})\s*\((\w{{3}})\)", re.IGNORECASE)
 TIME_RE = re.compile(r"(\d{1,2}(?::\d{2})?\s*[ap]\.m\.)", re.IGNORECASE)
 TIME_RE2 = re.compile(r"(\d{1,2}:\d{2}\s*[AP]M)")
+NOON_RE = re.compile(r"^(Noon|Midnight)\b", re.IGNORECASE)
+# Schools list times in their own time zone and add a label when a game is
+# somewhere else (e.g. North Park's "Noon ET" at Calvin).
+TZ_LABEL_RE = re.compile(r"\b([ECMP])[SD]?T\b")
+TIME_LOOKAHEAD = 5  # lines after a date line to search for its time
 RESULT_RE = re.compile(r"^([WL]),\s*(\d+)-(\d+)$")
 RESULT_LABEL_RE = re.compile(r"^([WL]),?$")
 SCORE_ONLY_RE = re.compile(r"^(\d+)-(\d+)$")
@@ -41,9 +46,12 @@ PHOTO_CREDIT_RE = re.compile(r"\bphoto\b|\binc\.?$", re.IGNORECASE)
 HIDE_SHOW_MARKER = "Hide/Show Additional Information For"
 NOISE_LINES = {
     "/", "final", "recap", "box score", "scheduled games",
-    "history", "game program", "-", "live stats",
+    "history", "game program", "-", "live stats", "watch",
 }
 STATUS_WORDS = {"canceled", "cancelled", "ppd", "postponed"}
+# A match between two OTHER teams at an event our school hosts or attends
+# (e.g. "Hunter vs Kean" on Vassar's schedule) - not one of our games.
+OTHER_TEAMS_MATCH_RE = re.compile(r"\S\s+vs\.?\s+\S", re.IGNORECASE)
 
 
 def _clean_lines(text):
@@ -66,14 +74,41 @@ def _merge_split_results(lines):
     return merged
 
 
-def _date_time_signature(line):
-    """Returns (date, time) if this line starts a date, else None."""
-    m = DATE_RE.match(line)
+def _find_time(line):
+    """Returns (time, tz_label) found in this line, or (None, None)."""
+    t = TIME_RE.search(line) or TIME_RE2.search(line)
+    if t:
+        time = t.group(1)
+        rest = line[t.end():]
+    else:
+        n = NOON_RE.match(line)
+        if not n:
+            return None, None
+        time = "12:00 PM" if n.group(1).lower() == "noon" else "12:00 AM"
+        rest = line[n.end():]
+    z = TZ_LABEL_RE.search(rest)
+    return time, (f"{z.group(1)}T" if z else None)
+
+
+def _date_time_signature(lines, i):
+    """
+    Returns (date, time) if lines[i] starts a date, else None. Some schools
+    put the time on its own line a few lines after the date, so look ahead
+    (stopping at the next date) - otherwise a same-day doubleheader whose
+    times are on separate lines gets merged into one game.
+    """
+    m = DATE_RE.match(lines[i])
     if not m:
         return None
     date_part = f"{m.group(1)} {m.group(2)}"
-    t = TIME_RE.search(line) or TIME_RE2.search(line)
-    time_part = t.group(1) if t else None
+    time_part, _ = _find_time(lines[i])
+    if time_part is None:
+        for j in range(i + 1, min(i + 1 + TIME_LOOKAHEAD, len(lines))):
+            if DATE_RE.match(lines[j]) or lines[j].startswith(HIDE_SHOW_MARKER):
+                break
+            time_part, _ = _find_time(lines[j])
+            if time_part:
+                break
     return (date_part, time_part)
 
 
@@ -116,7 +151,7 @@ def _split_into_blocks(lines):
                 i += 1
             continue
 
-        sig = _date_time_signature(line)
+        sig = _date_time_signature(lines, i)
         if sig is not None:
             if current_sig is None:
                 current_sig = sig
@@ -155,6 +190,7 @@ def _parse_block(block):
     game = {
         "date": None,
         "time": None,
+        "tz": None,
         "tv": None,
         "home_away": "neutral",
         "opponent": None,
@@ -169,17 +205,17 @@ def _parse_block(block):
         m = DATE_RE.match(line)
         if m:
             game["date"] = f"{m.group(1)} {m.group(2)}"
-            t = TIME_RE.search(line) or TIME_RE2.search(line)
-            if t:
-                game["time"] = t.group(1)
+            game["time"], game["tz"] = _find_time(line)
             break
 
     # if time wasn't on the date line itself, it's often its own line right after
     if game["time"] is None:
         for line in block:
-            t = TIME_RE.search(line) or TIME_RE2.search(line)
-            if t and not DATE_RE.match(line):
-                game["time"] = t.group(1)
+            if DATE_RE.match(line):
+                continue
+            t, z = _find_time(line)
+            if t:
+                game["time"], game["tz"] = t, z
                 break
 
     # result: first merged "W, 3-0" / "L, 2-3" style line
@@ -208,6 +244,7 @@ def _parse_block(block):
             or ALL_CAPS_LABEL_RE.match(candidate)
             or TIME_RE.search(candidate)
             or TIME_RE2.search(candidate)
+            or NOON_RE.match(candidate)
         )
 
     opponent_idx = None
@@ -237,18 +274,24 @@ def _parse_block(block):
             break
 
     # Strategy 3: upcoming neutral-site game (no vs/at, no result yet -
-    # e.g. Vassar's 2027 tournament matches). The opponent is the first
-    # substantive line after the date/time line.
+    # e.g. Vassar's 2027 tournament matches). Sidearm prints the opponent
+    # twice in a row, so prefer a line repeated on the next line; otherwise
+    # take the first substantive line after the date/time. Venue names
+    # ("Thornton Gym") and "hosted by ..." lines sit in between, so a
+    # repeated line is the safer signal.
     if game["opponent"] is None and result_idx is None:
         date_idx = next((k for k, ln in enumerate(block) if DATE_RE.match(ln)), None)
         if date_idx is not None:
-            for j in range(date_idx + 1, len(block)):
-                candidate = block[j]
-                if _is_noise(candidate) or "," in candidate:
-                    continue
-                game["opponent"] = RANK_PREFIX_RE.sub("", candidate).strip()
+            def _candidate(ln):
+                return not (_is_noise(ln) or "," in ln or ln.lower().startswith("hosted by"))
+            rest = range(date_idx + 1, len(block))
+            j = next((k for k in rest if k + 1 < len(block)
+                      and block[k] == block[k + 1] and _candidate(block[k])), None)
+            if j is None:
+                j = next((k for k in rest if _candidate(block[k])), None)
+            if j is not None:
+                game["opponent"] = RANK_PREFIX_RE.sub("", block[j]).strip()
                 opponent_idx = j
-                break
 
     # location: first comma-containing line anywhere in the block, excluding
     # the date line, the result line, and whichever line we used as opponent
@@ -275,7 +318,15 @@ def parse_sidearm_schedule(text):
     lines = _clean_lines(text)
     lines = _merge_split_results(lines)
     blocks = _split_into_blocks(lines)
-    games = [_parse_block(b) for b in blocks]
+    games = []
+    for b in blocks:
+        g = _parse_block(b)
+        # Skip matches between two other teams at a shared event: no vs/at
+        # marker for us, not played by us, and an "X vs Y" line in the block.
+        if g["home_away"] == "neutral" and not g["result"] and any(
+                OTHER_TEAMS_MATCH_RE.search(ln) for ln in b):
+            continue
+        games.append(g)
 
     # Forward-fill missing dates (tournament days sometimes only show the
     # date once, on the first game of that day)

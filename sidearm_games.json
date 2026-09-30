@@ -7,6 +7,7 @@
       {
         "date": "Jan 13",
         "time": "6 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "St. Thomas Aquinas",
@@ -18,6 +19,7 @@
       {
         "date": "Jan 15",
         "time": "6 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Dominican",
@@ -29,6 +31,7 @@
       {
         "date": "Jan 21",
         "time": "9 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "No. 16",
@@ -40,6 +43,7 @@
       {
         "date": "Jan 23",
         "time": "10 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Master's",
@@ -51,6 +55,7 @@
       {
         "date": "Jan 24",
         "time": "10:30 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "No. 2",
@@ -62,6 +67,7 @@
       {
         "date": "Jan 28",
         "time": "6 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Dominican",
@@ -73,6 +79,7 @@
       {
         "date": "Jan 30",
         "time": "5 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "NJIT",
@@ -84,6 +91,7 @@
       {
         "date": "Feb 6",
         "time": "6 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "American International",
@@ -95,6 +103,7 @@
       {
         "date": "Feb 12",
         "time": "5 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "St. Thomas Aquinas",
@@ -106,6 +115,7 @@
       {
         "date": "Feb 20",
         "time": "6 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Merrimack",
@@ -117,6 +127,7 @@
       {
         "date": "Feb 21",
         "time": "6 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Merrimack",
@@ -128,6 +139,7 @@
       {
         "date": "Feb 27",
         "time": "6 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Saint Francis",
@@ -139,6 +151,7 @@
       {
         "date": "Feb 28",
         "time": "5 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Saint Francis",
@@ -150,6 +163,7 @@
       {
         "date": "Mar 3",
         "time": "6 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Roberts Wesleyan",
@@ -161,6 +175,7 @@
       {
         "date": "Mar 4",
         "time": "1 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Roberts Wesleyan",
@@ -172,6 +187,7 @@
       {
         "date": "Mar 9",
         "time": "5 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "King",
@@ -183,6 +199,7 @@
       {
         "date": "Mar 10",
         "time": "5 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Barry",
@@ -194,6 +211,7 @@
       {
         "date": "Mar 12",
         "time": "2 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Edward Waters",
@@ -205,6 +223,7 @@
       {
         "date": "Mar 20",
         "time": "6 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "FDU",
@@ -216,6 +235,7 @@
       {
         "date": "Mar 21",
         "time": "12 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "FDU",
@@ -227,6 +247,7 @@
       {
         "date": "Mar 27",
         "time": "7 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Manhattan",
@@ -238,6 +259,7 @@
       {
         "date": "Mar 28",
         "time": "1 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Manhattan",
@@ -249,6 +271,7 @@
       {
         "date": "Apr 3",
         "time": "6 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Maryland Eastern Shore",
@@ -260,6 +283,7 @@
       {
         "date": "Apr 4",
         "time": "1 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Maryland Eastern Shore",
@@ -271,6 +295,7 @@
       {
         "date": "Apr 10",
         "time": "6 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Daemen",
@@ -282,6 +307,7 @@
       {
         "date": "Apr 11",
         "time": "4 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Daemen",
@@ -293,6 +319,7 @@
       {
         "date": "Apr 17",
         "time": "6 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "D'Youville",
@@ -304,6 +331,7 @@
       {
         "date": "Apr 18",
         "time": "1 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "D'Youville",
@@ -315,6 +343,7 @@
       {
         "date": "Apr 24",
         "time": "3 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "ESPN+",
@@ -334,6 +363,7 @@
       {
         "date": "Jan 16",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "The University of Olivet",
@@ -345,6 +375,7 @@
       {
         "date": "Jan 17",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Edgewood University",
@@ -356,6 +387,7 @@
       {
         "date": "Jan 17",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Illinois Wesleyan University",
@@ -367,6 +399,7 @@
       {
         "date": "Jan 25",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Loras College",
@@ -378,6 +411,7 @@
       {
         "date": "Jan 25",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Illinois Institute of Technology",
@@ -389,6 +423,7 @@
       {
         "date": "Jan 28",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Milwaukee School of Engineering",
@@ -400,6 +435,7 @@
       {
         "date": "Jan 31",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "North Central College",
@@ -411,6 +447,7 @@
       {
         "date": "Jan 31",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "California Lutheran University",
@@ -422,6 +459,7 @@
       {
         "date": "Feb 3",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Augustana College (IL)",
@@ -433,6 +471,7 @@
       {
         "date": "Feb 6",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Marian University",
@@ -444,6 +483,7 @@
       {
         "date": "Feb 14",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "#7",
@@ -455,6 +495,7 @@
       {
         "date": "Feb 14",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Wittenberg University",
@@ -466,6 +507,7 @@
       {
         "date": "Feb 15",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Milwaukee School of Engineering",
@@ -477,6 +519,7 @@
       {
         "date": "Feb 20",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Roosevelt University",
@@ -488,6 +531,7 @@
       {
         "date": "Feb 21",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Rockford University",
@@ -499,6 +543,7 @@
       {
         "date": "Feb 21",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Dominican University (Ill.)",
@@ -510,6 +555,7 @@
       {
         "date": "Feb 25",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Viterbo University (Wis.)",
@@ -521,6 +567,7 @@
       {
         "date": "Feb 27",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Calvin University",
@@ -532,6 +579,7 @@
       {
         "date": "Feb 28",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "The University of Olivet",
@@ -543,6 +591,7 @@
       {
         "date": "Feb 28",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Franklin College",
@@ -554,6 +603,7 @@
       {
         "date": "Mar 3",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Maranatha Baptist  University",
@@ -565,6 +615,7 @@
       {
         "date": "Mar 11",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Loras College",
@@ -576,6 +627,7 @@
       {
         "date": "Mar 14",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Adrian College",
@@ -587,6 +639,7 @@
       {
         "date": "Mar 14",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Franklin College",
@@ -598,6 +651,7 @@
       {
         "date": "Mar 21",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Judson University",
@@ -609,6 +663,7 @@
       {
         "date": "Mar 21",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Viterbo University (Wis.)",
@@ -620,6 +675,7 @@
       {
         "date": "Apr 3",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Greenville University",
@@ -631,6 +687,7 @@
       {
         "date": "Apr 3",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Franklin College",
@@ -642,6 +699,7 @@
       {
         "date": "Apr 4",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Westminster College (MO)",
@@ -661,6 +719,7 @@
       {
         "date": "Jan 30",
         "time": "9:00 a.m.",
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Jeanne Knoerle Sports and Recreation Center",
@@ -672,6 +731,7 @@
       {
         "date": "Jan 30",
         "time": "1:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Jeanne Knoerle Sports and Recreation Center",
@@ -683,6 +743,7 @@
       {
         "date": "Jan 30",
         "time": "4:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Jeanne Knoerle Sports and Recreation Center",
@@ -694,6 +755,7 @@
       {
         "date": "Jan 30",
         "time": "6:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Jeanne Knoerle Sports and Recreation Center",
@@ -705,6 +767,7 @@
       {
         "date": "Jan 31",
         "time": "8:00 a.m.",
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Jeanne Knoerle Sports and Recreation Center",
@@ -716,6 +779,7 @@
       {
         "date": "Jan 31",
         "time": "11:00 a.m.",
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Jeanne Knoerle Sports and Recreation Center",
@@ -727,6 +791,7 @@
       {
         "date": "Feb 1",
         "time": "12:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "Lingle Court",
@@ -738,6 +803,7 @@
       {
         "date": "Feb 8",
         "time": "2:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "#14",
@@ -749,6 +815,7 @@
       {
         "date": "Feb 27",
         "time": "6:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Benedictine University Mesa",
@@ -760,6 +827,7 @@
       {
         "date": "Mar 6",
         "time": "6:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Soka University of America",
@@ -771,6 +839,7 @@
       {
         "date": "Mar 7",
         "time": "9:10 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "La Sierra University",
@@ -782,6 +851,7 @@
       {
         "date": "Mar 11",
         "time": "6:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Viterbo University (Wis.)",
@@ -793,6 +863,7 @@
       {
         "date": "Mar 13",
         "time": "6:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Hope International University (Calif.)",
@@ -804,6 +875,7 @@
       {
         "date": "Mar 14",
         "time": "1:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "#1",
@@ -815,6 +887,7 @@
       {
         "date": "Mar 19",
         "time": "6:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "#11",
@@ -826,6 +899,7 @@
       {
         "date": "Mar 21",
         "time": "1:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Arizona Christian University",
@@ -837,6 +911,7 @@
       {
         "date": "Mar 27",
         "time": "6:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "#1",
@@ -848,6 +923,7 @@
       {
         "date": "Mar 28",
         "time": "1:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Hope International University (Calif.)",
@@ -859,6 +935,7 @@
       {
         "date": "Mar 31",
         "time": "6:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Arizona Christian University",
@@ -870,6 +947,7 @@
       {
         "date": "Apr 2",
         "time": "6:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "#10",
@@ -881,6 +959,7 @@
       {
         "date": "Apr 7",
         "time": "6:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Benedictine University Mesa",
@@ -892,6 +971,7 @@
       {
         "date": "Apr 10",
         "time": "7:00 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Soka University of America",
@@ -903,6 +983,7 @@
       {
         "date": "Apr 11",
         "time": "8:30 p.m.",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "La Sierra University",
@@ -922,6 +1003,7 @@
       {
         "date": "Jan 14",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Manhattan University",
@@ -933,6 +1015,7 @@
       {
         "date": "Jan 16",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "New Jersey Institute of Technology",
@@ -944,6 +1027,7 @@
       {
         "date": "Jan 17",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Fairleigh Dickinson",
@@ -955,6 +1039,7 @@
       {
         "date": "Jan 22",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Central State University",
@@ -966,6 +1051,7 @@
       {
         "date": "Jan 23",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Kentucky State University",
@@ -977,6 +1063,7 @@
       {
         "date": "Jan 28",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Mission University",
@@ -988,6 +1075,7 @@
       {
         "date": "Feb 4",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Ball State University",
@@ -999,6 +1087,7 @@
       {
         "date": "Feb 5",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Purdue Fort Wayne",
@@ -1010,6 +1099,7 @@
       {
         "date": "Feb 6",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Central State University",
@@ -1021,6 +1111,7 @@
       {
         "date": "Feb 12",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Lindenwood",
@@ -1032,6 +1123,7 @@
       {
         "date": "Feb 13",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "McKendree",
@@ -1043,6 +1135,7 @@
       {
         "date": "Feb 18",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Ottawa University",
@@ -1054,6 +1147,7 @@
       {
         "date": "Feb 19",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Central Christian College",
@@ -1065,6 +1159,7 @@
       {
         "date": "Mar 5",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "University of Jamestown",
@@ -1076,6 +1171,7 @@
       {
         "date": "Mar 6",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "University of Jamestown",
@@ -1087,6 +1183,7 @@
       {
         "date": "Mar 12",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Missouri S&T",
@@ -1098,6 +1195,7 @@
       {
         "date": "Mar 13",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Missouri S&T",
@@ -1109,6 +1207,7 @@
       {
         "date": "Mar 19",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Southwest Baptist",
@@ -1120,6 +1219,7 @@
       {
         "date": "Mar 20",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Southwest Baptist",
@@ -1131,6 +1231,7 @@
       {
         "date": "Mar 25",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Avila University",
@@ -1142,6 +1243,7 @@
       {
         "date": "Apr 2",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Quincy",
@@ -1153,6 +1255,7 @@
       {
         "date": "Apr 3",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Quincy",
@@ -1164,6 +1267,7 @@
       {
         "date": "Apr 9",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Maryville",
@@ -1175,6 +1279,7 @@
       {
         "date": "Apr 10",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Maryville",
@@ -1186,6 +1291,7 @@
       {
         "date": "Apr 16",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Roosevelt",
@@ -1197,6 +1303,7 @@
       {
         "date": "Apr 17",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Roosevelt",
@@ -1216,6 +1323,7 @@
       {
         "date": "Jan 19",
         "time": "4:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "St. Joseph's University Long Island",
@@ -1227,6 +1335,7 @@
       {
         "date": "Jan 23",
         "time": "1:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Hunter College",
@@ -1236,8 +1345,21 @@
         "status": null
       },
       {
+        "date": "Jan 23",
+        "time": "5:00 PM",
+        "tz": null,
+        "tv": null,
+        "home_away": "home",
+        "opponent": "Kean University",
+        "location": "Poughkeepsie, NY",
+        "result": null,
+        "sets": null,
+        "status": null
+      },
+      {
         "date": "Jan 29",
         "time": "6:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Nazareth University",
@@ -1249,10 +1371,23 @@
       {
         "date": "Jan 30",
         "time": "2:00 PM",
+        "tz": null,
+        "tv": null,
+        "home_away": "neutral",
+        "opponent": "John Jay College",
+        "location": "Newark, NJ | Rutgers-Newark",
+        "result": null,
+        "sets": null,
+        "status": null
+      },
+      {
+        "date": "Jan 30",
+        "time": "4:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Rutgers-Newark",
-        "location": "Newark, NJ | Rutgers-Newark",
+        "location": "Newark, NJ",
         "result": null,
         "sets": null,
         "status": null
@@ -1260,6 +1395,7 @@
       {
         "date": "Feb 5",
         "time": "8:15 PM",
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": "St. John Fisher University",
@@ -1271,6 +1407,7 @@
       {
         "date": "Feb 6",
         "time": "6:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Springfield College",
@@ -1282,6 +1419,7 @@
       {
         "date": "Feb 12",
         "time": "6:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Stevens",
@@ -1293,6 +1431,7 @@
       {
         "date": "Feb 13",
         "time": "1:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Marymount University",
@@ -1302,8 +1441,21 @@
         "status": null
       },
       {
+        "date": "Feb 13",
+        "time": "5:00 PM",
+        "tz": null,
+        "tv": null,
+        "home_away": "home",
+        "opponent": "Drew University",
+        "location": "Poughkeepsie, NY",
+        "result": null,
+        "sets": null,
+        "status": null
+      },
+      {
         "date": "Feb 19",
         "time": "6:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Purchase College",
@@ -1315,6 +1467,7 @@
       {
         "date": "Feb 20",
         "time": "4:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Springfield College",
@@ -1326,6 +1479,7 @@
       {
         "date": "Feb 25",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "New Paltz",
@@ -1337,6 +1491,7 @@
       {
         "date": "Feb 27",
         "time": "4:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Massachusetts Institute of Technology",
@@ -1348,6 +1503,7 @@
       {
         "date": "Mar 5",
         "time": "6:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Russell Sage College",
@@ -1359,10 +1515,23 @@
       {
         "date": "Mar 6",
         "time": "2:00 PM",
+        "tz": null,
+        "tv": null,
+        "home_away": "neutral",
+        "opponent": "Carlow University (Pa.)",
+        "location": "Geneva, NY | Hobart",
+        "result": null,
+        "sets": null,
+        "status": null
+      },
+      {
+        "date": "Mar 6",
+        "time": "4:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Hobart College",
-        "location": "Geneva, NY | Hobart",
+        "location": "Geneva, NY",
         "result": null,
         "sets": null,
         "status": null
@@ -1370,6 +1539,7 @@
       {
         "date": "Mar 18",
         "time": "6:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Roberts Wesleyan University",
@@ -1381,10 +1551,23 @@
       {
         "date": "Mar 20",
         "time": "1:00 PM",
+        "tz": null,
+        "tv": null,
+        "home_away": "neutral",
+        "opponent": "Buffalo State",
+        "location": "Erie, PA | Penn State Behrend",
+        "result": null,
+        "sets": null,
+        "status": null
+      },
+      {
+        "date": "Mar 20",
+        "time": "3:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Penn State Behrend",
-        "location": "Erie, PA | Penn State Behrend",
+        "location": "Erie, PA",
         "result": null,
         "sets": null,
         "status": null
@@ -1392,6 +1575,7 @@
       {
         "date": "Mar 26",
         "time": "5:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Emerson College",
@@ -1403,6 +1587,7 @@
       {
         "date": "Mar 27",
         "time": "12:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Wheaton College (Mass.)",
@@ -1414,6 +1599,7 @@
       {
         "date": "Mar 31",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Stevens",
@@ -1425,6 +1611,7 @@
       {
         "date": "Apr 3",
         "time": "2:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "New York University",
@@ -1434,8 +1621,21 @@
         "status": null
       },
       {
+        "date": "Apr 3",
+        "time": "4:30 PM",
+        "tz": null,
+        "tv": null,
+        "home_away": "home",
+        "opponent": "Bard College",
+        "location": "Poughkeepsie, NY",
+        "result": null,
+        "sets": null,
+        "status": null
+      },
+      {
         "date": "Apr 6",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "NEWMAC Championship | First Round",
@@ -1447,6 +1647,7 @@
       {
         "date": "Apr 10",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "NEWMAC Championship | Semifinal",
@@ -1458,6 +1659,7 @@
       {
         "date": "Apr 11",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "NEWMAC Championship | Final",
@@ -1477,6 +1679,7 @@
       {
         "date": "Jan 14",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Dominican University",
@@ -1488,6 +1691,7 @@
       {
         "date": "Jan 19",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Marian University",
@@ -1499,6 +1703,7 @@
       {
         "date": "Jan 22",
         "time": "1:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Aurora University",
@@ -1508,8 +1713,21 @@
         "status": null
       },
       {
+        "date": "Jan 22",
+        "time": "4:00 PM",
+        "tz": null,
+        "tv": null,
+        "home_away": "neutral",
+        "opponent": "Trine University",
+        "location": "Aurora, IL",
+        "result": null,
+        "sets": null,
+        "status": null
+      },
+      {
         "date": "Jan 26",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Lakeland University",
@@ -1521,6 +1739,7 @@
       {
         "date": "Jan 28",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Illinois Institute of Technology",
@@ -1531,7 +1750,20 @@
       },
       {
         "date": "Jan 30",
+        "time": "12:00 PM",
+        "tz": "ET",
+        "tv": null,
+        "home_away": "neutral",
+        "opponent": "Adrian College",
+        "location": "Grand Rapids, MI",
+        "result": null,
+        "sets": null,
+        "status": null
+      },
+      {
+        "date": "Jan 30",
         "time": "2:00 PM",
+        "tz": "ET",
         "tv": null,
         "home_away": "away",
         "opponent": "Calvin University",
@@ -1543,6 +1775,7 @@
       {
         "date": "Feb 2",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Wisconsin Lutheran College",
@@ -1554,6 +1787,7 @@
       {
         "date": "Feb 4",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Concordia University Chicago",
@@ -1565,6 +1799,7 @@
       {
         "date": "Feb 9",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Concordia University (WI)",
@@ -1576,6 +1811,7 @@
       {
         "date": "Feb 11",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Edgewood University",
@@ -1587,6 +1823,7 @@
       {
         "date": "Feb 16",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Rockford University",
@@ -1598,6 +1835,7 @@
       {
         "date": "Feb 20",
         "time": "2:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Loras College",
@@ -1607,8 +1845,21 @@
         "status": null
       },
       {
+        "date": "Feb 20",
+        "time": "7:00 PM",
+        "tz": null,
+        "tv": null,
+        "home_away": "home",
+        "opponent": "California Lutheran University",
+        "location": "Chicago, IL",
+        "result": null,
+        "sets": null,
+        "status": null
+      },
+      {
         "date": "Feb 24",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Carthage College",
@@ -1620,6 +1871,7 @@
       {
         "date": "Feb 27",
         "time": "3:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Augustana College",
@@ -1631,6 +1883,7 @@
       {
         "date": "Mar 3",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "North Central College",
@@ -1642,6 +1895,7 @@
       {
         "date": "Mar 13",
         "time": "3:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Loras College",
@@ -1653,6 +1907,7 @@
       {
         "date": "Mar 17",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Illinois Wesleyan University",
@@ -1664,6 +1919,7 @@
       {
         "date": "Mar 20",
         "time": "2:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "North Central College",
@@ -1673,8 +1929,21 @@
         "status": null
       },
       {
+        "date": "Mar 20",
+        "time": "4:30 PM",
+        "tz": null,
+        "tv": null,
+        "home_away": "neutral",
+        "opponent": "Hobart College",
+        "location": "Naperville, IL",
+        "result": null,
+        "sets": null,
+        "status": null
+      },
+      {
         "date": "Mar 24",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Carthage College",
@@ -1686,6 +1955,7 @@
       {
         "date": "Mar 27",
         "time": "3:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "University of California, Santa Cruz",
@@ -1697,6 +1967,7 @@
       {
         "date": "Mar 31",
         "time": "7:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Illinois Wesleyan University",
@@ -1708,6 +1979,7 @@
       {
         "date": "Apr 3",
         "time": "3:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Augustana College",
@@ -1734,6 +2006,7 @@
       {
         "date": "Jan 8",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Ohio State University",
@@ -1745,6 +2018,7 @@
       {
         "date": "Jan 14",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Long Beach State University",
@@ -1756,6 +2030,7 @@
       {
         "date": "Jan 23",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Rockhurst University",
@@ -1767,6 +2042,7 @@
       {
         "date": "Jan 24",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Rockhurst University",
@@ -1778,6 +2054,7 @@
       {
         "date": "Jan 28",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Thomas More University",
@@ -1789,6 +2066,7 @@
       {
         "date": "Jan 30",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Lees-McRae College",
@@ -1800,6 +2078,7 @@
       {
         "date": "Jan 31",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Lees-McRae College",
@@ -1811,6 +2090,7 @@
       {
         "date": "Feb 3",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "University of Charleston",
@@ -1822,6 +2102,7 @@
       {
         "date": "Feb 6",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "D'Youville University",
@@ -1833,6 +2114,7 @@
       {
         "date": "Feb 8",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Ohio State University",
@@ -1844,6 +2126,7 @@
       {
         "date": "Feb 13",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Northern Kentucky University",
@@ -1855,6 +2138,7 @@
       {
         "date": "Feb 14",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "University of Maryland Eastern Shore",
@@ -1866,6 +2150,7 @@
       {
         "date": "Feb 17",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Thomas More University",
@@ -1877,6 +2162,7 @@
       {
         "date": "Feb 24",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "University of Charleston",
@@ -1888,6 +2174,7 @@
       {
         "date": "Mar 3",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Kentucky State University",
@@ -1899,6 +2186,7 @@
       {
         "date": "Mar 6",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "LeMoyne-Owen College",
@@ -1910,6 +2198,7 @@
       {
         "date": "Mar 7",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "LeMoyne-Owen College",
@@ -1921,6 +2210,7 @@
       {
         "date": "Mar 20",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Edward Waters University",
@@ -1932,6 +2222,7 @@
       {
         "date": "Mar 21",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Edward Waters University",
@@ -1943,6 +2234,7 @@
       {
         "date": "Mar 27",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Fort Valley State University",
@@ -1954,6 +2246,7 @@
       {
         "date": "Mar 28",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Fort Valley State University",
@@ -1965,6 +2258,7 @@
       {
         "date": "Apr 1",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Benedict College",
@@ -1976,6 +2270,7 @@
       {
         "date": "Apr 2",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Benedict College",
@@ -1987,6 +2282,7 @@
       {
         "date": "Apr 7",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Kentucky State University",
@@ -1998,6 +2294,7 @@
       {
         "date": "Apr 16",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": null,
@@ -2009,6 +2306,7 @@
       {
         "date": "Apr 18",
         "time": "3:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "away",
         "opponent": "Southern Intercollegiate Athletic Conference Championships",
@@ -2020,6 +2318,7 @@
       {
         "date": "Apr 16",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": null,
@@ -2031,6 +2330,7 @@
       {
         "date": "Apr 18",
         "time": "3:00 PM",
+        "tz": null,
         "tv": null,
         "home_away": "neutral",
         "opponent": null,
@@ -2042,6 +2342,7 @@
       {
         "date": "Apr 17",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Benedict College",
@@ -2053,6 +2354,7 @@
       {
         "date": "Apr 18",
         "time": null,
+        "tz": null,
         "tv": null,
         "home_away": "home",
         "opponent": "Fort Valley State University",
