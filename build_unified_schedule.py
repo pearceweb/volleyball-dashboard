@@ -124,6 +124,19 @@ TIME_RE = re.compile(
 missing_tz_schools = set()
 
 
+AT_PLACE_RE = re.compile(r"^(.*?)\s+@\s+(.+)$")
+
+
+def clean_location(loc):
+    """
+    Schools write extra info around the city, in either order:
+    Sidearm "Springfield, MA | Springfield", Presto "McHie Arena |
+    Bourbonnais, Ill.". Keep the part that looks like "City, State".
+    """
+    parts = [p.strip() for p in (loc or "").split("|") if p.strip()]
+    return next((p for p in parts if "," in p), parts[0] if parts else None)
+
+
 def split_time(text):
     """'7:00 PM CST' -> ('7:00 PM', 'C'); anything else -> (None, None)."""
     m = TIME_RE.match(text or "")
@@ -167,7 +180,7 @@ def normalize_sidearm(entry):
             "start_utc": start_utc(date_iso, g.get("time"), tz),
             "home_away": g.get("home_away", "neutral"),
             "opponent": g.get("opponent"),
-            "location": g.get("location"),
+            "location": clean_location(g.get("location")),
             "result": g.get("result"),
             "sets": g.get("sets"),
             "status": g.get("status"),
@@ -192,6 +205,16 @@ def normalize_presto(entry):
             if time:
                 status = None
         tz = resolve_tz(entry["school"], label)
+        # Presto tournament games read "Hastings @ Sioux City, Iowa" (or
+        # "@ Tournament" when the site isn't named) - a neutral-site game.
+        opponent, home_away = g.get("opponent"), g.get("home_away", "neutral")
+        location = clean_location(g.get("location"))
+        m = AT_PLACE_RE.match(opponent or "")
+        if m:
+            opponent, place = m.group(1).strip(), m.group(2).strip()
+            home_away = "neutral"
+            if place.lower() != "tournament":
+                location = place
         out.append({
             "player": entry["player"],
             "school": entry["school"],
@@ -200,9 +223,9 @@ def normalize_presto(entry):
             "time": time,
             "tz": tz,
             "start_utc": start_utc(date_iso, time, tz),
-            "home_away": g.get("home_away", "neutral"),
-            "opponent": g.get("opponent"),
-            "location": g.get("location"),
+            "home_away": home_away,
+            "opponent": opponent,
+            "location": location,
             "result": g.get("result"),
             "sets": g.get("sets"),
             "status": status,

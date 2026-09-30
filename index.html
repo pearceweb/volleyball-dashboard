@@ -3,7 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MN Select Alumni — This Week</title>
+<title>MN Select Alumni — College Schedules</title>
+<meta name="description" content="Every college volleyball game for MN Select 18-1 alumni, with times in your time zone.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MN Select Alumni">
+<meta property="og:title" content="MN Select 18-1 Alumni — College Volleyball Schedules">
+<meta property="og:description" content="Every game for our former players, with times in your time zone.">
+<meta property="og:url" content="https://mnselectboys.tuckerpearcecreative.com/">
+<meta property="og:image" content="https://mnselectboys.tuckerpearcecreative.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏐</text></svg>">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0e1a26">
 <style>
   :root {
     --ink: #0e1a26;
@@ -155,7 +168,9 @@
     font-size: 12px;
     color: var(--text-dim);
     margin: 0 0 16px;
+    line-height: 1.6;
   }
+  .waiting-note summary { cursor: pointer; }
   .season-download-note {
     font-size: 12px;
     color: var(--text-dim);
@@ -543,7 +558,15 @@ function renderNextUp() {
   `;
 }
 
+function updateTitle() {
+  // Tab title / bookmark name follows the view, e.g.
+  // "Colin Nathan (Vassar College) — MN Select Alumni"
+  const who = currentPlayer ? currentPlayer.replace(/^(.*?) - (.*)$/, "$1 ($2)") : "College Schedules";
+  document.title = `${who} — MN Select Alumni`;
+}
+
 function render() {
+  updateTitle();
   renderNextUp();
   const content = document.getElementById("content");
   const rangeLabel = document.getElementById("range-label");
@@ -567,7 +590,7 @@ function render() {
     return;
   }
   const waitingNote = !currentPlayer && waitingPlayers.length
-    ? `<div class="waiting-note">Waiting on new schedules: ${waitingPlayers.map(escapeHtml).join(", ")}</div>`
+    ? `<details class="waiting-note"><summary>${waitingPlayers.length} player${waitingPlayers.length === 1 ? "" : "s"} waiting on new schedules</summary>${waitingPlayers.map(escapeHtml).join("<br>")}</details>`
     : "";
 
   let inRange;
@@ -728,8 +751,11 @@ function formatGameTime(g) {
 }
 
 function cleanLocation(loc) {
-  // Some schools add the host after a bar: "Springfield, MA | Springfield"
-  return (loc || "").split(" | ")[0].trim();
+  // The build step already trims these; kept as a fallback. Keep the
+  // "City, State" part of "Springfield, MA | Springfield" or
+  // "McHie Arena | Bourbonnais, Ill.".
+  const parts = (loc || "").split("|").map(p => p.trim()).filter(Boolean);
+  return parts.find(p => p.includes(",")) || parts[0] || "";
 }
 
 function gameWhere(g) {
