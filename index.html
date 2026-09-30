@@ -253,9 +253,17 @@
     font-size: 13px;
     color: var(--text-dim);
     margin-top: 2px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow-wrap: anywhere;
+  }
+  .opponent-line {
+    font-size: 14px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+  .where-line {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-top: 2px;
   }
   .side-tag {
     text-transform: uppercase;
@@ -646,6 +654,7 @@ function renderRow(g, idx) {
 
   const todayStr = new Date().toISOString().slice(0, 10);
   const isFutureUnplayed = !played && g.date_iso && g.date_iso >= todayStr;
+  const whereText = gameWhere(g);
 
   const calendarLink = isFutureUnplayed
     ? `<div class="cal-dropdown">
@@ -668,8 +677,13 @@ function renderRow(g, idx) {
     <div class="game-row ${g.home_away}">
       <div class="time-col">${timeDisplay}</div>
       <div class="main-col">
-        <div class="player-line">${escapeHtml(g.player)} <span class="school">\u00b7 ${escapeHtml(g.school)}</span></div>
-        <div class="matchup-line"><span class="side-tag">${sideTag}</span>${escapeHtml(g.opponent || "TBD")}</div>
+        ${currentPlayer
+          // On a player's own page their name/school is already in the
+          // header, so the opponent becomes the main line.
+          ? `<div class="opponent-line"><span class="side-tag">${sideTag}</span>${escapeHtml(g.opponent || "TBD")}</div>`
+          : `<div class="player-line">${escapeHtml(g.player)} <span class="school">\u00b7 ${escapeHtml(g.school)}</span></div>
+        <div class="matchup-line"><span class="side-tag">${sideTag}</span>${escapeHtml(g.opponent || "TBD")}</div>`}
+        ${whereText ? `<div class="where-line">${escapeHtml(whereText)}</div>` : ""}
         ${calendarLink}
       </div>
       <div class="result-col">${resultHtml}</div>
@@ -711,6 +725,19 @@ function formatGameTime(g) {
   const viewerHtml = `<span class="main-time">${clockTime(d, viewerTz)} <span class="zone">${zoneLabel(d, viewerTz)}</span></span>`;
   const venueText = `${clockTime(d, g.tz)} ${zoneLabel(d, g.tz)}`;
   return { viewer, viewerHtml, venue: venueText === viewer ? null : venueText };
+}
+
+function cleanLocation(loc) {
+  // Some schools add the host after a bar: "Springfield, MA | Springfield"
+  return (loc || "").split(" | ")[0].trim();
+}
+
+function gameWhere(g) {
+  // Home games need no location line - "vs" already means home.
+  const loc = cleanLocation(g.location);
+  if (g.home_away === "neutral") return loc ? `Neutral site \u00b7 ${loc}` : "Neutral site";
+  if (g.home_away === "away") return loc;
+  return "";
 }
 
 function byStartTime(a, b) {
@@ -773,7 +800,7 @@ function getEventDetails(g) {
   const descParts = [g.school];
   if (g.streaming_label) descParts.push(`Watch: ${g.streaming_label}`);
   if (g.streaming_url) descParts.push(`Watch: ${g.streaming_url}`);
-  return { summary, description: descParts.join("\n"), location: g.location || "" };
+  return { summary, description: descParts.join("\n"), location: cleanLocation(g.location) };
 }
 
 function buildVEventLines(g) {
@@ -1017,9 +1044,23 @@ function applyUrlState() {
     document.querySelectorAll(".range-btn[data-days]").forEach(b => b.classList.remove("active"));
     document.querySelector('.range-btn[data-days="all"]').classList.add("active");
     currentDays = "all";
+  } else if (!hasGamesThisWeek()) {
+    // Off-season: "This week" would be empty, so open on the full list.
+    // The URL stays clean, so this re-checks every visit.
+    document.querySelectorAll(".range-btn[data-days]").forEach(b => b.classList.remove("active"));
+    document.querySelector('.range-btn[data-days="all"]').classList.add("active");
+    currentDays = "all";
   }
 
   updateSeasonDownloadVisibility();
+}
+
+function hasGamesThisWeek() {
+  const start = localTodayStr();
+  const end = new Date();
+  end.setDate(end.getDate() + 6);
+  const endStr = `${end.getFullYear()}-${pad2(end.getMonth() + 1)}-${pad2(end.getDate())}`;
+  return allGames.some(g => g.date_iso && g.date_iso >= start && g.date_iso <= endStr);
 }
 
 function renderFooter() {
