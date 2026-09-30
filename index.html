@@ -924,8 +924,14 @@ function updateSeasonDownloadVisibility() {
 document.getElementById("player-filter").addEventListener("change", (e) => {
   currentPlayer = e.target.value;
   updateSeasonDownloadVisibility();
-  updateUrl();
-  render();
+  if (currentPlayer) {
+    // Show the player's whole season, same as opening a shared player
+    // link - "This week" is usually empty for one player.
+    jumpToAll();
+  } else {
+    updateUrl();
+    render();
+  }
 });
 
 function applyUrlState() {
