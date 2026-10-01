@@ -73,10 +73,10 @@ Tucker commits straight to `main` (no pull-request workflow).
   input) since the Gmail password lives only in GitHub secrets.
 - Set up on a Mac with `scripts/setup_mac_mini.sh` (one-line command in its
   header). Log: `~/Library/Logs/volleyball-presto-update.log`.
-- Only one Mac should run the job. It is moving from the laptop to the
-  always-on Mac mini (Oct 2026); after the move the laptop's job is turned off
-  with `launchctl bootout gui/$(id -u)/com.pearceweb.volleyball-presto` and
-  its plist removed.
+- Only one Mac should run the job: since 2026-10-01 that's the always-on
+  Mac mini (the laptop's job was removed). To stop it on a Mac:
+  `launchctl bootout gui/$(id -u)/com.pearceweb.volleyball-presto` and delete
+  `~/Library/LaunchAgents/com.pearceweb.volleyball-presto.plist`.
 
 ## Email alerts
 
