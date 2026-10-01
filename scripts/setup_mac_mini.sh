@@ -30,6 +30,12 @@ if ! command -v brew >/dev/null 2>&1 && [ ! -x /opt/homebrew/bin/brew ] && [ ! -
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 eval "$( (/opt/homebrew/bin/brew shellenv || /usr/local/bin/brew shellenv) 2>/dev/null)"
+# A fresh Homebrew isn't on Terminal's PATH until the shell profile loads it;
+# add it so `gh`/`brew` work in new Terminal windows too.
+if [ -x /opt/homebrew/bin/brew ] && ! grep -qs 'brew shellenv' "$HOME/.zprofile"; then
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "$HOME/.zprofile"
+  echo "Added Homebrew to ~/.zprofile (new Terminal windows will find gh)."
+fi
 command -v gh >/dev/null 2>&1 || brew install gh
 command -v python3 >/dev/null 2>&1 || brew install python
 echo "gh: $(gh --version | head -1)   python: $(python3 --version)"
@@ -102,6 +108,8 @@ echo "-------------------"
 code=$(launchctl print "gui/$(id -u)/$LABEL" | awk '/last exit code/ {print $NF}')
 if [ "$code" = "0" ]; then
   printf '\n\033[1;32mDone - the Mac mini will now run the job at 9 AM and 6 PM daily.\033[0m\n'
+  echo "To also work on the project here: open a NEW Terminal window and run"
+  echo "  gh repo clone pearceweb/volleyball-dashboard ~/Desktop/VolleyballTracker"
 else
   printf '\n\033[1;31mThe test run exited with code %s - send the log above to Claude.\033[0m\n' "$code"
 fi
