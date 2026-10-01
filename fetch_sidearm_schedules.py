@@ -151,6 +151,13 @@ def main():
         print(f"Fetching {entry['school']} ({entry['player']})...")
         try:
             games = fetch_and_parse(entry["url"])
+            had = len(previous.get(entry["player"], {}).get("games", []))
+            if not games and had:
+                # A page that suddenly has no games is almost always the site
+                # being down or changed (e.g. Orange Coast's domain lapsing to
+                # a parking page on 2026-09-30), not a real empty schedule.
+                # Treat it as an error so last run's games are kept.
+                raise ValueError(f"page returned 0 games (had {had} last run) - site down or changed?")
             url, games = resolve_current_season(entry["url"], games)
             if url != entry["url"]:
                 print(f"  -> newer season found: {url}")

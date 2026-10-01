@@ -123,6 +123,7 @@ def load_previous():
 def main():
     previous = load_previous()
     season_updates = []
+    new_errors = []
     all_results = []
     for entry in SCHOOLS:
         print(f"Fetching {entry['school']} ({entry['player']})...")
@@ -130,6 +131,13 @@ def main():
         start_url = max(entry["url"], previous.get(entry["player"], {}).get("url") or "")
         try:
             games = fetch_and_parse(start_url)
+            had = len(previous.get(entry["player"], {}).get("games", []))
+            if not games and had:
+                # A page that suddenly has no games is almost always the site
+                # being down or changed (e.g. Orange Coast's domain lapsing to
+                # a parking page on 2026-09-30), not a real empty schedule.
+                # Treat it as an error so last run's games are kept.
+                raise ValueError(f"page returned 0 games (had {had} last run) - site down or changed?")
             url, games = resolve_current_season(start_url, games)
             if url != start_url:
                 print(f"  -> newer season found: {url}")
@@ -153,6 +161,8 @@ def main():
             prev = previous.get(entry["player"], {})
             kept = prev.get("games", [])
             print(f"  -> ERROR: {e} (keeping {len(kept)} games from last run)")
+            if not prev.get("error"):
+                new_errors.append(f"{entry['player']} - {entry['school']}: {e}")
             all_results.append({
                 "player": entry["player"],
                 "school": entry["school"],
@@ -169,6 +179,10 @@ def main():
 
     with open("presto_season_updates.txt", "w", encoding="utf-8") as f:
         f.write("\n".join(season_updates))
+    # New problems (not already flagged last run) - the Mac job emails these.
+    with open("presto_alerts.txt", "w", encoding="utf-8") as f:
+        f.write("\n".join(new_errors))
+
     if season_updates:
         print("\nNEW SEASONS DETECTED:")
         for u in season_updates:

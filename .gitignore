@@ -10,3 +10,4 @@ __pycache__/
 health_alerts.txt
 season_updates.txt
 presto_season_updates.txt
+presto_alerts.txt

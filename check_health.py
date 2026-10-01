@@ -46,11 +46,14 @@ def check(current_path, previous_path, alerts):
     previous = counts_by_school(load(previous_path))
 
     for school, info in current.items():
+        prev_info = previous.get(school)
         if info["error"]:
-            alerts.append(f"{school}: fetch error - {info['error']}")
+            # Alert once when a problem starts, not on every run while it
+            # lasts (the fetch scripts keep last good games meanwhile).
+            if not (prev_info and prev_info["error"]):
+                alerts.append(f"{school}: fetch error - {info['error']}")
             continue
 
-        prev_info = previous.get(school)
         if prev_info is None:
             continue  # first time seeing this school - nothing to compare yet
 
