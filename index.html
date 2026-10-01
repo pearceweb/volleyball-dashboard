@@ -90,6 +90,33 @@
   .next-up-wrap {
     margin-bottom: 20px;
   }
+  .team-record { color: var(--text); font-weight: 600; margin-top: 2px; }
+  .team-record:empty { display: none; }
+  .recent-results { margin-bottom: 20px; }
+  .recent-row {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    font-size: 13px;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .recent-row .when { color: var(--text-dim); width: 34px; flex-shrink: 0; font-size: 12px; }
+  .recent-row .who { flex: 1; min-width: 0; }
+  .recent-row .who .school { color: var(--text-dim); }
+  .recent-row .score { font-weight: 700; white-space: nowrap; }
+  .recent-row .score.win { color: var(--win); }
+  .recent-row .score.loss { color: var(--loss); }
+  .matchup-tag {
+    display: block;
+    width: fit-content;
+    margin: 4px 0 2px;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--amber);
+    text-decoration: none;
+  }
+  .matchup-tag:hover { text-decoration: underline; }
   .next-up-label {
     font-size: 11px;
     font-weight: 700;
@@ -452,9 +479,11 @@
     <div>
       <h1>25/26 MN Select 18-1 - College Schedule</h1>
       <div class="subtitle" id="range-label">Loading schedule...</div>
+      <div class="subtitle team-record" id="team-record"></div>
     </div>
   </header>
   <div id="print-context" class="print-only"></div>
+  <div id="recent-results"></div>
   <div id="next-up"></div>
   <div class="filter-row">
     <div class="range-controls">
@@ -571,6 +600,7 @@ function renderNextUp() {
       <div class="next-up-card ${g.home_away}">
         <div class="next-up-player">${escapeHtml(g.player)} <span class="school">\u00b7 ${escapeHtml(g.school)}</span></div>
         <div class="next-up-matchup"><span class="side-tag">${sideTag}</span>${escapeHtml(g.opponent || "TBD")}${timeText}</div>
+        ${matchupHtml(g)}
       </div>
     `;
   }).join("");
@@ -590,8 +620,58 @@ function updateTitle() {
   document.title = `${who} — MN Select Alumni`;
 }
 
+function playerLink(player, school) {
+  return `?player=${encodeURIComponent(`${player} - ${school}`).replace(/%20/g, "+")}&range=all`;
+}
+
+function matchupHtml(g) {
+  // Another MN Select player's team is the opponent - link to their page.
+  return (g.matchup_with || []).map(m =>
+    `<a class="matchup-tag" href="${escapeAttr(playerLink(m.player, m.school))}">\u{1F525} MN Select matchup vs ${escapeHtml(m.player)}</a>`
+  ).join(" ");
+}
+
+function renderRecord() {
+  // Current-season record for the selected player's team (finished seasons
+  // are already filtered out of allGames).
+  const el = document.getElementById("team-record");
+  el.textContent = "";
+  if (!currentPlayer) return;
+  const played = allGames.filter(g => `${g.player} - ${g.school}` === currentPlayer && g.result);
+  if (!played.length) return;
+  const w = played.filter(g => g.result === "W").length;
+  el.textContent = `${played[0].school}: ${w}-${played.length - w} this season`;
+}
+
+function renderRecentResults() {
+  // All-players view only: scores from the last 7 days, newest first.
+  const wrap = document.getElementById("recent-results");
+  wrap.innerHTML = "";
+  if (currentPlayer) return;
+  const today = localTodayStr();
+  const from = new Date();
+  from.setDate(from.getDate() - 7);
+  const fromStr = `${from.getFullYear()}-${pad2(from.getMonth() + 1)}-${pad2(from.getDate())}`;
+  const recent = allGames
+    .filter(g => g.result && g.date_iso && g.date_iso >= fromStr && g.date_iso <= today)
+    .sort((a, b) => byStartTime(b, a));
+  if (!recent.length) return;
+  const rows = recent.map(g => {
+    const side = g.home_away === "away" ? "@" : "vs";
+    const when = new Date(g.date_iso + "T00:00:00").toLocaleDateString(undefined, { weekday: "short" });
+    return `<div class="recent-row">
+      <span class="when">${when}</span>
+      <span class="who"><a href="${escapeAttr(playerLink(g.player, g.school))}" style="color:inherit;text-decoration:none">${escapeHtml(g.player)}</a> <span class="school">\u00b7 ${escapeHtml(g.school)} ${side} ${escapeHtml(g.opponent || "")}</span></span>
+      <span class="score ${g.result === "W" ? "win" : "loss"}">${g.result} ${escapeHtml(g.sets || "")}</span>
+    </div>`;
+  }).join("");
+  wrap.innerHTML = `<div class="recent-results"><div class="next-up-label">Recent results \u00b7 last 7 days</div>${rows}</div>`;
+}
+
 function render() {
   updateTitle();
+  renderRecord();
+  renderRecentResults();
   renderNextUp();
   const content = document.getElementById("content");
   const rangeLabel = document.getElementById("range-label");
@@ -732,6 +812,7 @@ function renderRow(g, idx) {
           : `<div class="player-line">${escapeHtml(g.player)} <span class="school">\u00b7 ${escapeHtml(g.school)}</span></div>
         <div class="matchup-line"><span class="side-tag">${sideTag}</span>${escapeHtml(g.opponent || "TBD")}</div>`}
         ${whereText ? `<div class="where-line">${escapeHtml(whereText)}</div>` : ""}
+        ${matchupHtml(g)}
         ${calendarLink}
       </div>
       <div class="result-col">${resultHtml}</div>

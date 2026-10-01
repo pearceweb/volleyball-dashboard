@@ -240,6 +240,51 @@ def normalize_presto(entry):
     return out
 
 
+# ---------------------------------------------------------------------------
+# MN SELECT MATCHUPS: games where a player's team faces another player's
+# team. Opponent names vary by school ("Central State" vs "Central State
+# University"), so list the names each school goes by. Matching is on the
+# START of the opponent name, so "St. Joseph's University Long Island" is
+# not LIU and "Mercyhurst" is not Mercy. Add new schools here.
+# ---------------------------------------------------------------------------
+SCHOOL_ALIASES = {
+    "Long Island University": ["long island university", "liu"],
+    "UW-Stevens Point": ["uw-stevens point", "uw stevens point", "wisconsin-stevens point", "uwsp"],
+    "Park University (Gilbert)": ["park university gilbert", "park university (gilbert)", "park gilbert",
+                                  "park (gilbert)", "park university-gilbert"],
+    "Rockhurst University": ["rockhurst"],
+    "Vassar College": ["vassar"],
+    "North Park University": ["north park"],
+    "Mercy University": ["mercy university", "mercy college", "mercy"],
+    "Central State University": ["central state"],
+    "Olivet Nazarene University": ["olivet nazarene", "olivet"],
+    "Orange Coast College": ["orange coast"],
+}
+
+
+def _norm(name):
+    name = re.sub(r"^(No\.\s*\d+|#\d+|#RV)\s+", "", (name or "").strip(), flags=re.IGNORECASE)
+    return re.sub(r"\s+", " ", name.lower().replace(".", ""))
+
+
+def tag_matchups(all_games, players):
+    """Adds g["matchup_with"] = [{"player", "school"}, ...] (or [])."""
+    by_school = {}
+    for p in players:
+        by_school.setdefault(p["school"], []).append(p)
+    for g in all_games:
+        opp = _norm(g.get("opponent"))
+        g["matchup_with"] = [
+            {"player": p["player"], "school": p["school"]}
+            for school, ps in by_school.items() if school != g["school"]
+            for alias in SCHOOL_ALIASES.get(school, [_norm(school)])
+            if re.match(rf"{re.escape(alias)}(\b|$)", opp)
+            for p in ps
+        ]
+        # an alias list can match twice (e.g. "mercy university" and "mercy")
+        g["matchup_with"] = [dict(t) for t in {tuple(m.items()) for m in g["matchup_with"]}]
+
+
 def main():
     all_games = []
     unresolved_dates = []
@@ -271,6 +316,7 @@ def main():
 
     # Sort: games with a resolved date first (chronological), undated last
     all_games.sort(key=lambda g: (g["date_iso"] is None, g["date_iso"] or ""))
+    tag_matchups(all_games, players)
 
     with open("unified_schedule.json", "w", encoding="utf-8") as f:
         json.dump(all_games, f, indent=2)

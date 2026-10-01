@@ -15,7 +15,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -33,7 +34,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -51,7 +53,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -69,7 +72,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -87,7 +91,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -105,7 +110,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -123,7 +129,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -141,7 +148,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -159,7 +167,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -177,7 +186,13 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": [
+      {
+        "player": "Ryan Michalak",
+        "school": "Rockhurst University"
+      }
+    ]
   },
   {
     "player": "Drew Demarais",
@@ -195,7 +210,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -213,7 +229,13 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": [
+      {
+        "player": "Ryan Michalak",
+        "school": "Rockhurst University"
+      }
+    ]
   },
   {
     "player": "Connor Voss",
@@ -231,7 +253,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": "https://www.occpirateathletics.com/links/2j0yhx",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -249,7 +272,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": "https://www.occpirateathletics.com/links/2j0yhx",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -267,7 +291,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -285,7 +310,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -303,7 +329,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": "https://www.occpirateathletics.com/links/2j0yhx",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -321,7 +348,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -339,7 +367,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -357,7 +386,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -375,7 +405,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -393,7 +424,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -411,7 +443,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -429,7 +462,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -447,7 +481,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -465,7 +500,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -483,7 +519,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -501,7 +538,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -519,7 +557,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -537,7 +576,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -555,7 +595,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -573,7 +614,8 @@
     "status": "Canceled",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -591,7 +633,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -609,7 +652,8 @@
     "status": "Canceled",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -627,7 +671,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -645,7 +690,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": "https://www.occpirateathletics.com/links/2j0yhx",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -663,7 +709,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -681,7 +728,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -699,7 +747,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -717,7 +766,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -735,7 +785,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -753,7 +804,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -771,7 +823,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": "https://www.occpirateathletics.com/links/2j0yhx",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -789,7 +842,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -807,7 +861,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -825,7 +880,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -843,7 +899,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -861,7 +918,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -879,7 +937,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -897,7 +956,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -915,7 +975,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -933,7 +994,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": "https://www.occpirateathletics.com/links/2j0yhx",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -951,7 +1013,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -969,7 +1032,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -987,7 +1051,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -1005,7 +1070,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -1023,7 +1089,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -1041,7 +1108,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -1059,7 +1127,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -1077,7 +1146,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -1095,7 +1165,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -1113,7 +1184,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -1131,7 +1203,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -1149,7 +1222,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -1167,7 +1241,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": "https://www.occpirateathletics.com/links/2j0yhx",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -1185,7 +1260,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -1203,7 +1279,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -1221,7 +1298,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -1239,7 +1317,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -1257,7 +1336,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -1275,7 +1355,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -1293,7 +1374,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -1311,7 +1393,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -1329,7 +1412,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -1347,7 +1431,8 @@
     "status": "Canceled",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -1365,7 +1450,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": "https://www.occpirateathletics.com/links/2j0yhx",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -1383,7 +1469,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -1401,7 +1488,8 @@
     "status": "Canceled",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -1419,7 +1507,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -1437,7 +1526,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -1455,7 +1545,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -1473,7 +1564,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -1491,7 +1583,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -1509,7 +1602,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -1527,7 +1621,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -1545,7 +1640,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -1563,7 +1659,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -1581,7 +1678,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -1599,7 +1697,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -1617,7 +1716,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -1635,7 +1735,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -1653,7 +1754,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -1671,7 +1773,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -1689,7 +1792,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": "https://www.occpirateathletics.com/links/2j0yhx",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -1707,7 +1811,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -1725,7 +1830,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -1743,7 +1849,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -1761,7 +1868,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -1779,7 +1887,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -1797,7 +1906,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -1815,7 +1925,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -1833,7 +1944,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -1851,7 +1963,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -1869,7 +1982,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": "https://www.occpirateathletics.com/links/2j0yhx",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -1887,7 +2001,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -1905,7 +2020,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -1923,7 +2039,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -1941,7 +2058,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -1959,7 +2077,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -1977,7 +2096,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -1995,7 +2115,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -2013,7 +2134,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -2031,7 +2153,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -2049,7 +2172,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -2067,7 +2191,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -2085,7 +2210,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -2103,7 +2229,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ben DeVos",
@@ -2121,7 +2248,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -2139,7 +2267,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -2157,7 +2286,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -2175,7 +2305,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": "https://www.occpirateathletics.com/links/2j0yhx",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -2193,7 +2324,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -2211,7 +2343,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -2229,7 +2362,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": "https://www.occpirateathletics.com/links/2j0yhx",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -2247,7 +2381,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Henry Hudson",
@@ -2265,7 +2400,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -2283,7 +2419,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -2301,7 +2438,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -2319,7 +2457,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -2337,7 +2476,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Connor Voss",
@@ -2355,7 +2495,8 @@
     "status": "Final",
     "streaming_label": null,
     "streaming_url": "https://www.occpirateathletics.com/links/2j0yhx",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -2373,7 +2514,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -2391,7 +2533,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -2409,7 +2552,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Kaleb Mhiripiri",
@@ -2427,7 +2571,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Drew Demarais",
@@ -2445,7 +2590,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -2463,7 +2609,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -2481,7 +2628,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -2499,7 +2647,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -2517,7 +2666,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -2535,7 +2685,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -2553,7 +2704,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -2571,7 +2723,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -2589,7 +2742,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -2607,7 +2761,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -2625,7 +2780,13 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": [
+      {
+        "player": "Kaleb Mhiripiri",
+        "school": "Central State University"
+      }
+    ]
   },
   {
     "player": "Colson Pearce",
@@ -2643,7 +2804,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -2661,7 +2823,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -2679,7 +2842,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -2697,7 +2861,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -2715,7 +2880,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -2733,7 +2899,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -2751,7 +2918,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -2769,7 +2937,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -2787,7 +2956,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -2805,7 +2975,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -2823,7 +2994,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -2841,7 +3013,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -2859,7 +3032,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -2877,7 +3051,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -2895,7 +3070,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -2913,7 +3089,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -2931,7 +3108,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -2949,7 +3127,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -2967,7 +3146,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -2985,7 +3165,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -3003,7 +3184,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -3021,7 +3203,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -3039,7 +3222,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -3057,7 +3241,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -3075,7 +3260,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -3093,7 +3279,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -3111,7 +3298,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -3129,7 +3317,13 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": [
+      {
+        "player": "Kaleb Mhiripiri",
+        "school": "Central State University"
+      }
+    ]
   },
   {
     "player": "Colin Nathan",
@@ -3147,7 +3341,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -3165,7 +3360,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -3183,7 +3379,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -3201,7 +3398,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -3219,7 +3417,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -3237,7 +3436,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -3255,7 +3455,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -3273,7 +3474,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -3291,7 +3493,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -3309,7 +3512,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -3327,7 +3531,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -3345,7 +3550,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -3363,7 +3569,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -3381,7 +3588,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -3399,7 +3607,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -3417,7 +3626,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -3435,7 +3645,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -3453,7 +3664,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -3471,7 +3683,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -3489,7 +3702,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -3507,7 +3721,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -3525,7 +3740,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -3543,7 +3759,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -3561,7 +3778,8 @@
     "status": "TBA",
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -3579,7 +3797,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -3597,7 +3816,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -3615,7 +3835,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -3633,7 +3854,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -3651,7 +3873,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -3669,7 +3892,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -3687,7 +3911,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -3705,7 +3930,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -3723,7 +3949,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -3741,7 +3968,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -3759,7 +3987,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -3777,7 +4006,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -3795,7 +4025,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -3813,7 +4044,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -3831,7 +4063,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -3849,7 +4082,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -3867,7 +4101,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -3885,7 +4120,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -3903,7 +4139,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -3921,7 +4158,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -3939,7 +4177,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -3957,7 +4196,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -3975,7 +4215,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -3993,7 +4234,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -4011,7 +4253,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -4029,7 +4272,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -4047,7 +4291,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -4065,7 +4310,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -4083,7 +4329,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -4101,7 +4348,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -4119,7 +4367,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -4137,7 +4386,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -4155,7 +4405,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -4173,7 +4424,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -4191,7 +4443,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -4209,7 +4462,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -4227,7 +4481,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colson Pearce",
@@ -4245,7 +4500,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -4263,7 +4519,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -4281,7 +4538,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ethan Jordheim",
@@ -4299,7 +4557,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": "https://www.onutigers.com/links/ncdanr",
-    "platform": "presto"
+    "platform": "presto",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -4317,7 +4576,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -4335,7 +4595,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Colin Nathan",
@@ -4353,7 +4614,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -4371,7 +4633,8 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   },
   {
     "player": "Ryan Michalak",
@@ -4389,6 +4652,7 @@
     "status": null,
     "streaming_label": null,
     "streaming_url": null,
-    "platform": "sidearm"
+    "platform": "sidearm",
+    "matchup_with": []
   }
 ]

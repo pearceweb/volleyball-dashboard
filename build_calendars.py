@@ -51,6 +51,8 @@ def _event(g):
         summary += f" - {g['result']} {g.get('sets') or ''}".rstrip()
 
     desc = [f"{g['player']} - {g['school']}"]
+    for m in g.get("matchup_with") or []:
+        desc.append(f"MN Select matchup vs {m['player']} ({m['school']})")
     if g.get("home_away") == "neutral":
         desc.append("Neutral site")
     if g.get("streaming_label"):
