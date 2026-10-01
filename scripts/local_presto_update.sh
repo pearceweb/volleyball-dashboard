@@ -16,7 +16,13 @@
 
 set -uo pipefail
 export PATH="/opt/homebrew/bin:/Library/Frameworks/Python.framework/Versions/3.13/bin:/usr/local/bin:/usr/bin:/bin"
-REPO_DIR="${REPO_DIR:-$HOME/Library/Application Support/volleyball-dashboard-updater/repo}"
+UPDATER_DIR="$HOME/Library/Application Support/volleyball-dashboard-updater"
+REPO_DIR="${REPO_DIR:-$UPDATER_DIR/repo}"
+# Use the private Python environment made by scripts/setup_mac_mini.sh when
+# it exists (it has requests + beautifulsoup4); otherwise the system python3.
+if [ -x "$UPDATER_DIR/venv/bin/python3" ]; then
+  export PATH="$UPDATER_DIR/venv/bin:$PATH"
+fi
 FILES="presto_games.json unified_schedule.json players.json calendars"
 
 # Everything runs inside main(), so bash has read the whole script before
