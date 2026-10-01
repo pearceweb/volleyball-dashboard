@@ -10,8 +10,12 @@ first college season. Any 2025-26 data for a school predates the player and
 must never be presented as theirs (the page hides finished seasons).
 
 The project is worked on from two Macs (laptop and Mac mini). GitHub is the
-source of truth: `git pull` before starting, commit and push when done.
-Tucker commits straight to `main` (no pull-request workflow).
+source of truth. **Tucker only works on this through Claude, never in the
+terminal himself — so syncing is Claude's job:** at the start of every
+session run `git pull --rebase --autostash` before reading or changing
+anything (the Mac mini job and GitHub Actions push data updates throughout
+the day), and commit + push finished work before the session ends.
+Commits go straight to `main` (no pull-request workflow).
 
 ## How data flows
 
