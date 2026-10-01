@@ -1,0 +1,296 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//MN Select Alumni//Volleyball Schedules//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Ryan Michalak - Rockhurst University volleyball
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:ryan-michalak-2027-01-14-manhattanuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270114
+DTEND;VALUE=DATE:20270115
+SUMMARY:Ryan Michalak (Rockhurst University) @ Manhattan University
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Riverdale\, NY
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-01-16-newjerseyinstituteoftechnology@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270116
+DTEND;VALUE=DATE:20270117
+SUMMARY:Ryan Michalak (Rockhurst University) @ New Jersey Institute of Tech
+ nology
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Newark\, NJ
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-01-17-fairleighdickinson@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270117
+DTEND;VALUE=DATE:20270118
+SUMMARY:Ryan Michalak (Rockhurst University) @ Fairleigh Dickinson
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Teaneck\, NJ
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-01-22-centralstateuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270122
+DTEND;VALUE=DATE:20270123
+SUMMARY:Ryan Michalak (Rockhurst University) vs Central State University
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Kansas City\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-01-23-kentuckystateuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270123
+DTEND;VALUE=DATE:20270124
+SUMMARY:Ryan Michalak (Rockhurst University) vs Kentucky State University
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Kansas City\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-01-28-missionuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270128
+DTEND;VALUE=DATE:20270129
+SUMMARY:Ryan Michalak (Rockhurst University) vs Mission University
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Kansas City\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-02-04-ballstateuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270204
+DTEND;VALUE=DATE:20270205
+SUMMARY:Ryan Michalak (Rockhurst University) @ Ball State University
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Muncie\, IN
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-02-05-purduefortwayne@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270205
+DTEND;VALUE=DATE:20270206
+SUMMARY:Ryan Michalak (Rockhurst University) @ Purdue Fort Wayne
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Fort Wayne\, IN
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-02-06-centralstateuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270206
+DTEND;VALUE=DATE:20270207
+SUMMARY:Ryan Michalak (Rockhurst University) @ Central State University
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Wilberforce\, OH
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-02-12-lindenwood@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270212
+DTEND;VALUE=DATE:20270213
+SUMMARY:Ryan Michalak (Rockhurst University) @ Lindenwood
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:St Charles\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-02-13-mckendree@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270213
+DTEND;VALUE=DATE:20270214
+SUMMARY:Ryan Michalak (Rockhurst University) @ McKendree
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Lebanon\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-02-18-ottawauniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270218
+DTEND;VALUE=DATE:20270219
+SUMMARY:Ryan Michalak (Rockhurst University) vs Ottawa University
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Kansas City\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-02-19-centralchristiancollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270219
+DTEND;VALUE=DATE:20270220
+SUMMARY:Ryan Michalak (Rockhurst University) vs Central Christian College
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Kansas City\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-03-05-universityofjamestown@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270305
+DTEND;VALUE=DATE:20270306
+SUMMARY:Ryan Michalak (Rockhurst University) vs University of Jamestown
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Kansas City\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-03-06-universityofjamestown@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270306
+DTEND;VALUE=DATE:20270307
+SUMMARY:Ryan Michalak (Rockhurst University) vs University of Jamestown
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Kansas City\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-03-12-missourist@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270312
+DTEND;VALUE=DATE:20270313
+SUMMARY:Ryan Michalak (Rockhurst University) vs Missouri S&T
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Kansas City\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-03-13-missourist@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270313
+DTEND;VALUE=DATE:20270314
+SUMMARY:Ryan Michalak (Rockhurst University) vs Missouri S&T
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Kansas City\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-03-19-southwestbaptist@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270319
+DTEND;VALUE=DATE:20270320
+SUMMARY:Ryan Michalak (Rockhurst University) @ Southwest Baptist
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Bolivar\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-03-20-southwestbaptist@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270320
+DTEND;VALUE=DATE:20270321
+SUMMARY:Ryan Michalak (Rockhurst University) @ Southwest Baptist
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Bolivar\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-03-25-avilauniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270325
+DTEND;VALUE=DATE:20270326
+SUMMARY:Ryan Michalak (Rockhurst University) vs Avila University
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Kansas City\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-04-02-quincy@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270402
+DTEND;VALUE=DATE:20270403
+SUMMARY:Ryan Michalak (Rockhurst University) @ Quincy
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Quincy\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-04-03-quincy@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270403
+DTEND;VALUE=DATE:20270404
+SUMMARY:Ryan Michalak (Rockhurst University) @ Quincy
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Quincy\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-04-09-maryville@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270409
+DTEND;VALUE=DATE:20270410
+SUMMARY:Ryan Michalak (Rockhurst University) vs Maryville
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Kansas City\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-04-10-maryville@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270410
+DTEND;VALUE=DATE:20270411
+SUMMARY:Ryan Michalak (Rockhurst University) vs Maryville
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Kansas City\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-04-16-roosevelt@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270416
+DTEND;VALUE=DATE:20270417
+SUMMARY:Ryan Michalak (Rockhurst University) @ Roosevelt
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Chicago\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:ryan-michalak-2027-04-17-roosevelt@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270417
+DTEND;VALUE=DATE:20270418
+SUMMARY:Ryan Michalak (Rockhurst University) @ Roosevelt
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Chicago\, IL
+END:VEVENT
+END:VCALENDAR

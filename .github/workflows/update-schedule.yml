@@ -18,6 +18,10 @@ on:
         description: "Email this message (used by the Mac's daily PrestoSports job)"
         type: string
         default: ""
+      notify_subject:
+        description: "Subject for notify_message"
+        type: string
+        default: "new season schedule posted"
 
 permissions:
   contents: write
@@ -63,7 +67,7 @@ jobs:
           server_port: 465
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: "Volleyball dashboard: new season schedule posted"
+          subject: "Volleyball dashboard: ${{ inputs.notify_subject }}"
           to: ${{ secrets.NOTIFY_TO }}
           from: Volleyball Dashboard
           body: ${{ inputs.notify_message }}
@@ -138,6 +142,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add sidearm_games.json presto_games.json unified_schedule.json players.json
+          git add sidearm_games.json presto_games.json unified_schedule.json players.json calendars
           git diff --staged --quiet || git commit -m "Auto-update schedule data"
           git push

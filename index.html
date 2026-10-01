@@ -164,6 +164,16 @@
     align-items: flex-start;
     gap: 6px;
   }
+  .cal-heading { font-size: 14px; font-weight: 600; }
+  .cal-subheading { font-size: 12.5px; color: var(--text); margin-top: 10px; }
+  #subscribe-block, #download-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .subscribe-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+  .subscribe-buttons a { text-decoration: none; }
   .waiting-note {
     font-size: 12px;
     color: var(--text-dim);
@@ -457,14 +467,27 @@
       <select id="player-filter" class="player-select">
         <option value="">All players</option>
       </select>
-      <a id="season-download-link" href="#season-download-bottom" style="display:none;">&darr; Download full season</a>
+      <a id="season-download-link" href="#season-download-bottom" style="display:none;">&#128197; Add to calendar</a>
       <button id="print-btn" class="range-btn" onclick="window.print()">Print / Save as PDF</button>
     </div>
   </div>
   <div id="content"></div>
   <div id="season-download-bottom" style="display:none;">
-    <button id="season-download-btn" class="range-btn" onclick="downloadFullSeason()" title="Downloads one file with every remaining game as a separate calendar entry">Download Full Season</button>
-    <div class="season-download-note">Apple Calendar: opens directly. Google/Outlook: import via Settings.</div>
+    <div class="cal-heading" id="cal-heading">Add these games to your calendar</div>
+    <div id="subscribe-block">
+      <div class="cal-subheading">Subscribe &mdash; updates automatically when the schedule changes</div>
+      <div class="subscribe-buttons">
+        <a id="subscribe-apple" class="range-btn" href="#">Apple / iPhone / Outlook</a>
+        <a id="subscribe-google" class="range-btn" href="#" target="_blank" rel="noopener">Google Calendar</a>
+        <button id="subscribe-copy" class="range-btn" onclick="copySubscribeLink()">Copy link</button>
+      </div>
+      <div class="season-download-note">Shows up as its own calendar you can turn off or delete any time. Apple updates within hours; Google can take up to a day.</div>
+    </div>
+    <div id="download-block">
+      <div class="cal-subheading">Or download a one-time copy (won't update)</div>
+      <button id="season-download-btn" class="range-btn" onclick="downloadFullSeason()" title="Downloads one file with every remaining game as a separate calendar entry">Download Full Season</button>
+      <div class="season-download-note">Apple Calendar: opens directly. Google/Outlook: import via Settings.</div>
+    </div>
   </div>
 </div>
 <footer id="site-footer"></footer>
@@ -482,6 +505,8 @@ let waitingPlayers = [];
 // Subset of waitingPlayers with no games at all yet - a brand-new program
 // (e.g. Mercy) that hasn't published its first schedule.
 let newProgramPlayers = [];
+// "Player - School" -> calendar feed path, from players.json
+let playerCalendars = {};
 
 function localTodayStr() {
   const d = new Date();
@@ -1019,12 +1044,46 @@ function populatePlayerFilter(data, players) {
   }
 }
 
+function subscribeUrl() {
+  // Calendar feed for the current view (one player, or everyone), built by
+  // build_calendars.py. Absolute https URL on this site.
+  const path = currentPlayer ? playerCalendars[currentPlayer] : "calendars/all.ics";
+  return path ? new URL(path, window.location.href).href : null;
+}
+
 function updateSeasonDownloadVisibility() {
   const link = document.getElementById("season-download-link");
   const bottom = document.getElementById("season-download-bottom");
-  const show = currentPlayer && !waitingPlayers.includes(currentPlayer);
+  const show = !(currentPlayer && waitingPlayers.includes(currentPlayer));
   link.style.display = show ? "inline" : "none";
   bottom.style.display = show ? "flex" : "none";
+  if (!show) return;
+
+  // The one-time download is per player; subscribing works for both views.
+  document.getElementById("download-block").style.display = currentPlayer ? "flex" : "none";
+  document.getElementById("cal-heading").textContent = currentPlayer
+    ? `Add ${currentPlayer.split(" - ")[0]}'s games to your calendar`
+    : "Add every player's games to your calendar";
+
+  const url = subscribeUrl();
+  document.getElementById("subscribe-block").style.display = url ? "flex" : "none";
+  if (url) {
+    const webcal = url.replace(/^https?:/, "webcal:");
+    document.getElementById("subscribe-apple").href = webcal;
+    document.getElementById("subscribe-google").href =
+      `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(webcal)}`;
+  }
+}
+
+function copySubscribeLink() {
+  const url = subscribeUrl();
+  const btn = document.getElementById("subscribe-copy");
+  const done = text => { btn.textContent = text; setTimeout(() => { btn.textContent = "Copy link"; }, 2000); };
+  if (navigator.clipboard && url) {
+    navigator.clipboard.writeText(url).then(() => done("Copied!"), () => window.prompt("Copy this link:", url));
+  } else if (url) {
+    window.prompt("Copy this link:", url);
+  }
 }
 
 document.getElementById("player-filter").addEventListener("change", (e) => {
@@ -1112,6 +1171,9 @@ fetch("unified_schedule.json", { cache: "no-cache" })
   .then(data => playersRequest.then(players => [data, players]))
   .then(([data, players]) => {
     allGames = splitFinishedSeasons(data, players);
+    for (const p of players) {
+      if (p.calendar) playerCalendars[`${p.player} - ${p.school}`] = p.calendar;
+    }
     populatePlayerFilter(data, players);
     applyUrlState();
     render();

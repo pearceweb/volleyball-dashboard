@@ -50,6 +50,8 @@ import json
 import re
 from urllib.parse import urljoin
 from zoneinfo import ZoneInfo
+
+from build_calendars import write_calendars
 from datetime import datetime
 
 SIDEARM_YEAR_RE = re.compile(r"/schedule/(\d{4})/?$")
@@ -277,6 +279,13 @@ def main():
     if missing_tz_schools:
         print(f"WARNING: no time zone set for {sorted(missing_tz_schools)} - "
               f"assumed Central. Add them to SCHOOL_TZ.")
+
+    # Subscribable calendar feeds (calendars/*.ics); the page links to each
+    # player's feed via the "calendar" path in players.json.
+    cal_paths = write_calendars(all_games, players)
+    for p in players:
+        p["calendar"] = cal_paths.get(p["player"])
+    print(f"Wrote {len(cal_paths) + 1} calendar feeds to calendars/")
 
     with open("players.json", "w", encoding="utf-8") as f:
         json.dump(players, f, indent=2)

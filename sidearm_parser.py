@@ -44,6 +44,12 @@ CONFERENCE_TAG_RE = re.compile(r"^[A-Za-z0-9]+\s*\*$")
 ALL_CAPS_LABEL_RE = re.compile(r"^[A-Z][A-Z\s]{2,}$")
 PHOTO_CREDIT_RE = re.compile(r"\bphoto\b|\binc\.?$", re.IGNORECASE)
 HIDE_SHOW_MARKER = "Hide/Show Additional Information For"
+# Where the schedule ends and the rest of the page (box-score template,
+# headlines, footer) begins - the last game's block is cut off here.
+END_OF_SCHEDULE_MARKERS = {"Score By Period", "Related Headlines"}
+# "City, ST" shape: starts with a letter, something after the comma. Filters
+# footer junk like "124 Raymond Avenue, Box 750" or ", opens in new window".
+LOCATION_SHAPE_RE = re.compile(r"^[A-Za-z][^,]*,\s*\S")
 NOISE_LINES = {
     "/", "final", "recap", "box score", "scheduled games",
     "history", "game program", "-", "live stats", "watch",
@@ -151,6 +157,8 @@ def _split_into_blocks(lines):
                 i += 1
             continue
 
+        if line in END_OF_SCHEDULE_MARKERS:
+            break
         sig = _date_time_signature(lines, i)
         if sig is not None:
             if current_sig is None:
@@ -300,7 +308,11 @@ def _parse_block(block):
     for idx, line in enumerate(block):
         if idx == opponent_idx:
             continue
-        if "," in line and not DATE_RE.match(line) and not RESULT_RE.match(line) and not PHOTO_CREDIT_RE.search(line):
+        # (the page footer - mailing address, link text - can land in the last
+        # game's block, so require a "City, ST" shape and no ZIP code)
+        if ("," in line and not DATE_RE.match(line) and not RESULT_RE.match(line)
+                and not PHOTO_CREDIT_RE.search(line) and LOCATION_SHAPE_RE.match(line)
+                and not re.search(r"\b\d{5}(-\d{4})?$", line)):  # ZIP = mailing address
             game["location"] = line
             break
 

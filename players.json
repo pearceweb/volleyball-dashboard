@@ -1,42 +1,52 @@
 [
   {
     "player": "Drew Demarais",
-    "school": "Long Island University"
+    "school": "Long Island University",
+    "calendar": "calendars/drew-demarais.ics"
   },
   {
     "player": "Ben DeVos",
-    "school": "UW-Stevens Point"
+    "school": "UW-Stevens Point",
+    "calendar": "calendars/ben-devos.ics"
   },
   {
     "player": "Henry Hudson",
-    "school": "Park University (Gilbert)"
+    "school": "Park University (Gilbert)",
+    "calendar": "calendars/henry-hudson.ics"
   },
   {
     "player": "Ryan Michalak",
-    "school": "Rockhurst University"
+    "school": "Rockhurst University",
+    "calendar": "calendars/ryan-michalak.ics"
   },
   {
     "player": "Colin Nathan",
-    "school": "Vassar College"
+    "school": "Vassar College",
+    "calendar": "calendars/colin-nathan.ics"
   },
   {
     "player": "Colson Pearce",
-    "school": "North Park University"
+    "school": "North Park University",
+    "calendar": "calendars/colson-pearce.ics"
   },
   {
     "player": "Treysen Cornillez",
-    "school": "Mercy University"
+    "school": "Mercy University",
+    "calendar": "calendars/treysen-cornillez.ics"
   },
   {
     "player": "Kaleb Mhiripiri",
-    "school": "Central State University"
+    "school": "Central State University",
+    "calendar": "calendars/kaleb-mhiripiri.ics"
   },
   {
     "player": "Ethan Jordheim",
-    "school": "Olivet Nazarene University"
+    "school": "Olivet Nazarene University",
+    "calendar": "calendars/ethan-jordheim.ics"
   },
   {
     "player": "Connor Voss",
-    "school": "Orange Coast College"
+    "school": "Orange Coast College",
+    "calendar": "calendars/connor-voss.ics"
   }
 ]
