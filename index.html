@@ -472,6 +472,11 @@
     font-size: 14px;
   }
 </style>
+<!-- Visit counting (GoatCounter: no cookies, no cross-site tracking).
+     no_onload: the page reports its own views so each player gets a path. -->
+<script>window.goatcounter = { no_onload: true };</script>
+<script data-goatcounter="https://tuckerpearcecreative.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js" onload="flushVisitQueue()"></script>
 </head>
 <body>
 <div class="wrap">
@@ -506,15 +511,15 @@
     <div id="subscribe-block">
       <div class="cal-subheading">Subscribe &mdash; updates automatically when the schedule changes</div>
       <div class="subscribe-buttons">
-        <a id="subscribe-apple" class="range-btn" href="#">Apple / iPhone / Outlook</a>
-        <a id="subscribe-google" class="range-btn" href="#" target="_blank" rel="noopener">Google Calendar</a>
-        <button id="subscribe-copy" class="range-btn" onclick="copySubscribeLink()">Copy link</button>
+        <a id="subscribe-apple" class="range-btn" href="#" data-track="calendar-subscribe-apple">Apple / iPhone / Outlook</a>
+        <a id="subscribe-google" class="range-btn" href="#" target="_blank" rel="noopener" data-track="calendar-subscribe-google">Google Calendar</a>
+        <button id="subscribe-copy" class="range-btn" onclick="copySubscribeLink()" data-track="calendar-subscribe-copy-link">Copy link</button>
       </div>
       <div class="season-download-note">Shows up as its own calendar you can turn off or delete any time. Apple updates within hours; Google can take up to a day.</div>
     </div>
     <div id="download-block">
       <div class="cal-subheading">Or download a one-time copy (won't update)</div>
-      <button id="season-download-btn" class="range-btn" onclick="downloadFullSeason()" title="Downloads one file with every remaining game as a separate calendar entry">Download Full Season</button>
+      <button id="season-download-btn" class="range-btn" data-track="calendar-download-season" onclick="downloadFullSeason()" title="Downloads one file with every remaining game as a separate calendar entry">Download Full Season</button>
       <div class="season-download-note">Apple Calendar: opens directly. Google/Outlook: import via Settings.</div>
     </div>
   </div>
@@ -619,6 +624,37 @@ function updateTitle() {
   const who = currentPlayer ? currentPlayer.replace(/^(.*?) - (.*)$/, "$1 ($2)") : "College Schedules";
   document.title = `${who} — MN Select Alumni`;
 }
+
+// ---- Visit counting (GoatCounter) ----------------------------------------
+// Player views are reported as "/player/<slug>" so the dashboard shows visits
+// per player, including dropdown switches (which don't reload the page).
+// Clicks on elements with data-track="name" are reported as events, tagged
+// with the player page they happened on. GoatCounter ignores localhost.
+const visitQueue = [];
+function sendVisit(data) {
+  if (window.goatcounter && window.goatcounter.count) window.goatcounter.count(data);
+  else visitQueue.push(data);  // script still loading (it's async)
+}
+function flushVisitQueue() {
+  while (visitQueue.length && window.goatcounter && window.goatcounter.count) {
+    window.goatcounter.count(visitQueue.shift());
+  }
+}
+function playerSlug(label) {
+  return label.split(" - ")[0].toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+function currentVisitPath() {
+  return currentPlayer ? `/player/${playerSlug(currentPlayer)}` : "/";
+}
+function trackPageView() {
+  sendVisit({ path: currentVisitPath(), title: document.title });
+}
+document.addEventListener("click", (e) => {
+  const el = e.target.closest("[data-track]");
+  if (!el) return;
+  const where = currentPlayer ? playerSlug(currentPlayer) : "all-players";
+  sendVisit({ path: `${el.dataset.track}/${where}`, title: el.dataset.track, event: true });
+});
 
 function playerLink(player, school) {
   return `?player=${encodeURIComponent(`${player} - ${school}`).replace(/%20/g, "+")}&range=all`;
@@ -777,7 +813,7 @@ function renderRow(g, idx) {
   } else if (g.streaming_label) {
     resultHtml = `<span class="watch-link">${escapeHtml(g.streaming_label)}</span>`;
   } else if (g.streaming_url) {
-    resultHtml = `<a class="watch-link" href="${escapeAttr(g.streaming_url)}" target="_blank" rel="noopener">Watch</a>`;
+    resultHtml = `<a class="watch-link" href="${escapeAttr(g.streaming_url)}" target="_blank" rel="noopener" data-track="watch">Watch</a>`;
   }
 
   const todayStr = new Date().toISOString().slice(0, 10);
@@ -788,13 +824,13 @@ function renderRow(g, idx) {
     ? `<div class="cal-dropdown">
         <button class="cal-link" onclick="toggleCalMenu(${idx}, event)" title="Add to calendar">+ Calendar</button>
         <div class="cal-menu" id="cal-menu-${idx}">
-          <button onclick="addToCalendar(${idx}); closeCalMenu();">
+          <button onclick="addToCalendar(${idx}); closeCalMenu();" data-track="calendar-game-apple">
             <span class="cal-icon cal-icon-ical">i</span> Apple / iCal
           </button>
-          <a href="${escapeAttr(getGoogleCalendarUrl(g))}" target="_blank" rel="noopener" onclick="closeCalMenu();">
+          <a href="${escapeAttr(getGoogleCalendarUrl(g))}" target="_blank" rel="noopener" onclick="closeCalMenu();" data-track="calendar-game-google">
             <span class="cal-icon cal-icon-google">G</span> Google Calendar
           </a>
-          <a href="${escapeAttr(getOutlookCalendarUrl(g))}" target="_blank" rel="noopener" onclick="closeCalMenu();">
+          <a href="${escapeAttr(getOutlookCalendarUrl(g))}" target="_blank" rel="noopener" onclick="closeCalMenu();" data-track="calendar-game-outlook">
             <span class="cal-icon cal-icon-outlook">O</span> Outlook
           </a>
         </div>
@@ -1178,6 +1214,7 @@ document.getElementById("player-filter").addEventListener("change", (e) => {
     updateUrl();
     render();
   }
+  trackPageView();  // a dropdown switch is a new "page" for counting
 });
 
 function applyUrlState() {
@@ -1257,6 +1294,8 @@ fetch("unified_schedule.json", { cache: "no-cache" })
     }
     populatePlayerFilter(data, players);
     applyUrlState();
+    updateTitle();
+    trackPageView();
     render();
   })
   .catch(err => {
