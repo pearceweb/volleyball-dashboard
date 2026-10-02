@@ -82,6 +82,16 @@ Commits go straight to `main` (no pull-request workflow).
   `launchctl bootout gui/$(id -u)/com.pearceweb.volleyball-presto` and delete
   `~/Library/LaunchAgents/com.pearceweb.volleyball-presto.plist`.
 
+## Visit counting
+
+GoatCounter (dashboard: https://tuckerpearcecreative.goatcounter.com; no
+cookies). `index.html` reports views itself (`no_onload`): `/` for all
+players, `/player/<slug>` per player (dropdown switches count too), and
+clicks on elements with `data-track="name"` as events (`name/<player>`).
+Add `data-track` to new buttons/links worth measuring. GoatCounter ignores
+localhost; visiting the site with `#toggle-goatcounter` stops counting that
+browser's own visits.
+
 ## Email alerts
 
 GitHub repo secrets `MAIL_USERNAME`, `MAIL_PASSWORD` (a Gmail **app password**
