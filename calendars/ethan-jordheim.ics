@@ -196,13 +196,13 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ethan-jordheim-2027-02-27-bethelin@mnselectboys
 DTSTAMP:20260101T000000Z
-DTSTART;VALUE=DATE:20270227
-DTEND;VALUE=DATE:20270228
-SUMMARY:Ethan Jordheim (Olivet Nazarene University) vs Bethel (IN)
-DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nNeutral site\nWatc
- h: https://www.onutigers.com/links/ncdanr\nFull schedule: https://mnselect
- boys.tuckerpearcecreative.com/?player=Ethan+Jordheim+-+Olivet+Nazarene+Uni
- versity&range=all
+DTSTART:20270227T220000Z
+DTEND:20270228T000000Z
+SUMMARY:Ethan Jordheim (Olivet Nazarene University) @ Bethel (IN)
+DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nWatch: https://www
+ .onutigers.com/links/ncdanr\nFull schedule: https://mnselectboys.tuckerpea
+ rcecreative.com/?player=Ethan+Jordheim+-+Olivet+Nazarene+University&range=
+ all
 END:VEVENT
 BEGIN:VEVENT
 UID:ethan-jordheim-2027-03-02-indianawesleyan@mnselectboys

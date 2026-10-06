@@ -673,17 +673,6 @@ DESCRIPTION:Colin Nathan - Vassar College\nFull schedule: https://mnselectb
 LOCATION:New Paltz\, NY
 END:VEVENT
 BEGIN:VEVENT
-UID:ethan-jordheim-2027-02-27-bethelin@mnselectboys
-DTSTAMP:20260101T000000Z
-DTSTART;VALUE=DATE:20270227
-DTEND;VALUE=DATE:20270228
-SUMMARY:Ethan Jordheim (Olivet Nazarene University) vs Bethel (IN)
-DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nNeutral site\nWatc
- h: https://www.onutigers.com/links/ncdanr\nFull schedule: https://mnselect
- boys.tuckerpearcecreative.com/?player=Ethan+Jordheim+-+Olivet+Nazarene+Uni
- versity&range=all
-END:VEVENT
-BEGIN:VEVENT
 UID:colin-nathan-2027-02-27-massachusettsinstituteoftechnology@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270227T210000Z
@@ -705,6 +694,17 @@ DESCRIPTION:Colson Pearce - North Park University\nFull schedule: https://m
  nselectboys.tuckerpearcecreative.com/?player=Colson+Pearce+-+North+Park+Un
  iversity&range=all
 LOCATION:Rock Island\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:ethan-jordheim-2027-02-27-bethelin@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270227T220000Z
+DTEND:20270228T000000Z
+SUMMARY:Ethan Jordheim (Olivet Nazarene University) @ Bethel (IN)
+DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nWatch: https://www
+ .onutigers.com/links/ncdanr\nFull schedule: https://mnselectboys.tuckerpea
+ rcecreative.com/?player=Ethan+Jordheim+-+Olivet+Nazarene+University&range=
+ all
 END:VEVENT
 BEGIN:VEVENT
 UID:ethan-jordheim-2027-03-02-indianawesleyan@mnselectboys
