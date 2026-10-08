@@ -92,6 +92,9 @@
   }
   .team-record { color: var(--text); font-weight: 600; margin-top: 2px; }
   .team-record:empty { display: none; }
+  .team-instagram { display: inline-block; margin-top: 6px; font-size: 13px; color: var(--amber); text-decoration: none; font-weight: 600; }
+  .team-instagram:hover { text-decoration: underline; }
+  .team-instagram[hidden] { display: none; }
   .recent-results { margin-bottom: 20px; }
   .recent-row {
     display: flex;
@@ -485,6 +488,7 @@
       <h1>25/26 MN Select 18-1 - College Schedule</h1>
       <div class="subtitle" id="range-label">Loading schedule...</div>
       <div class="subtitle team-record" id="team-record"></div>
+      <a id="team-instagram" class="team-instagram" target="_blank" rel="noopener" data-track="team-instagram" hidden></a>
     </div>
   </header>
   <div id="print-context" class="print-only"></div>
@@ -541,6 +545,7 @@ let waitingPlayers = [];
 let newProgramPlayers = [];
 // "Player - School" -> calendar feed path, from players.json
 let playerCalendars = {};
+let playerInstagram = {};
 
 function localTodayStr() {
   const d = new Date();
@@ -667,6 +672,16 @@ function matchupHtml(g) {
   ).join(" ");
 }
 
+function renderInstagram() {
+  // Player pages: link to the team's men's volleyball Instagram, if known.
+  const el = document.getElementById("team-instagram");
+  const url = currentPlayer && playerInstagram[currentPlayer];
+  el.hidden = !url;
+  if (!url) return;
+  el.href = url;
+  el.textContent = `\u{1F4F8} ${currentPlayer.split(" - ").slice(1).join(" - ")} volleyball on Instagram`;
+}
+
 function renderRecord() {
   // Current-season record for the selected player's team (finished seasons
   // are already filtered out of allGames).
@@ -707,6 +722,7 @@ function renderRecentResults() {
 function render() {
   updateTitle();
   renderRecord();
+  renderInstagram();
   renderRecentResults();
   renderNextUp();
   const content = document.getElementById("content");
@@ -1291,6 +1307,7 @@ fetch("unified_schedule.json", { cache: "no-cache" })
     allGames = splitFinishedSeasons(data, players);
     for (const p of players) {
       if (p.calendar) playerCalendars[`${p.player} - ${p.school}`] = p.calendar;
+      if (p.instagram) playerInstagram[`${p.player} - ${p.school}`] = p.instagram;
     }
     populatePlayerFilter(data, players);
     applyUrlState();

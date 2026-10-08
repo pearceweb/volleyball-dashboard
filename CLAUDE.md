@@ -63,8 +63,9 @@ Commits go straight to `main` (no pull-request workflow).
 
 1. Add the entry to `SCHOOLS` in `fetch_sidearm_schedules.py` or
    `fetch_presto_schedules.py` (player, school, schedule URL).
-2. In `build_unified_schedule.py`, add the school to `SCHOOL_TZ` (IANA zone)
-   and `SCHOOL_ALIASES` (names opponents use for it).
+2. In `build_unified_schedule.py`, add the school to `SCHOOL_TZ` (IANA zone),
+   `SCHOOL_ALIASES` (names opponents use for it) and `SCHOOL_INSTAGRAM`
+   (team Instagram handle, linked at the top of the player's page).
 3. Run the fetch + build locally, check the page, commit, push.
 
 ## Mac job (PrestoSports)

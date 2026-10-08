@@ -115,6 +115,21 @@ SCHOOL_TZ = {
     "Orange Coast College": "America/Los_Angeles",
 }
 DEFAULT_TZ = "America/Chicago"
+
+# Each team's men's volleyball Instagram handle (no "@"), linked at the top
+# of the player's page. None = not known yet; the page shows no link.
+SCHOOL_INSTAGRAM = {
+    "Long Island University": None,
+    "UW-Stevens Point": None,
+    "Park University (Gilbert)": None,
+    "Rockhurst University": None,
+    "Vassar College": None,
+    "North Park University": None,
+    "Mercy University": None,
+    "Central State University": None,
+    "Olivet Nazarene University": None,
+    "Orange Coast College": None,
+}
 TZ_BY_LETTER = {
     "E": "America/New_York",
     "C": "America/Chicago",
@@ -331,6 +346,9 @@ def main():
     cal_paths = write_calendars(all_games, players)
     for p in players:
         p["calendar"] = cal_paths.get(p["player"])
+        handle = SCHOOL_INSTAGRAM.get(p["school"])
+        if handle:
+            p["instagram"] = f"https://www.instagram.com/{handle}/"
     print(f"Wrote {len(cal_paths) + 1} calendar feeds to calendars/")
 
     with open("players.json", "w", encoding="utf-8") as f:
