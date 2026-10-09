@@ -6,4 +6,26 @@ METHOD:PUBLISH
 X-WR-CALNAME:Treysen Cornillez - Mercy University volleyball
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:treysen-cornillez-2027-02-04-manhattanuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270204
+DTEND;VALUE=DATE:20270205
+SUMMARY:Treysen Cornillez (Mercy University) vs Manhattan University
+DESCRIPTION:Treysen Cornillez - Mercy University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Treysen+Cornillez+-+Mercy+Univ
+ ersity&range=all
+LOCATION:Dobbs Ferry\, NY
+END:VEVENT
+BEGIN:VEVENT
+UID:treysen-cornillez-2027-02-20-daemenuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270220
+DTEND;VALUE=DATE:20270221
+SUMMARY:Treysen Cornillez (Mercy University) vs Daemen University
+DESCRIPTION:Treysen Cornillez - Mercy University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Treysen+Cornillez+-+Mercy+Univ
+ ersity&range=all
+LOCATION:Dobbs Ferry\, NY
+END:VEVENT
 END:VCALENDAR

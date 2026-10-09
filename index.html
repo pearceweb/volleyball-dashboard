@@ -120,6 +120,23 @@
     text-decoration: none;
   }
   .matchup-tag:hover { text-decoration: underline; }
+  .peek-tag {
+    display: inline-block;
+    margin: 4px 0 2px;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--text-dim);
+    border: 1px dashed var(--line);
+    border-radius: 4px;
+    padding: 1px 6px;
+  }
+  .peek-note {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-top: 6px;
+    max-width: 520px;
+  }
+  .peek-note[hidden] { display: none; }
   .next-up-label {
     font-size: 11px;
     font-weight: 700;
@@ -493,6 +510,7 @@
       <h1>25/26 MN Select 18-1 - College Schedule</h1>
       <div class="subtitle" id="range-label">Loading schedule...</div>
       <div class="subtitle team-record" id="team-record"></div>
+      <div id="peek-note" class="peek-note" hidden></div>
       <a id="team-instagram" class="team-instagram" target="_blank" rel="noopener" data-track="team-instagram" hidden></a>
     </div>
   </header>
@@ -618,6 +636,7 @@ function renderNextUp() {
           <div class="next-up-player">${escapeHtml(g.player)} <span class="school">\u00b7 ${escapeHtml(g.school)}</span></div>
           <div class="next-up-matchup"><span class="side-tag">${sideTag}</span>${escapeHtml(g.opponent || "TBD")}${timeText}</div>
           ${matchupHtml(g)}
+          ${peekHtml(g)}
         </div>
         ${watch ? `<div class="next-up-watch">${watch}</div>` : ""}
       </div>
@@ -681,6 +700,24 @@ function matchupHtml(g) {
   ).join(" ");
 }
 
+function peekHtml(g) {
+  // Games found on an opponent's schedule before our school posted its own.
+  if (!g.partial) return "";
+  const from = g.source ? ` \u00b7 from ${escapeHtml(g.source)}` : "";
+  return `<span class="peek-tag">Sneak peek${from}</span>`;
+}
+
+function renderPeekNote() {
+  // Player page: explain that only some games are known so far.
+  const el = document.getElementById("peek-note");
+  const games = currentPlayer ? allGames.filter(g => `${g.player} - ${g.school}` === currentPlayer) : [];
+  el.hidden = !games.some(g => g.partial);
+  if (el.hidden) return;
+  const school = currentPlayer.split(" - ").slice(1).join(" - ");
+  el.textContent = `Sneak peek: ${school} hasn't posted its schedule yet. These games come from ` +
+    `opponents' schedules, so it's only part of the season. The full schedule replaces them once it's out.`;
+}
+
 function renderInstagram() {
   // Player pages: link to the team's men's volleyball Instagram, if known.
   const el = document.getElementById("team-instagram");
@@ -732,6 +769,7 @@ function render() {
   updateTitle();
   renderRecord();
   renderInstagram();
+  renderPeekNote();
   renderRecentResults();
   renderNextUp();
   const content = document.getElementById("content");
@@ -879,6 +917,7 @@ function renderRow(g, idx) {
         <div class="matchup-line"><span class="side-tag">${sideTag}</span>${escapeHtml(g.opponent || "TBD")}</div>`}
         ${whereText ? `<div class="where-line">${escapeHtml(whereText)}</div>` : ""}
         ${matchupHtml(g)}
+        ${peekHtml(g)}
         ${calendarLink}
       </div>
       <div class="result-col">${resultHtml}</div>

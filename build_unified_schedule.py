@@ -330,6 +330,11 @@ def load_manual_games(players, fetched):
             "streaming_url": g.get("watch_url"),
             "platform": "manual",
         })
+        if g.get("partial"):
+            # A few games found on opponents' schedules before our school
+            # posts its own - the page labels them as a sneak peek.
+            out[-1]["partial"] = True
+            out[-1]["source"] = g.get("source")
     return out
 
 

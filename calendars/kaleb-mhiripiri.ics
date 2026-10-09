@@ -6,4 +6,74 @@ METHOD:PUBLISH
 X-WR-CALNAME:Kaleb Mhiripiri - Central State University volleyball
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:kaleb-mhiripiri-2027-01-10-universityofcharlestonwva@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270110T200000Z
+DTEND:20270110T220000Z
+SUMMARY:Kaleb Mhiripiri (Central State University) @ University of Charlest
+ on (W.Va.)
+DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Kaleb+Mhiripiri+-+Centra
+ l+State+University&range=all
+LOCATION:Charleston\, WV
+END:VEVENT
+BEGIN:VEVENT
+UID:kaleb-mhiripiri-2027-01-13-northernkentuckyuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270113
+DTEND;VALUE=DATE:20270114
+SUMMARY:Kaleb Mhiripiri (Central State University) vs Northern Kentucky Uni
+ versity
+DESCRIPTION:Kaleb Mhiripiri - Central State University\nNeutral site\nFull 
+ schedule: https://mnselectboys.tuckerpearcecreative.com/?player=Kaleb+Mhir
+ ipiri+-+Central+State+University&range=all
+END:VEVENT
+BEGIN:VEVENT
+UID:kaleb-mhiripiri-2027-01-22-rockhurstuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270122
+DTEND;VALUE=DATE:20270123
+SUMMARY:Kaleb Mhiripiri (Central State University) @ Rockhurst University
+DESCRIPTION:Kaleb Mhiripiri - Central State University\nMN Select matchup v
+ s Ryan Michalak (Rockhurst University)\nFull schedule: https://mnselectboy
+ s.tuckerpearcecreative.com/?player=Kaleb+Mhiripiri+-+Central+State+Univers
+ ity&range=all
+LOCATION:Kansas City\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:kaleb-mhiripiri-2027-02-06-rockhurstuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270206
+DTEND;VALUE=DATE:20270207
+SUMMARY:Kaleb Mhiripiri (Central State University) vs Rockhurst University
+DESCRIPTION:Kaleb Mhiripiri - Central State University\nMN Select matchup v
+ s Ryan Michalak (Rockhurst University)\nFull schedule: https://mnselectboy
+ s.tuckerpearcecreative.com/?player=Kaleb+Mhiripiri+-+Central+State+Univers
+ ity&range=all
+LOCATION:Wilberforce\, OH
+END:VEVENT
+BEGIN:VEVENT
+UID:kaleb-mhiripiri-2027-03-06-daemenuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270306T190000Z
+DTEND:20270306T210000Z
+SUMMARY:Kaleb Mhiripiri (Central State University) vs Daemen University
+DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Kaleb+Mhiripiri+-+Centra
+ l+State+University&range=all
+LOCATION:Wilberforce\, OH
+END:VEVENT
+BEGIN:VEVENT
+UID:kaleb-mhiripiri-2027-03-26-universityofcharlestonwva@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270326T220000Z
+DTEND:20270327T000000Z
+SUMMARY:Kaleb Mhiripiri (Central State University) vs University of Charles
+ ton (W.Va.)
+DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Kaleb+Mhiripiri+-+Centra
+ l+State+University&range=all
+LOCATION:Wilberforce\, OH
+END:VEVENT
 END:VCALENDAR

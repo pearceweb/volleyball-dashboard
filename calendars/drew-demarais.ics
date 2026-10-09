@@ -6,4 +6,48 @@ METHOD:PUBLISH
 X-WR-CALNAME:Drew Demarais - Long Island University volleyball
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:drew-demarais-2027-03-12-manhattanuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270312
+DTEND;VALUE=DATE:20270313
+SUMMARY:Drew Demarais (Long Island University) vs Manhattan University
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Brooklyn\, NY
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-03-13-manhattanuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270313
+DTEND;VALUE=DATE:20270314
+SUMMARY:Drew Demarais (Long Island University) vs Manhattan University
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Brooklyn\, NY
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-03-26-daemenuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270326T220000Z
+DTEND:20270327T000000Z
+SUMMARY:Drew Demarais (Long Island University) vs Daemen University
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Brooklyn\, NY
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-03-27-daemenuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270327T170000Z
+DTEND:20270327T190000Z
+SUMMARY:Drew Demarais (Long Island University) vs Daemen University
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Brooklyn\, NY
+END:VEVENT
 END:VCALENDAR

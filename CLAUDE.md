@@ -73,6 +73,11 @@ Commits go straight to `main` (no pull-request workflow).
   has any game that season. A school's older-season fetched games are
   dropped while it has hand-added games in a newer season. UW-Stevens
   Point's 2027 season is in there this way (from its Oct 2026 teaser).
+  `"partial": true` + `"source": "Daemen's schedule"` marks a "sneak peek"
+  game found on an opponent's schedule (also `until_schedule_posted`); the
+  page tags those games and explains on the player's page that it's only
+  part of the season. Find more with the debug workflow's `opponents` mode
+  (`scripts/scan_opponents.py`).
 - **MN Select matchups**: games where the opponent is another player's school
   are tagged (`matchup_with`) and shown on the page.
 
