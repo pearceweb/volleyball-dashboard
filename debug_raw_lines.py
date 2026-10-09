@@ -9,6 +9,10 @@ mis-parsed. Prints the first ~90 lines (should cover 3-5 games).
 Usage:
     python3 debug_raw_lines.py                     # defaults to UW-Stevens Point
     python3 debug_raw_lines.py <schedule-url>       # any Sidearm school
+    python3 debug_raw_lines.py <schedule-url> all   # every line, not just ~90
+
+The "Debug a schedule page" GitHub workflow runs this on GitHub's servers
+(for when a school's site can't be reached from where you are).
 """
 
 import sys
@@ -40,6 +44,7 @@ for i, ln in enumerate(lines):
         start = i
         break
 
-for i, ln in enumerate(lines[start:start + 90]):
+count = None if len(sys.argv) > 2 and sys.argv[2] == "all" else 90
+for i, ln in enumerate(lines[start:start + count if count else None]):
     print(f"{i:3d}: {ln!r}")
 

@@ -1,0 +1,30 @@
+name: Debug a schedule page
+
+# Manual only: prints a Sidearm schedule page's raw text lines and what the
+# parser makes of them, for fixing parser problems when the school's site
+# can't be reached from where you are. Changes nothing in the repo.
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "Schedule page URL"
+        type: string
+        required: true
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4
+      - name: Raw lines
+        env:
+          URL: ${{ inputs.url }}
+        run: python3 debug_raw_lines.py "$URL" all
+      - name: Parsed games
+        env:
+          URL: ${{ inputs.url }}
+        run: python3 -c 'import json,os; from fetch_sidearm_schedules import fetch_and_parse; print(json.dumps(fetch_and_parse(os.environ["URL"]), indent=1))'
