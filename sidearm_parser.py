@@ -40,6 +40,9 @@ RESULT_LABEL_RE = re.compile(r"^([WL]),?$")
 SCORE_ONLY_RE = re.compile(r"^(\d+)-(\d+)$")
 TV_RE = re.compile(r"^TV:\s*(.+)$", re.IGNORECASE)
 RANK_PREFIX_RE = re.compile(r"^(No\.\s*\d+|#\d+|#RV|\(\d+\))\s+")
+# Park Gilbert puts an opponent's ranking on its own line: "vs" / "#14" /
+# "Westcliff University".
+RANK_ONLY_RE = re.compile(r"^(No\.\s*\d+|#\d+|#RV|\(\d+\))$")
 CONFERENCE_TAG_RE = re.compile(r"^[A-Za-z0-9]+\s*\*$")
 ALL_CAPS_LABEL_RE = re.compile(r"^[A-Z][A-Z\s]{2,}$")
 PHOTO_CREDIT_RE = re.compile(r"\bphoto\b|\binc\.?$", re.IGNORECASE)
@@ -262,6 +265,8 @@ def _parse_block(block):
     for idx, line in enumerate(block):
         if line.lower() in ("vs", "at"):
             game["home_away"] = "home" if line.lower() == "vs" else "away"
+            if idx + 1 < len(block) and RANK_ONLY_RE.match(block[idx + 1]):
+                idx += 1
             if idx + 1 < len(block):
                 candidate = block[idx + 1]
                 game["opponent"] = RANK_PREFIX_RE.sub("", candidate).strip()
@@ -274,7 +279,11 @@ def _parse_block(block):
         j = result_idx - 1
         while j >= 0:
             candidate = block[j]
-            if _is_noise(candidate) or "," in candidate:
+            # A line right after the "City, ST" line is the gym name (Park
+            # Gilbert's tournament games: "Richmond, Ind." / "Lingle Court").
+            after_location = j > 0 and LOCATION_SHAPE_RE.match(block[j - 1])
+            if (_is_noise(candidate) or "," in candidate or after_location
+                    or RANK_ONLY_RE.match(candidate)):
                 j -= 1
                 continue
             game["opponent"] = RANK_PREFIX_RE.sub("", candidate).strip()
