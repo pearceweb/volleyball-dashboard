@@ -279,6 +279,15 @@ def _parse_block(block):
 
     # Strategy 2 (fallback): nearest substantive line immediately before
     # the result, skipping known noise/labels and location lines.
+    # A line right after a ranking-only line ("#7") is the opponent, even
+    # with a comma in it ("University of California, Santa Cruz" on UWSP's).
+    if game["opponent"] is None and result_idx is not None:
+        for idx in range(result_idx - 1):
+            if RANK_ONLY_RE.match(block[idx]) and not _is_noise(block[idx + 1]):
+                game["opponent"] = block[idx + 1]
+                opponent_idx = idx + 1
+                break
+
     if game["opponent"] is None and result_idx is not None:
         j = result_idx - 1
         while j >= 0:
