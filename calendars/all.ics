@@ -7,6 +7,19 @@ X-WR-CALNAME:MN Select alumni volleyball
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
+UID:colson-pearce-2026-10-09-rockforduniversityscrimmage@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20261010T000000Z
+DTEND:20261010T020000Z
+SUMMARY:Colson Pearce (North Park University) vs Rockford University (scrim
+ mage)
+DESCRIPTION:Colson Pearce - North Park University\nWatch: https://boxcast.t
+ v/view/mvb-scrimmage-jjicfzhdo1vmgatfazyi\nFull schedule: https://mnselect
+ boys.tuckerpearcecreative.com/?player=Colson+Pearce+-+North+Park+Universit
+ y&range=all
+LOCATION:Chicago\, IL
+END:VEVENT
+BEGIN:VEVENT
 UID:ryan-michalak-2027-01-14-manhattanuniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270114

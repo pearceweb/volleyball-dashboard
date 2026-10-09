@@ -277,6 +277,51 @@ SCHOOL_ALIASES = {
 }
 
 
+def load_manual_games(players, fetched):
+    """
+    Games the schools' schedule pages don't list (fall scrimmages etc.),
+    added by hand to manual_games.json. Merged in on every build so the
+    scheduled jobs never wipe them. Skipped once the school's own schedule
+    shows a game that day, so nothing appears twice.
+    """
+    try:
+        with open("manual_games.json", encoding="utf-8") as f:
+            entries = json.load(f)
+    except FileNotFoundError:
+        return []
+    player_for = {p["school"]: p["player"] for p in players}
+    fetched_days = {(g["school"], g["date_iso"]) for g in fetched}
+    out = []
+    for g in entries:
+        school = g["school"]
+        if school not in player_for:
+            print(f"WARNING: manual game for unknown school {school!r} - skipped")
+            continue
+        if (school, g["date"]) in fetched_days:
+            print(f"Manual game {school} {g['date']} now on the school's schedule - skipped")
+            continue
+        tz = resolve_tz(school, None)
+        out.append({
+            "player": player_for[school],
+            "school": school,
+            "date_iso": g["date"],
+            "date_display": datetime.strptime(g["date"], "%Y-%m-%d").strftime("%b %-d"),
+            "time": g.get("time"),
+            "tz": tz,
+            "start_utc": start_utc(g["date"], g.get("time"), tz),
+            "home_away": g.get("home_away", "neutral"),
+            "opponent": g.get("opponent"),
+            "location": g.get("location"),
+            "result": g.get("result"),
+            "sets": g.get("sets"),
+            "status": None,
+            "streaming_label": None,
+            "streaming_url": g.get("watch_url"),
+            "platform": "manual",
+        })
+    return out
+
+
 def _norm(name):
     name = re.sub(r"^(No\.\s*\d+|#\d+|#RV)\s+", "", (name or "").strip(), flags=re.IGNORECASE)
     return re.sub(r"\s+", " ", name.lower().replace(".", ""))
@@ -324,6 +369,8 @@ def main():
             players.append({"player": entry["player"], "school": entry["school"]})
     except FileNotFoundError:
         print("presto_games.json not found - skipping (run fetch_presto_schedules.py first)")
+
+    all_games.extend(load_manual_games(players, all_games))
 
     for g in all_games:
         if g["date_iso"] is None and g["date_display"]:

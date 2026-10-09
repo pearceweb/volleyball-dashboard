@@ -2594,6 +2594,25 @@
     "matchup_with": []
   },
   {
+    "player": "Colson Pearce",
+    "school": "North Park University",
+    "date_iso": "2026-10-09",
+    "date_display": "Oct 9",
+    "time": "7:00 PM",
+    "tz": "America/Chicago",
+    "start_utc": "2026-10-10T00:00:00Z",
+    "home_away": "home",
+    "opponent": "Rockford University (scrimmage)",
+    "location": "Chicago, IL",
+    "result": null,
+    "sets": null,
+    "status": null,
+    "streaming_label": null,
+    "streaming_url": "https://boxcast.tv/view/mvb-scrimmage-jjicfzhdo1vmgatfazyi",
+    "platform": "manual",
+    "matchup_with": []
+  },
+  {
     "player": "Ryan Michalak",
     "school": "Rockhurst University",
     "date_iso": "2027-01-14",

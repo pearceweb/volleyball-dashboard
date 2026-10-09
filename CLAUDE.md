@@ -56,6 +56,11 @@ Commits go straight to `main` (no pull-request workflow).
 - **Presto data cleanup** (in the build): "Hastings @ Sioux City, Iowa" →
   neutral site in Sioux City; times live in the status column; relative watch
   links are made absolute.
+- **Hand-added games**: `manual_games.json` holds games the school sites
+  don't list (fall scrimmages). The build merges them in every run, so the
+  jobs never wipe them, and skips one once the school's own schedule shows a
+  game for that school on that day. Fields: school, date (YYYY-MM-DD), time
+  ("7:00 PM", school's zone), home_away, opponent, location, watch_url.
 - **MN Select matchups**: games where the opponent is another player's school
   are tagged (`matchup_with`) and shown on the page.
 
