@@ -1263,8 +1263,9 @@ function applyUrlState() {
     document.querySelectorAll(".range-btn[data-days]").forEach(b => b.classList.remove("active"));
     document.querySelector('.range-btn[data-days="all"]').classList.add("active");
     currentDays = "all";
-  } else if (!hasGamesThisWeek()) {
-    // Off-season: "This week" would be empty, so open on the full list.
+  } else if (!isRegularSeason() || !hasGamesThisWeek()) {
+    // Outside the Jan-May season (fall scrimmages) or a week with no
+    // games, "This week" would look empty, so open on the full list.
     // The URL stays clean, so this re-checks every visit.
     document.querySelectorAll(".range-btn[data-days]").forEach(b => b.classList.remove("active"));
     document.querySelector('.range-btn[data-days="all"]').classList.add("active");
@@ -1272,6 +1273,11 @@ function applyUrlState() {
   }
 
   updateSeasonDownloadVisibility();
+}
+
+function isRegularSeason() {
+  // Men's college volleyball plays January through early May.
+  return new Date().getMonth() <= 4;
 }
 
 function hasGamesThisWeek() {
