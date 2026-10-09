@@ -36,11 +36,12 @@ UID:kaleb-mhiripiri-2027-01-13-northernkentuckyuniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270113
 DTEND;VALUE=DATE:20270114
-SUMMARY:Kaleb Mhiripiri (Central State University) vs Northern Kentucky Uni
- versity
-DESCRIPTION:Kaleb Mhiripiri - Central State University\nNeutral site\nFull 
- schedule: https://mnselectboys.tuckerpearcecreative.com/?player=Kaleb+Mhir
- ipiri+-+Central+State+University&range=all
+SUMMARY:Kaleb Mhiripiri (Central State University) @ Northern Kentucky Univ
+ ersity
+DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Kaleb+Mhiripiri+-+Centra
+ l+State+University&range=all
+LOCATION:Highland Heights\, KY
 END:VEVENT
 BEGIN:VEVENT
 UID:ryan-michalak-2027-01-14-manhattanuniversity@mnselectboys
@@ -1756,5 +1757,29 @@ DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
  selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
  ersity&range=all
 LOCATION:Chicago\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:kaleb-mhiripiri-2027-04-23-fortvalleystateuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270423T220000Z
+DTEND:20270424T000000Z
+SUMMARY:Kaleb Mhiripiri (Central State University) @ Fort Valley State Univ
+ ersity
+DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Kaleb+Mhiripiri+-+Centra
+ l+State+University&range=all
+LOCATION:Fort Valley\, GA
+END:VEVENT
+BEGIN:VEVENT
+UID:kaleb-mhiripiri-2027-04-24-fortvalleystateuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270424T190000Z
+DTEND:20270424T210000Z
+SUMMARY:Kaleb Mhiripiri (Central State University) @ Fort Valley State Univ
+ ersity
+DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Kaleb+Mhiripiri+-+Centra
+ l+State+University&range=all
+LOCATION:Fort Valley\, GA
 END:VEVENT
 END:VCALENDAR
