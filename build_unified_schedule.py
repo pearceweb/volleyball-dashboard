@@ -117,18 +117,18 @@ SCHOOL_TZ = {
 DEFAULT_TZ = "America/Chicago"
 
 # Each team's men's volleyball Instagram handle (no "@"), linked at the top
-# of the player's page. None = not known yet; the page shows no link.
+# of the player's page. None = no account; the page shows no link.
 SCHOOL_INSTAGRAM = {
-    "Long Island University": None,
-    "UW-Stevens Point": None,
-    "Park University (Gilbert)": None,
-    "Rockhurst University": None,
-    "Vassar College": None,
-    "North Park University": None,
-    "Mercy University": None,
-    "Central State University": None,
-    "Olivet Nazarene University": None,
-    "Orange Coast College": None,
+    "Long Island University": "liusharksmvb",
+    "UW-Stevens Point": "uwspmvb",
+    "Park University (Gilbert)": "parkugilbert_mvb",
+    "Rockhurst University": "rockhurstmvb",
+    "Vassar College": "vassarmvb",
+    "North Park University": "npumensvb",
+    "Mercy University": "mercymvbteam",
+    "Central State University": "centralstatemvb",
+    "Olivet Nazarene University": "olivetmvb",
+    "Orange Coast College": "occmvball",
 }
 TZ_BY_LETTER = {
     "E": "America/New_York",
