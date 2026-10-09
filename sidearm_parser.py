@@ -43,6 +43,10 @@ RANK_PREFIX_RE = re.compile(r"^(No\.\s*\d+|#\d+|#RV|\(\d+\))\s+")
 # Park Gilbert puts an opponent's ranking on its own line: "vs" / "#14" /
 # "Westcliff University".
 RANK_ONLY_RE = re.compile(r"^(No\.\s*\d+|#\d+|#RV|\(\d+\))$")
+# Gym names, which some schools print right after the "City, ST" line.
+VENUE_RE = re.compile(
+    r"\b(Center|Centre|Court|Arena|Gym|Gymnasium|Fieldhouse|Field House|Pavilion|"
+    r"Grounds|Complex|Coliseum|Dome)$", re.IGNORECASE)
 CONFERENCE_TAG_RE = re.compile(r"^[A-Za-z0-9]+\s*\*$")
 ALL_CAPS_LABEL_RE = re.compile(r"^[A-Z][A-Z\s]{2,}$")
 PHOTO_CREDIT_RE = re.compile(r"\bphoto\b|\binc\.?$", re.IGNORECASE)
@@ -279,10 +283,12 @@ def _parse_block(block):
         j = result_idx - 1
         while j >= 0:
             candidate = block[j]
-            # A line right after the "City, ST" line is the gym name (Park
-            # Gilbert's tournament games: "Richmond, Ind." / "Lingle Court").
-            after_location = j > 0 and LOCATION_SHAPE_RE.match(block[j - 1])
-            if (_is_noise(candidate) or "," in candidate or after_location
+            # A gym name right after the "City, ST" line (Park Gilbert's
+            # tournament games: "Richmond, Ind." / "Lingle Court"). Other
+            # schools (UWSP) put the opponent there, so it must look like a gym.
+            venue = (j > 0 and LOCATION_SHAPE_RE.match(block[j - 1])
+                     and VENUE_RE.search(candidate))
+            if (_is_noise(candidate) or "," in candidate or venue
                     or RANK_ONLY_RE.match(candidate)):
                 j -= 1
                 continue
