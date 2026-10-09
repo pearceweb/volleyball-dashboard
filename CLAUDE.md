@@ -51,8 +51,15 @@ Commits go straight to `main` (no pull-request workflow).
 - **Parser gotchas (Sidearm)**: same-day doubleheaders with times on their own
   line, matches between two other teams at a shared event ("Hunter vs Kean" —
   skipped), venue names next to opponents, and page-footer text after the last
-  game (parsing stops at "Score By Period"/"Related Headlines"). After any
-  parser change, diff the output for every school before committing.
+  game (parsing stops at "Score By Period"/"Related Headlines"), rankings
+  on their own line ("vs" / "#14" / opponent — Park Gilbert, LIU), and gym
+  names right after the city line ("Richmond, Ind." / "Lingle Court"). After
+  any parser change, diff the output for every school before committing.
+- **Debugging a school's page** when its site is unreachable from where
+  you are: run the manual "Debug a schedule page" workflow (GitHub's
+  servers can reach Sidearm) with a schedule URL to print the page's raw
+  lines + parsed games, or with `all` to print every school's parsed games
+  — run it on `main` and on a branch with the parser change, then diff.
 - **Presto data cleanup** (in the build): "Hastings @ Sioux City, Iowa" →
   neutral site in Sioux City; times live in the status column; relative watch
   links are made absolute.

@@ -40,6 +40,13 @@ RESULT_LABEL_RE = re.compile(r"^([WL]),?$")
 SCORE_ONLY_RE = re.compile(r"^(\d+)-(\d+)$")
 TV_RE = re.compile(r"^TV:\s*(.+)$", re.IGNORECASE)
 RANK_PREFIX_RE = re.compile(r"^(No\.\s*\d+|#\d+|#RV|\(\d+\))\s+")
+# Park Gilbert puts an opponent's ranking on its own line: "vs" / "#14" /
+# "Westcliff University".
+RANK_ONLY_RE = re.compile(r"^(No\.\s*\d+|#\d+|#RV|\(\d+\))$")
+# Gym names, which some schools print right after the "City, ST" line.
+VENUE_RE = re.compile(
+    r"\b(Center|Centre|Court|Arena|Gym|Gymnasium|Fieldhouse|Field House|Pavilion|"
+    r"Grounds|Complex|Coliseum|Dome)$", re.IGNORECASE)
 CONFERENCE_TAG_RE = re.compile(r"^[A-Za-z0-9]+\s*\*$")
 ALL_CAPS_LABEL_RE = re.compile(r"^[A-Z][A-Z\s]{2,}$")
 PHOTO_CREDIT_RE = re.compile(r"\bphoto\b|\binc\.?$", re.IGNORECASE)
@@ -262,6 +269,8 @@ def _parse_block(block):
     for idx, line in enumerate(block):
         if line.lower() in ("vs", "at"):
             game["home_away"] = "home" if line.lower() == "vs" else "away"
+            if idx + 1 < len(block) and RANK_ONLY_RE.match(block[idx + 1]):
+                idx += 1
             if idx + 1 < len(block):
                 candidate = block[idx + 1]
                 game["opponent"] = RANK_PREFIX_RE.sub("", candidate).strip()
@@ -270,11 +279,26 @@ def _parse_block(block):
 
     # Strategy 2 (fallback): nearest substantive line immediately before
     # the result, skipping known noise/labels and location lines.
+    # A line right after a ranking-only line ("#7") is the opponent, even
+    # with a comma in it ("University of California, Santa Cruz" on UWSP's).
+    if game["opponent"] is None and result_idx is not None:
+        for idx in range(result_idx - 1):
+            if RANK_ONLY_RE.match(block[idx]) and not _is_noise(block[idx + 1]):
+                game["opponent"] = block[idx + 1]
+                opponent_idx = idx + 1
+                break
+
     if game["opponent"] is None and result_idx is not None:
         j = result_idx - 1
         while j >= 0:
             candidate = block[j]
-            if _is_noise(candidate) or "," in candidate:
+            # A gym name right after the "City, ST" line (Park Gilbert's
+            # tournament games: "Richmond, Ind." / "Lingle Court"). Other
+            # schools (UWSP) put the opponent there, so it must look like a gym.
+            venue = (j > 0 and LOCATION_SHAPE_RE.match(block[j - 1])
+                     and VENUE_RE.search(candidate))
+            if (_is_noise(candidate) or "," in candidate or venue
+                    or RANK_ONLY_RE.match(candidate)):
                 j -= 1
                 continue
             game["opponent"] = RANK_PREFIX_RE.sub("", candidate).strip()
