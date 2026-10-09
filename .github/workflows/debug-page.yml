@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       url:
-        description: "Schedule page URL, or 'all' to print every Sidearm school's parsed games"
+        description: "Schedule page URL, 'all' to print every Sidearm school's parsed games, or 'opponents' to scan opponents' new-season schedules"
         type: string
         required: true
 
@@ -21,12 +21,12 @@ jobs:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
       - name: Raw lines
-        if: inputs.url != 'all'
+        if: inputs.url != 'all' && inputs.url != 'opponents'
         env:
           URL: ${{ inputs.url }}
         run: python3 debug_raw_lines.py "$URL" all
       - name: Parsed games
-        if: inputs.url != 'all'
+        if: inputs.url != 'all' && inputs.url != 'opponents'
         env:
           URL: ${{ inputs.url }}
         run: python3 -c 'import json,os; from fetch_sidearm_schedules import fetch_and_parse; print(json.dumps(fetch_and_parse(os.environ["URL"]), indent=1))'
@@ -42,3 +42,6 @@ jobs:
               for g in fetch_and_parse(e["url"]):
                   print("GAME", e["school"], "|", json.dumps(g, sort_keys=True))
           PY
+      - name: Opponents' new-season schedules
+        if: inputs.url == 'opponents'
+        run: python3 scripts/scan_opponents.py
