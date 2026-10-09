@@ -92,6 +92,16 @@
   }
   .team-record { color: var(--text); font-weight: 600; margin-top: 2px; }
   .team-record:empty { display: none; }
+  .back-home {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--amber);
+    text-decoration: none;
+    margin-bottom: 6px;
+  }
+  .back-home:hover { text-decoration: underline; }
+  .back-home[hidden] { display: none; }
   .team-instagram { display: inline-block; margin-top: 6px; font-size: 13px; color: var(--amber); text-decoration: none; font-weight: 600; }
   .team-instagram:hover { text-decoration: underline; }
   .team-instagram[hidden] { display: none; }
@@ -456,6 +466,7 @@
     #season-download-bottom,
     .quick-jump,
     .watch-link,
+    .back-home,
     .cal-dropdown,
     #site-footer {
       display: none !important;
@@ -507,6 +518,7 @@
 <div class="wrap">
   <header>
     <div>
+      <a id="back-home" class="back-home" href="./" data-track="back-to-all-players" hidden>&larr; All players</a>
       <h1>25/26 MN Select 18-1 - College Schedule</h1>
       <div class="subtitle" id="range-label">Loading schedule...</div>
       <div class="subtitle team-record" id="team-record"></div>
@@ -718,6 +730,10 @@ function renderPeekNote() {
     `opponents' schedules, so it's only part of the season. The full schedule replaces them once it's out.`;
 }
 
+function renderBackHome() {
+  document.getElementById("back-home").hidden = !currentPlayer;
+}
+
 function renderInstagram() {
   // Player pages: link to the team's men's volleyball Instagram, if known.
   const el = document.getElementById("team-instagram");
@@ -770,6 +786,7 @@ function render() {
   renderRecord();
   renderInstagram();
   renderPeekNote();
+  renderBackHome();
   renderRecentResults();
   renderNextUp();
   const content = document.getElementById("content");
@@ -1271,6 +1288,16 @@ function copySubscribeLink() {
     window.prompt("Copy this link:", url);
   }
 }
+
+// "← All players" on a player's page: same as picking "All players" in the
+// dropdown (keeps the chosen date range).
+document.getElementById("back-home").addEventListener("click", (e) => {
+  e.preventDefault();
+  const select = document.getElementById("player-filter");
+  select.value = "";
+  select.dispatchEvent(new Event("change"));
+  window.scrollTo(0, 0);
+});
 
 document.getElementById("player-filter").addEventListener("change", (e) => {
   currentPlayer = e.target.value;
