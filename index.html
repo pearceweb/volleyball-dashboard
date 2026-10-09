@@ -135,7 +135,12 @@
     border-radius: 10px;
     padding: 12px 16px;
     margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
+  .next-up-main { flex: 1; min-width: 0; }
+  .next-up-watch { flex-shrink: 0; }
   .next-up-card.away { border-left-color: var(--away); }
   .next-up-card.neutral { border-left-color: var(--text-dim); }
   .next-up-card:last-child { margin-bottom: 0; }
@@ -606,11 +611,15 @@ function renderNextUp() {
     const sideTag = g.home_away === "home" ? "vs" : g.home_away === "away" ? "@" : "vs";
     const t = formatGameTime(g);
     const timeText = t ? ` &middot; ${t.viewer}${t.venue ? ` (${t.venue} local)` : ""}` : "";
+    const watch = watchHtml(g, "watch-next-up");
     return `
       <div class="next-up-card ${g.home_away}">
-        <div class="next-up-player">${escapeHtml(g.player)} <span class="school">\u00b7 ${escapeHtml(g.school)}</span></div>
-        <div class="next-up-matchup"><span class="side-tag">${sideTag}</span>${escapeHtml(g.opponent || "TBD")}${timeText}</div>
-        ${matchupHtml(g)}
+        <div class="next-up-main">
+          <div class="next-up-player">${escapeHtml(g.player)} <span class="school">\u00b7 ${escapeHtml(g.school)}</span></div>
+          <div class="next-up-matchup"><span class="side-tag">${sideTag}</span>${escapeHtml(g.opponent || "TBD")}${timeText}</div>
+          ${matchupHtml(g)}
+        </div>
+        ${watch ? `<div class="next-up-watch">${watch}</div>` : ""}
       </div>
     `;
   }).join("");
@@ -814,6 +823,13 @@ function jumpToUpcoming() {
   if (marker) marker.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+function watchHtml(g, track = "watch") {
+  // Where to watch: a network name (Sidearm) or a stream link.
+  if (g.streaming_label) return `<span class="watch-link">${escapeHtml(g.streaming_label)}</span>`;
+  if (g.streaming_url) return `<a class="watch-link" href="${escapeAttr(g.streaming_url)}" target="_blank" rel="noopener" data-track="${track}">Watch</a>`;
+  return "";
+}
+
 function renderRow(g, idx) {
   const sideTag = g.home_away === "home" ? "vs" : g.home_away === "away" ? "@" : "vs";
   const played = !!g.result;
@@ -826,10 +842,8 @@ function renderRow(g, idx) {
   if (played) {
     const cls = g.result === "W" ? "win" : "loss";
     resultHtml = `<div class="score ${cls}">${g.result} ${g.sets || ""}</div>`;
-  } else if (g.streaming_label) {
-    resultHtml = `<span class="watch-link">${escapeHtml(g.streaming_label)}</span>`;
-  } else if (g.streaming_url) {
-    resultHtml = `<a class="watch-link" href="${escapeAttr(g.streaming_url)}" target="_blank" rel="noopener" data-track="watch">Watch</a>`;
+  } else {
+    resultHtml = watchHtml(g);
   }
 
   const todayStr = new Date().toISOString().slice(0, 10);
