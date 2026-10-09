@@ -6,4 +6,313 @@ METHOD:PUBLISH
 X-WR-CALNAME:Ben DeVos - UW-Stevens Point volleyball
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:ben-devos-2027-01-16-universityofolivet@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270117T010000Z
+DTEND:20270117T030000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs University of Olivet
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Stevens Point\, WI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-01-17-illinoiswesleyanuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270117T180000Z
+DTEND:20270117T200000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Illinois Wesleyan University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+LOCATION:Madison\, WI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-01-17-edgewooduniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270117T210000Z
+DTEND:20270117T230000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) @ Edgewood University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Madison\, WI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-01-25-lorascollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270125T170000Z
+DTEND:20270125T190000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Loras College
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Stevens Point\, WI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-01-25-illinoisinstituteoftechnology@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270125T220000Z
+DTEND:20270126T000000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Illinois Institute of Technology
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Stevens Point\, WI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-01-28-milwaukeeschoolofengineering@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270129T000000Z
+DTEND:20270129T020000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Milwaukee School of Engineering
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Stevens Point\, WI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-01-31-northcentralcollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270131T180000Z
+DTEND:20270131T200000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) @ North Central College
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Naperville\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-01-31-californialutheranuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270131T203000Z
+DTEND:20270131T223000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs California Lutheran University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+LOCATION:Naperville\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-02-03-augustanacollegeil@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270204T010000Z
+DTEND:20270204T030000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Augustana College (IL)
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Stevens Point\, WI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-02-06-marianuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270207T010000Z
+DTEND:20270207T030000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Marian University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Stevens Point\, WI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-02-14-ucsantacruz@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270214T190000Z
+DTEND:20270214T210000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs UC Santa Cruz
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-02-14-wittenberguniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270214T213000Z
+DTEND:20270214T233000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Wittenberg University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-02-15-milwaukeeschoolofengineering@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270215T200000Z
+DTEND:20270215T220000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) @ Milwaukee School of Engineering
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Milwaukee\, WI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-02-20-rooseveltuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270221T000000Z
+DTEND:20270221T020000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) @ Roosevelt University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Chicago\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-02-21-rockforduniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270221T190000Z
+DTEND:20270221T210000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Rockford University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+LOCATION:River Forest\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-02-21-dominicanuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270221T220000Z
+DTEND:20270222T000000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) @ Dominican University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:River Forest\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-02-25-viterbouniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270226T010000Z
+DTEND:20270226T030000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Viterbo University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Stevens Point\, WI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-02-27-calvinuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270227T220000Z
+DTEND:20270228T000000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) @ Calvin University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Grand Rapids\, MI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-02-28-universityofolivet@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270228T150000Z
+DTEND:20270228T170000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) @ University of Olivet
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Olivet\, MI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-02-28-franklincollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270228T170000Z
+DTEND:20270228T190000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Franklin College
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+LOCATION:Olivet\, MI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-03-03-maranathabaptistuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270304T010000Z
+DTEND:20270304T030000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Maranatha Baptist University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Stevens Point\, WI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-03-11-lorascollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270312T000000Z
+DTEND:20270312T020000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) @ Loras College
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Dubuque\, IA
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-03-14-adriancollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270314T140000Z
+DTEND:20270314T160000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) @ Adrian College
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Adrian\, MI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-03-14-franklincollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270314T160000Z
+DTEND:20270314T180000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Franklin College
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+LOCATION:Adrian\, MI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-03-21-judsonuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270321T200000Z
+DTEND:20270321T220000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Judson University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+LOCATION:La Crosse\, WI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-03-21-viterbouniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270321T220000Z
+DTEND:20270322T000000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) @ Viterbo University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:La Crosse\, WI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-04-03-westminstercollegemo@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270403
+DTEND;VALUE=DATE:20270404
+SUMMARY:Ben DeVos (UW-Stevens Point) @ Westminster College (MO)
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Fulton\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-04-03-greenvilleuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270403
+DTEND;VALUE=DATE:20270404
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Greenville University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+LOCATION:Fulton\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-04-04-simpsoncollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270404
+DTEND;VALUE=DATE:20270405
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Simpson College
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+LOCATION:Fulton\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-04-04-franklincollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270404
+DTEND;VALUE=DATE:20270405
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Franklin College
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+LOCATION:Fulton\, MO
+END:VEVENT
 END:VCALENDAR

@@ -277,12 +277,20 @@ SCHOOL_ALIASES = {
 }
 
 
+def season_of(date_iso):
+    """'2027-02-14' -> 2026: a season runs July-June, named by its fall year."""
+    year, month = int(date_iso[:4]), int(date_iso[5:7])
+    return year if month >= 7 else year - 1
+
+
 def load_manual_games(players, fetched):
     """
     Games the schools' schedule pages don't list (fall scrimmages etc.),
     added by hand to manual_games.json. Merged in on every build so the
     scheduled jobs never wipe them. Skipped once the school's own schedule
-    shows a game that day, so nothing appears twice.
+    shows a game that day, so nothing appears twice. Entries marked
+    "until_schedule_posted" (a season copied from a school's teaser graphic)
+    are all dropped once the school's own schedule has any game that season.
     """
     try:
         with open("manual_games.json", encoding="utf-8") as f:
@@ -291,11 +299,14 @@ def load_manual_games(players, fetched):
         return []
     player_for = {p["school"]: p["player"] for p in players}
     fetched_days = {(g["school"], g["date_iso"]) for g in fetched}
+    fetched_seasons = {(g["school"], season_of(g["date_iso"])) for g in fetched if g["date_iso"]}
     out = []
     for g in entries:
         school = g["school"]
         if school not in player_for:
             print(f"WARNING: manual game for unknown school {school!r} - skipped")
+            continue
+        if g.get("until_schedule_posted") and (school, season_of(g["date"])) in fetched_seasons:
             continue
         if (school, g["date"]) in fetched_days:
             print(f"Manual game {school} {g['date']} now on the school's schedule - skipped")
@@ -370,7 +381,17 @@ def main():
     except FileNotFoundError:
         print("presto_games.json not found - skipping (run fetch_presto_schedules.py first)")
 
-    all_games.extend(load_manual_games(players, all_games))
+    manual = load_manual_games(players, all_games)
+    # A school with hand-added games in a newer season than its own schedule
+    # page (e.g. UWSP's teaser before its page is updated): drop the old
+    # season's games so they're never shown as the current player's.
+    newest_manual = {}
+    for g in manual:
+        newest_manual[g["school"]] = max(newest_manual.get(g["school"], 0), season_of(g["date_iso"]))
+    all_games = [g for g in all_games
+                 if not (g["school"] in newest_manual and g["date_iso"]
+                         and season_of(g["date_iso"]) < newest_manual[g["school"]])]
+    all_games.extend(manual)
 
     for g in all_games:
         if g["date_iso"] is None and g["date_display"]:

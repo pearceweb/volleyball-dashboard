@@ -61,6 +61,11 @@ Commits go straight to `main` (no pull-request workflow).
   jobs never wipe them, and skips one once the school's own schedule shows a
   game for that school on that day. Fields: school, date (YYYY-MM-DD), time
   ("7:00 PM", school's zone), home_away, opponent, location, watch_url.
+  A whole season copied from a school's teaser graphic is marked
+  `until_schedule_posted`: all of it drops out once the school's own page
+  has any game that season. A school's older-season fetched games are
+  dropped while it has hand-added games in a newer season. UW-Stevens
+  Point's 2027 season is in there this way (from its Oct 2026 teaser).
 - **MN Select matchups**: games where the opponent is another player's school
   are tagged (`matchup_with`) and shown on the page.
 
