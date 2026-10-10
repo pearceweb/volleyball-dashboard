@@ -67,7 +67,8 @@ Commits go straight to `main` (no pull-request workflow).
   don't list (fall scrimmages). The build merges them in every run, so the
   jobs never wipe them, and skips one once the school's own schedule shows a
   game for that school on that day. Fields: school, date (YYYY-MM-DD), time
-  ("7:00 PM", school's zone), home_away, opponent, location, watch_url.
+  ("7:00 PM", school's zone unless `tz` gives an IANA zone), home_away,
+  opponent, location, watch_url.
   A whole season copied from a school's teaser graphic is marked
   `until_schedule_posted`: all of it drops out once the school's own page
   has any game that season. A school's older-season fetched games are

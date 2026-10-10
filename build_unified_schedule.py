@@ -311,7 +311,9 @@ def load_manual_games(players, fetched):
         if (school, g["date"]) in fetched_days:
             print(f"Manual game {school} {g['date']} now on the school's schedule - skipped")
             continue
-        tz = resolve_tz(school, None)
+        # "tz" when the listed time isn't in the school's own zone (a time
+        # copied from an opponent's schedule for a game in their zone).
+        tz = g.get("tz") or resolve_tz(school, None)
         out.append({
             "player": player_for[school],
             "school": school,

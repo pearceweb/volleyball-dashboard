@@ -6,4 +6,36 @@ METHOD:PUBLISH
 X-WR-CALNAME:Ben DeVos - UW-Stevens Point volleyball
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:ben-devos-2027-02-06-adriancollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270206T210000Z
+DTEND:20270206T230000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Adrian College
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+LOCATION:Grand Rapids\, MI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-02-11-marianuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270211
+DTEND;VALUE=DATE:20270212
+SUMMARY:Ben DeVos (UW-Stevens Point) @ Marian University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Fond du Lac\, WI
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-03-13-milwaukeeschoolofengineering@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270313T203000Z
+DTEND:20270313T223000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Milwaukee School of Engineering
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+LOCATION:Lisle\, IL
+END:VEVENT
 END:VCALENDAR
