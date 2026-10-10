@@ -71,8 +71,9 @@ Commits go straight to `main` (no pull-request workflow).
   A whole season copied from a school's teaser graphic is marked
   `until_schedule_posted`: all of it drops out once the school's own page
   has any game that season. A school's older-season fetched games are
-  dropped while it has hand-added games in a newer season. UW-Stevens
-  Point's 2027 season is in there this way (from its Oct 2026 teaser).
+  dropped while it has hand-added games in a newer season. Check a teaser
+  graphic's year first: UWSP's "2027" teaser turned out to be its 2025-26
+  season and was removed.
   `"partial": true` + `"source": "Daemen's schedule"` marks a "sneak peek"
   game found on an opponent's schedule (also `until_schedule_posted`); the
   page tags those games and explains on the player's page that it's only

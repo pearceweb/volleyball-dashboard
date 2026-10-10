@@ -39,6 +39,9 @@ TARGETS = {
     "Central State University": (
         "https://maraudersports.com/sports/mens-volleyball/schedule/2026",
         ["central state"]),
+    "UW-Stevens Point": (
+        "https://athletics.uwsp.edu/sports/mens-volleyball/schedule/2026",
+        ["uw-stevens point", "uw stevens point", "wisconsin-stevens point", "uwsp", "stevens point"]),
     "Park University (Gilbert)": (
         "https://gilbert.parkathletics.com/sports/mens-volleyball/schedule/2026",
         ["park"]),  # loose on purpose: Park's two campuses are told apart by hand
