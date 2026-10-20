@@ -104,11 +104,10 @@ UID:ethan-jordheim-2027-01-16-dordtia@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270116T170000Z
 DTEND:20270116T190000Z
-SUMMARY:Ethan Jordheim (Olivet Nazarene University) vs Dordt (IA)
-DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nNeutral site\nFull
-  schedule: https://mnselectboys.tuckerpearcecreative.com/?player=Ethan+Jor
- dheim+-+Olivet+Nazarene+University&range=all
-LOCATION:Sioux City\, Iowa
+SUMMARY:Ethan Jordheim (Olivet Nazarene University) @ Dordt (IA)
+DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nFull schedule: htt
+ ps://mnselectboys.tuckerpearcecreative.com/?player=Ethan+Jordheim+-+Olivet
+ +Nazarene+University&range=all
 END:VEVENT
 BEGIN:VEVENT
 UID:ryan-michalak-2027-01-17-fairleighdickinson@mnselectboys
