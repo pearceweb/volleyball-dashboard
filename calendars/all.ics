@@ -178,6 +178,17 @@ DESCRIPTION:Colson Pearce - North Park University\nFull schedule: https://m
 LOCATION:Aurora\, IL
 END:VEVENT
 BEGIN:VEVENT
+UID:ben-devos-2027-01-22-augustanacollegeil@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270122T200000Z
+DTEND:20270122T220000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Augustana College (IL)
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+LOCATION:Fond du Lac\, WI
+END:VEVENT
+BEGIN:VEVENT
 UID:colson-pearce-2027-01-22-trineuniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270122T220000Z
@@ -788,6 +799,18 @@ DESCRIPTION:Colin Nathan - Vassar College\nFull schedule: https://mnselectb
 LOCATION:New Paltz\, NY
 END:VEVENT
 BEGIN:VEVENT
+UID:henry-hudson-2027-02-25-benedictineuniversitymesa@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270226T010000Z
+DTEND:20270226T030000Z
+SUMMARY:Henry Hudson (Park University (Gilbert)) @ Benedictine University M
+ esa
+DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
+ //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
+ sity+(Gilbert)&range=all
+LOCATION:Mesa\, AZ
+END:VEVENT
+BEGIN:VEVENT
 UID:colin-nathan-2027-02-27-massachusettsinstituteoftechnology@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270227T210000Z
@@ -876,6 +899,18 @@ DESCRIPTION:Colin Nathan - Vassar College\nFull schedule: https://mnselectb
  oys.tuckerpearcecreative.com/?player=Colin+Nathan+-+Vassar+College&range=a
  ll
 LOCATION:Albany\, NY
+END:VEVENT
+BEGIN:VEVENT
+UID:henry-hudson-2027-03-05-sokauniversityofamerica@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270306T010000Z
+DTEND:20270306T030000Z
+SUMMARY:Henry Hudson (Park University (Gilbert)) vs Soka University of Amer
+ ica
+DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
+ //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
+ sity+(Gilbert)&range=all
+LOCATION:Gilbert\, AZ
 END:VEVENT
 BEGIN:VEVENT
 UID:ryan-michalak-2027-03-06-universityofjamestown@mnselectboys
@@ -1180,6 +1215,18 @@ DESCRIPTION:Colson Pearce - North Park University\nFull schedule: https://m
 LOCATION:Chicago\, IL
 END:VEVENT
 BEGIN:VEVENT
+UID:henry-hudson-2027-03-24-benedictineuniversitymesa@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270325T010000Z
+DTEND:20270325T030000Z
+SUMMARY:Henry Hudson (Park University (Gilbert)) vs Benedictine University 
+ Mesa
+DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
+ //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
+ sity+(Gilbert)&range=all
+LOCATION:Gilbert\, AZ
+END:VEVENT
+BEGIN:VEVENT
 UID:ryan-michalak-2027-03-25-avilauniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270325
@@ -1405,6 +1452,18 @@ DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
 LOCATION:Riverside\, CA
 END:VEVENT
 BEGIN:VEVENT
+UID:henry-hudson-2027-04-08-sokauniversityofamerica@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270409T010000Z
+DTEND:20270409T030000Z
+SUMMARY:Henry Hudson (Park University (Gilbert)) @ Soka University of Ameri
+ ca
+DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
+ //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
+ sity+(Gilbert)&range=all
+LOCATION:Aliso Viejo\, CA
+END:VEVENT
+BEGIN:VEVENT
 UID:ryan-michalak-2027-04-09-maryville@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270409
@@ -1470,6 +1529,17 @@ DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
 LOCATION:Chicago\, IL
 END:VEVENT
 BEGIN:VEVENT
+UID:kaleb-mhiripiri-2027-04-16-benedictcollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270416T220000Z
+DTEND:20270417T000000Z
+SUMMARY:Kaleb Mhiripiri (Central State University) vs Benedict College
+DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Kaleb+Mhiripiri+-+Centra
+ l+State+University&range=all
+LOCATION:Wilberforce\, OH
+END:VEVENT
+BEGIN:VEVENT
 UID:ryan-michalak-2027-04-17-roosevelt@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270417
@@ -1479,6 +1549,17 @@ DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
  selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
  ersity&range=all
 LOCATION:Chicago\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:kaleb-mhiripiri-2027-04-17-benedictcollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270417T170000Z
+DTEND:20270417T190000Z
+SUMMARY:Kaleb Mhiripiri (Central State University) vs Benedict College
+DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Kaleb+Mhiripiri+-+Centra
+ l+State+University&range=all
+LOCATION:Wilberforce\, OH
 END:VEVENT
 BEGIN:VEVENT
 UID:kaleb-mhiripiri-2027-04-23-fortvalleystateuniversity@mnselectboys

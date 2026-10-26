@@ -19,11 +19,35 @@ DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
 LOCATION:Redding\, CA
 END:VEVENT
 BEGIN:VEVENT
+UID:henry-hudson-2027-02-25-benedictineuniversitymesa@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270226T010000Z
+DTEND:20270226T030000Z
+SUMMARY:Henry Hudson (Park University (Gilbert)) @ Benedictine University M
+ esa
+DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
+ //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
+ sity+(Gilbert)&range=all
+LOCATION:Mesa\, AZ
+END:VEVENT
+BEGIN:VEVENT
 UID:henry-hudson-2027-03-04-lasierrauniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270304
 DTEND;VALUE=DATE:20270305
 SUMMARY:Henry Hudson (Park University (Gilbert)) vs La Sierra University
+DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
+ //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
+ sity+(Gilbert)&range=all
+LOCATION:Gilbert\, AZ
+END:VEVENT
+BEGIN:VEVENT
+UID:henry-hudson-2027-03-05-sokauniversityofamerica@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270306T010000Z
+DTEND:20270306T030000Z
+SUMMARY:Henry Hudson (Park University (Gilbert)) vs Soka University of Amer
+ ica
 DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
  //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
  sity+(Gilbert)&range=all
@@ -51,6 +75,18 @@ DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
  //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
  sity+(Gilbert)&range=all
 LOCATION:Santa Clarita\, CA
+END:VEVENT
+BEGIN:VEVENT
+UID:henry-hudson-2027-03-24-benedictineuniversitymesa@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270325T010000Z
+DTEND:20270325T030000Z
+SUMMARY:Henry Hudson (Park University (Gilbert)) vs Benedictine University 
+ Mesa
+DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
+ //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
+ sity+(Gilbert)&range=all
+LOCATION:Gilbert\, AZ
 END:VEVENT
 BEGIN:VEVENT
 UID:henry-hudson-2027-04-02-themastersuniversity@mnselectboys
@@ -85,5 +121,17 @@ DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
  //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
  sity+(Gilbert)&range=all
 LOCATION:Riverside\, CA
+END:VEVENT
+BEGIN:VEVENT
+UID:henry-hudson-2027-04-08-sokauniversityofamerica@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270409T010000Z
+DTEND:20270409T030000Z
+SUMMARY:Henry Hudson (Park University (Gilbert)) @ Soka University of Ameri
+ ca
+DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
+ //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
+ sity+(Gilbert)&range=all
+LOCATION:Aliso Viejo\, CA
 END:VEVENT
 END:VCALENDAR

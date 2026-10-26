@@ -7,6 +7,17 @@ X-WR-CALNAME:Ben DeVos - UW-Stevens Point volleyball
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
+UID:ben-devos-2027-01-22-augustanacollegeil@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270122T200000Z
+DTEND:20270122T220000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Augustana College (IL)
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+LOCATION:Fond du Lac\, WI
+END:VEVENT
+BEGIN:VEVENT
 UID:ben-devos-2027-02-06-adriancollege@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270206T210000Z

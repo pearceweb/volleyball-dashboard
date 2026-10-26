@@ -78,6 +78,28 @@ DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
 LOCATION:Wilberforce\, OH
 END:VEVENT
 BEGIN:VEVENT
+UID:kaleb-mhiripiri-2027-04-16-benedictcollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270416T220000Z
+DTEND:20270417T000000Z
+SUMMARY:Kaleb Mhiripiri (Central State University) vs Benedict College
+DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Kaleb+Mhiripiri+-+Centra
+ l+State+University&range=all
+LOCATION:Wilberforce\, OH
+END:VEVENT
+BEGIN:VEVENT
+UID:kaleb-mhiripiri-2027-04-17-benedictcollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270417T170000Z
+DTEND:20270417T190000Z
+SUMMARY:Kaleb Mhiripiri (Central State University) vs Benedict College
+DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Kaleb+Mhiripiri+-+Centra
+ l+State+University&range=all
+LOCATION:Wilberforce\, OH
+END:VEVENT
+BEGIN:VEVENT
 UID:kaleb-mhiripiri-2027-04-23-fortvalleystateuniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270423T220000Z
