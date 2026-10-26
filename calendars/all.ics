@@ -34,8 +34,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:kaleb-mhiripiri-2027-01-13-northernkentuckyuniversity@mnselectboys
 DTSTAMP:20260101T000000Z
-DTSTART;VALUE=DATE:20270113
-DTEND;VALUE=DATE:20270114
+DTSTART:20270113T230000Z
+DTEND:20270114T010000Z
 SUMMARY:Kaleb Mhiripiri (Central State University) @ Northern Kentucky Univ
  ersity
 DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
