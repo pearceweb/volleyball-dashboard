@@ -29,7 +29,8 @@ import re
 MONTHS = "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 DATE_RE = re.compile(rf"^({MONTHS})\s+(\d{{1,2}})\s*\((\w{{3}})\)", re.IGNORECASE)
 TIME_RE = re.compile(r"(\d{1,2}(?::\d{2})?\s*[ap]\.m\.)", re.IGNORECASE)
-TIME_RE2 = re.compile(r"(\d{1,2}:\d{2}\s*[AP]M)")
+# Also "6 PM" with no minutes (Northern Kentucky).
+TIME_RE2 = re.compile(r"(\d{1,2}(?::\d{2})?\s*[AP]M)\b")
 NOON_RE = re.compile(r"^(Noon|Midnight)\b", re.IGNORECASE)
 # Schools list times in their own time zone and add a label when a game is
 # somewhere else (e.g. North Park's "Noon ET" at Calvin).
