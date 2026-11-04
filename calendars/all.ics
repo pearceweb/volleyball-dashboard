@@ -541,6 +541,16 @@ DESCRIPTION:Colin Nathan - Vassar College\nFull schedule: https://mnselectb
 LOCATION:Springfield\, MA
 END:VEVENT
 BEGIN:VEVENT
+UID:ben-devos-2027-02-06-calvinuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270206T230000Z
+DTEND:20270207T010000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) @ Calvin University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Grand Rapids\, MI
+END:VEVENT
+BEGIN:VEVENT
 UID:colson-pearce-2027-02-09-concordiauniversitywi@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270210T010000Z
@@ -552,16 +562,6 @@ DESCRIPTION:Colson Pearce - North Park University\nFull schedule: https://m
 LOCATION:Chicago\, IL
 END:VEVENT
 BEGIN:VEVENT
-UID:ben-devos-2027-02-11-marianuniversity@mnselectboys
-DTSTAMP:20260101T000000Z
-DTSTART;VALUE=DATE:20270211
-DTEND;VALUE=DATE:20270212
-SUMMARY:Ben DeVos (UW-Stevens Point) @ Marian University
-DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
- ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
-LOCATION:Fond du Lac\, WI
-END:VEVENT
-BEGIN:VEVENT
 UID:colson-pearce-2027-02-11-edgewooduniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270212T010000Z
@@ -571,6 +571,16 @@ DESCRIPTION:Colson Pearce - North Park University\nFull schedule: https://m
  nselectboys.tuckerpearcecreative.com/?player=Colson+Pearce+-+North+Park+Un
  iversity&range=all
 LOCATION:Chicago\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-02-11-marianuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270212T010000Z
+DTEND:20270212T030000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) @ Marian University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Fond du Lac\, WI
 END:VEVENT
 BEGIN:VEVENT
 UID:ryan-michalak-2027-02-12-lindenwood@mnselectboys
@@ -708,18 +718,6 @@ DESCRIPTION:Colin Nathan - Vassar College\nFull schedule: https://mnselectb
 LOCATION:Poughkeepsie\, NY
 END:VEVENT
 BEGIN:VEVENT
-UID:henry-hudson-2027-02-20-simpsonuniversitycalif@mnselectboys
-DTSTAMP:20260101T000000Z
-DTSTART;VALUE=DATE:20270220
-DTEND;VALUE=DATE:20270221
-SUMMARY:Henry Hudson (Park University (Gilbert)) @ Simpson University (Cali
- f.)
-DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
- //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
- sity+(Gilbert)&range=all
-LOCATION:Redding\, CA
-END:VEVENT
-BEGIN:VEVENT
 UID:treysen-cornillez-2027-02-20-daemenuniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270220
@@ -729,6 +727,18 @@ DESCRIPTION:Treysen Cornillez - Mercy University\nFull schedule: https://mn
  selectboys.tuckerpearcecreative.com/?player=Treysen+Cornillez+-+Mercy+Univ
  ersity&range=all
 LOCATION:Dobbs Ferry\, NY
+END:VEVENT
+BEGIN:VEVENT
+UID:henry-hudson-2027-02-20-simpsonuniversitycalif@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270220T180000Z
+DTEND:20270220T200000Z
+SUMMARY:Henry Hudson (Park University (Gilbert)) @ Simpson University (Cali
+ f.)
+DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
+ //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
+ sity+(Gilbert)&range=all
+LOCATION:Redding\, CA
 END:VEVENT
 BEGIN:VEVENT
 UID:colson-pearce-2027-02-20-lorascollege@mnselectboys
@@ -751,6 +761,18 @@ DESCRIPTION:Colin Nathan - Vassar College\nFull schedule: https://mnselectb
  oys.tuckerpearcecreative.com/?player=Colin+Nathan+-+Vassar+College&range=a
  ll
 LOCATION:Springfield\, MA
+END:VEVENT
+BEGIN:VEVENT
+UID:henry-hudson-2027-02-20-simpsonuniversitycalif@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270220T210000Z
+DTEND:20270220T230000Z
+SUMMARY:Henry Hudson (Park University (Gilbert)) @ Simpson University (Cali
+ f.)
+DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
+ //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
+ sity+(Gilbert)&range=all
+LOCATION:Redding\, CA
 END:VEVENT
 BEGIN:VEVENT
 UID:colson-pearce-2027-02-20-californialutheranuniversity@mnselectboys
@@ -1169,6 +1191,17 @@ DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
 LOCATION:Santa Clarita\, CA
 END:VEVENT
 BEGIN:VEVENT
+UID:ben-devos-2027-03-20-franklincollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270320T200000Z
+DTEND:20270320T220000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Franklin College
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+LOCATION:Franklin\, IN
+END:VEVENT
+BEGIN:VEVENT
 UID:colson-pearce-2027-03-20-hobartcollege@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270320T213000Z
@@ -1178,6 +1211,18 @@ DESCRIPTION:Colson Pearce - North Park University\nNeutral site\nFull sched
  ule: https://mnselectboys.tuckerpearcecreative.com/?player=Colson+Pearce+-
  +North+Park+University&range=all
 LOCATION:Naperville\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-03-20-robertswesleyanuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270320T213000Z
+DTEND:20270320T233000Z
+SUMMARY:Drew Demarais (Long Island University) @ Roberts Wesleyan Universit
+ y
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Rochester\, NY
 END:VEVENT
 BEGIN:VEVENT
 UID:ethan-jordheim-2027-03-20-viterbo@mnselectboys

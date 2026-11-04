@@ -29,6 +29,18 @@ DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
 LOCATION:Brooklyn\, NY
 END:VEVENT
 BEGIN:VEVENT
+UID:drew-demarais-2027-03-20-robertswesleyanuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270320T213000Z
+DTEND:20270320T233000Z
+SUMMARY:Drew Demarais (Long Island University) @ Roberts Wesleyan Universit
+ y
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Rochester\, NY
+END:VEVENT
+BEGIN:VEVENT
 UID:drew-demarais-2027-03-26-daemenuniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270326T220000Z

@@ -29,10 +29,20 @@ DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
 LOCATION:Grand Rapids\, MI
 END:VEVENT
 BEGIN:VEVENT
+UID:ben-devos-2027-02-06-calvinuniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270206T230000Z
+DTEND:20270207T010000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) @ Calvin University
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
+ ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
+LOCATION:Grand Rapids\, MI
+END:VEVENT
+BEGIN:VEVENT
 UID:ben-devos-2027-02-11-marianuniversity@mnselectboys
 DTSTAMP:20260101T000000Z
-DTSTART;VALUE=DATE:20270211
-DTEND;VALUE=DATE:20270212
+DTSTART:20270212T010000Z
+DTEND:20270212T030000Z
 SUMMARY:Ben DeVos (UW-Stevens Point) @ Marian University
 DESCRIPTION:Ben DeVos - UW-Stevens Point\nFull schedule: https://mnselectbo
  ys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+Point&range=all
@@ -48,5 +58,16 @@ DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
  s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
  oint&range=all
 LOCATION:Lisle\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:ben-devos-2027-03-20-franklincollege@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270320T200000Z
+DTEND:20270320T220000Z
+SUMMARY:Ben DeVos (UW-Stevens Point) vs Franklin College
+DESCRIPTION:Ben DeVos - UW-Stevens Point\nNeutral site\nFull schedule: http
+ s://mnselectboys.tuckerpearcecreative.com/?player=Ben+DeVos+-+UW-Stevens+P
+ oint&range=all
+LOCATION:Franklin\, IN
 END:VEVENT
 END:VCALENDAR
