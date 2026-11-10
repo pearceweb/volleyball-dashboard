@@ -289,6 +289,17 @@ DESCRIPTION:Colson Pearce - North Park University\nFull schedule: https://m
 LOCATION:Chicago\, IL
 END:VEVENT
 BEGIN:VEVENT
+UID:connor-voss-2027-01-27-moorpark@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270128T020000Z
+DTEND:20270128T040000Z
+SUMMARY:Connor Voss (Orange Coast College) @ Moorpark
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Moorpark\, CA
+END:VEVENT
+BEGIN:VEVENT
 UID:ryan-michalak-2027-01-28-missionuniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270128
@@ -333,6 +344,17 @@ DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nWatch: https://www
  rcecreative.com/?player=Ethan+Jordheim+-+Olivet+Nazarene+University&range=
  all
 LOCATION:Bourbonnais\, Ill.
+END:VEVENT
+BEGIN:VEVENT
+UID:connor-voss-2027-01-29-lapierce@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270130T020000Z
+DTEND:20270130T040000Z
+SUMMARY:Connor Voss (Orange Coast College) vs LA Pierce
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Costa Mesa\, CA
 END:VEVENT
 BEGIN:VEVENT
 UID:colson-pearce-2027-01-30-adriancollege@mnselectboys
@@ -412,6 +434,17 @@ DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nWatch: https://www
  rcecreative.com/?player=Ethan+Jordheim+-+Olivet+Nazarene+University&range=
  all
 LOCATION:Whiting\, Ind.
+END:VEVENT
+BEGIN:VEVENT
+UID:connor-voss-2027-02-03-longbeach@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270204T020000Z
+DTEND:20270204T040000Z
+SUMMARY:Connor Voss (Orange Coast College) @ Long Beach
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Long Beach\, CA
 END:VEVENT
 BEGIN:VEVENT
 UID:ryan-michalak-2027-02-04-ballstateuniversity@mnselectboys
@@ -495,6 +528,17 @@ DESCRIPTION:Colin Nathan - Vassar College\nNeutral site\nFull schedule: htt
 LOCATION:Springfield\, MA
 END:VEVENT
 BEGIN:VEVENT
+UID:connor-voss-2027-02-05-fullerton@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270206T020000Z
+DTEND:20270206T040000Z
+SUMMARY:Connor Voss (Orange Coast College) vs Fullerton
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Costa Mesa\, CA
+END:VEVENT
+BEGIN:VEVENT
 UID:ryan-michalak-2027-02-06-centralstateuniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270206
@@ -562,6 +606,17 @@ DESCRIPTION:Colson Pearce - North Park University\nFull schedule: https://m
 LOCATION:Chicago\, IL
 END:VEVENT
 BEGIN:VEVENT
+UID:connor-voss-2027-02-10-elcamino@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270211T020000Z
+DTEND:20270211T040000Z
+SUMMARY:Connor Voss (Orange Coast College) @ El Camino
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Torrance\, CA
+END:VEVENT
+BEGIN:VEVENT
 UID:colson-pearce-2027-02-11-edgewooduniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270212T010000Z
@@ -603,6 +658,17 @@ DESCRIPTION:Colin Nathan - Vassar College\nFull schedule: https://mnselectb
  oys.tuckerpearcecreative.com/?player=Colin+Nathan+-+Vassar+College&range=a
  ll
 LOCATION:Poughkeepsie\, NY
+END:VEVENT
+BEGIN:VEVENT
+UID:connor-voss-2027-02-12-santamonica@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270213T020000Z
+DTEND:20270213T040000Z
+SUMMARY:Connor Voss (Orange Coast College) vs Santa Monica
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Costa Mesa\, CA
 END:VEVENT
 BEGIN:VEVENT
 UID:ryan-michalak-2027-02-13-mckendree@mnselectboys
@@ -673,6 +739,17 @@ DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nWatch: https://www
 LOCATION:Chicago\, Ill.
 END:VEVENT
 BEGIN:VEVENT
+UID:connor-voss-2027-02-17-antelopevalley@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270218T020000Z
+DTEND:20270218T040000Z
+SUMMARY:Connor Voss (Orange Coast College) @ Antelope Valley
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Lancaster\, CA
+END:VEVENT
+BEGIN:VEVENT
 UID:ryan-michalak-2027-02-18-ottawauniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270218
@@ -716,6 +793,17 @@ DESCRIPTION:Colin Nathan - Vassar College\nFull schedule: https://mnselectb
  oys.tuckerpearcecreative.com/?player=Colin+Nathan+-+Vassar+College&range=a
  ll
 LOCATION:Poughkeepsie\, NY
+END:VEVENT
+BEGIN:VEVENT
+UID:connor-voss-2027-02-19-santabarbara@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270220T020000Z
+DTEND:20270220T040000Z
+SUMMARY:Connor Voss (Orange Coast College) vs Santa Barbara
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Costa Mesa\, CA
 END:VEVENT
 BEGIN:VEVENT
 UID:treysen-cornillez-2027-02-20-daemenuniversity@mnselectboys
@@ -810,6 +898,17 @@ DESCRIPTION:Colson Pearce - North Park University\nFull schedule: https://m
 LOCATION:Kenosha\, WI
 END:VEVENT
 BEGIN:VEVENT
+UID:connor-voss-2027-02-24-grossmont@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270225T020000Z
+DTEND:20270225T040000Z
+SUMMARY:Connor Voss (Orange Coast College) vs Grossmont
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Costa Mesa\, CA
+END:VEVENT
+BEGIN:VEVENT
 UID:colin-nathan-2027-02-25-newpaltz@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270226T000000Z
@@ -831,6 +930,17 @@ DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
  //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
  sity+(Gilbert)&range=all
 LOCATION:Mesa\, AZ
+END:VEVENT
+BEGIN:VEVENT
+UID:connor-voss-2027-02-26-palomar@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270227T020000Z
+DTEND:20270227T040000Z
+SUMMARY:Connor Voss (Orange Coast College) @ Palomar
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:San Marcos\, CA
 END:VEVENT
 BEGIN:VEVENT
 UID:colin-nathan-2027-02-27-massachusettsinstituteoftechnology@mnselectboys
@@ -890,6 +1000,17 @@ DESCRIPTION:Colson Pearce - North Park University\nFull schedule: https://m
 LOCATION:Chicago\, IL
 END:VEVENT
 BEGIN:VEVENT
+UID:connor-voss-2027-03-03-sandiegomesa@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270304T020000Z
+DTEND:20270304T040000Z
+SUMMARY:Connor Voss (Orange Coast College) vs San Diego Mesa
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Costa Mesa\, CA
+END:VEVENT
+BEGIN:VEVENT
 UID:henry-hudson-2027-03-04-lasierrauniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270304
@@ -933,6 +1054,17 @@ DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
  //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
  sity+(Gilbert)&range=all
 LOCATION:Gilbert\, AZ
+END:VEVENT
+BEGIN:VEVENT
+UID:connor-voss-2027-03-05-sandiegomiramar@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270306T020000Z
+DTEND:20270306T040000Z
+SUMMARY:Connor Voss (Orange Coast College) @ San Diego Miramar
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:San Diego\, CA
 END:VEVENT
 BEGIN:VEVENT
 UID:ryan-michalak-2027-03-06-universityofjamestown@mnselectboys
@@ -1001,6 +1133,17 @@ DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nWatch: https://www
  all
 END:VEVENT
 BEGIN:VEVENT
+UID:connor-voss-2027-03-10-irvinevalley@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270311T020000Z
+DTEND:20270311T040000Z
+SUMMARY:Connor Voss (Orange Coast College) vs Irvine Valley
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Costa Mesa\, CA
+END:VEVENT
+BEGIN:VEVENT
 UID:ryan-michalak-2027-03-12-missourist@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270312
@@ -1032,6 +1175,17 @@ DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nWatch: https://www
  .onutigers.com/links/ncdanr\nFull schedule: https://mnselectboys.tuckerpea
  rcecreative.com/?player=Ethan+Jordheim+-+Olivet+Nazarene+University&range=
  all
+END:VEVENT
+BEGIN:VEVENT
+UID:connor-voss-2027-03-12-santiagocanyon@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270313T020000Z
+DTEND:20270313T040000Z
+SUMMARY:Connor Voss (Orange Coast College) @ Santiago Canyon
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Orange\, CA
 END:VEVENT
 BEGIN:VEVENT
 UID:ryan-michalak-2027-03-13-missourist@mnselectboys
@@ -1090,6 +1244,17 @@ DESCRIPTION:Colson Pearce - North Park University\nFull schedule: https://m
 LOCATION:Chicago\, IL
 END:VEVENT
 BEGIN:VEVENT
+UID:connor-voss-2027-03-17-goldenwest@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270318T010000Z
+DTEND:20270318T030000Z
+SUMMARY:Connor Voss (Orange Coast College) @ Golden West
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Huntington Beach\, CA
+END:VEVENT
+BEGIN:VEVENT
 UID:colin-nathan-2027-03-18-robertswesleyanuniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270318T220000Z
@@ -1134,6 +1299,17 @@ DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
  //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
  sity+(Gilbert)&range=all
 LOCATION:Fullerton\, CA
+END:VEVENT
+BEGIN:VEVENT
+UID:connor-voss-2027-03-19-grossmont@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270320T010000Z
+DTEND:20270320T030000Z
+SUMMARY:Connor Voss (Orange Coast College) @ Grossmont
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:El Cajon\, CA
 END:VEVENT
 BEGIN:VEVENT
 UID:ryan-michalak-2027-03-20-southwestbaptist@mnselectboys
@@ -1272,6 +1448,17 @@ DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
 LOCATION:Gilbert\, AZ
 END:VEVENT
 BEGIN:VEVENT
+UID:connor-voss-2027-03-24-palomar@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270325T010000Z
+DTEND:20270325T030000Z
+SUMMARY:Connor Voss (Orange Coast College) vs Palomar
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Costa Mesa\, CA
+END:VEVENT
+BEGIN:VEVENT
 UID:ryan-michalak-2027-03-25-avilauniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270325
@@ -1327,6 +1514,17 @@ DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
  s://mnselectboys.tuckerpearcecreative.com/?player=Kaleb+Mhiripiri+-+Centra
  l+State+University&range=all
 LOCATION:Wilberforce\, OH
+END:VEVENT
+BEGIN:VEVENT
+UID:connor-voss-2027-03-26-sandiegomesa@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270327T010000Z
+DTEND:20270327T030000Z
+SUMMARY:Connor Voss (Orange Coast College) @ San Diego Mesa
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:San Diego\, CA
 END:VEVENT
 BEGIN:VEVENT
 UID:colin-nathan-2027-03-27-wheatoncollegemass@mnselectboys
@@ -1398,6 +1596,17 @@ DESCRIPTION:Colson Pearce - North Park University\nFull schedule: https://m
 LOCATION:Bloomington\, IL
 END:VEVENT
 BEGIN:VEVENT
+UID:connor-voss-2027-03-31-sandiegomiramar@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270401T010000Z
+DTEND:20270401T030000Z
+SUMMARY:Connor Voss (Orange Coast College) vs San Diego Miramar
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Costa Mesa\, CA
+END:VEVENT
+BEGIN:VEVENT
 UID:ryan-michalak-2027-04-02-quincy@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270402
@@ -1418,6 +1627,17 @@ DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
  //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
  sity+(Gilbert)&range=all
 LOCATION:Gilbert\, AZ
+END:VEVENT
+BEGIN:VEVENT
+UID:connor-voss-2027-04-02-irvinevalley@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270403T010000Z
+DTEND:20270403T030000Z
+SUMMARY:Connor Voss (Orange Coast College) @ Irvine Valley
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Irvine\, CA
 END:VEVENT
 BEGIN:VEVENT
 UID:ryan-michalak-2027-04-03-quincy@mnselectboys
@@ -1497,6 +1717,17 @@ DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
 LOCATION:Riverside\, CA
 END:VEVENT
 BEGIN:VEVENT
+UID:connor-voss-2027-04-07-santiagocanyon@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270408T010000Z
+DTEND:20270408T030000Z
+SUMMARY:Connor Voss (Orange Coast College) vs Santiago Canyon
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Costa Mesa\, CA
+END:VEVENT
+BEGIN:VEVENT
 UID:henry-hudson-2027-04-08-sokauniversityofamerica@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270409T010000Z
@@ -1530,6 +1761,17 @@ DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nWatch: https://www
  rcecreative.com/?player=Ethan+Jordheim+-+Olivet+Nazarene+University&range=
  all
 LOCATION:Bourbonnais\, Ill.
+END:VEVENT
+BEGIN:VEVENT
+UID:connor-voss-2027-04-09-goldenwest@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270410T010000Z
+DTEND:20270410T030000Z
+SUMMARY:Connor Voss (Orange Coast College) vs Golden West
+DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
+ lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
+ ge&range=all
+LOCATION:Costa Mesa\, CA
 END:VEVENT
 BEGIN:VEVENT
 UID:ryan-michalak-2027-04-10-maryville@mnselectboys
