@@ -1207,14 +1207,32 @@ function closeCalMenu() {
 
 document.addEventListener("click", closeCalMenu);
 
-function updateUrl() {
+function updateUrl(push = false) {
+  // Switching players adds a history entry (pushState): the phone's Back
+  // button then returns to the previous player, and Chrome on iPhone
+  // reliably updates its address bar (it could keep showing the previous
+  // player's address after replaceState). Range changes just replace it.
   const params = new URLSearchParams();
   if (currentPlayer) params.set("player", currentPlayer);
   if (currentDays !== 7) params.set("range", String(currentDays));
   const qs = params.toString();
   const newUrl = window.location.pathname + (qs ? "?" + qs : "");
-  history.replaceState(null, "", newUrl);
+  if (newUrl === window.location.pathname + window.location.search) return;
+  if (push) history.pushState(null, "", newUrl);
+  else history.replaceState(null, "", newUrl);
 }
+
+// Back/Forward between players: show the page the address now points to.
+window.addEventListener("popstate", () => {
+  currentPlayer = "";
+  document.getElementById("player-filter").value = "";
+  currentDays = 7;
+  document.querySelectorAll(".range-btn[data-days]").forEach(b =>
+    b.classList.toggle("active", b.dataset.days === "7"));
+  applyUrlState();
+  render();
+  trackPageView();
+});
 
 document.querySelectorAll(".range-btn[data-days]").forEach(btn => {
   btn.addEventListener("click", () => {
@@ -1227,11 +1245,11 @@ document.querySelectorAll(".range-btn[data-days]").forEach(btn => {
   });
 });
 
-function jumpToAll() {
+function jumpToAll(push = false) {
   document.querySelectorAll(".range-btn[data-days]").forEach(b => b.classList.remove("active"));
   document.querySelector('.range-btn[data-days="all"]').classList.add("active");
   currentDays = "all";
-  updateUrl();
+  updateUrl(push);
   render();
 }
 
@@ -1305,9 +1323,9 @@ document.getElementById("player-filter").addEventListener("change", (e) => {
   if (currentPlayer) {
     // Show the player's whole season, same as opening a shared player
     // link - "This week" is usually empty for one player.
-    jumpToAll();
+    jumpToAll(true);
   } else {
-    updateUrl();
+    updateUrl(true);
     render();
   }
   trackPageView();  // a dropdown switch is a new "page" for counting
