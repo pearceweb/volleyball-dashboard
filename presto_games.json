@@ -125,6 +125,16 @@
         "video_url": "/links/ncdanr"
       },
       {
+        "date": "February 9",
+        "home_away": "home",
+        "opponent": "St. Francis (IL)",
+        "location": "McHie Arena | Bourbonnais, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "7:00 PM CST",
+        "video_url": "/links/ncdanr"
+      },
+      {
         "date": "February 13",
         "home_away": "home",
         "opponent": "Hope International",
@@ -263,6 +273,16 @@
         "sets": null,
         "status": "7:00 PM CDT",
         "video_url": "/links/ncdanr"
+      },
+      {
+        "date": "April 1",
+        "home_away": "away",
+        "opponent": "St. Francis (IL)",
+        "location": "Pat Sullivan Center | Joliet, Ill.",
+        "result": null,
+        "sets": null,
+        "status": "7:00 PM CDT",
+        "video_url": null
       },
       {
         "date": "April 9",

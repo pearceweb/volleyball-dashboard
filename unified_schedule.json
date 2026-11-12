@@ -1043,6 +1043,25 @@
     "matchup_with": []
   },
   {
+    "player": "Ethan Jordheim",
+    "school": "Olivet Nazarene University",
+    "date_iso": "2027-02-09",
+    "date_display": "February 9",
+    "time": "7:00 PM",
+    "tz": "America/Chicago",
+    "start_utc": "2027-02-10T01:00:00Z",
+    "home_away": "home",
+    "opponent": "St. Francis (IL)",
+    "location": "Bourbonnais, Ill.",
+    "result": null,
+    "sets": null,
+    "status": null,
+    "streaming_label": null,
+    "streaming_url": "https://www.onutigers.com/links/ncdanr",
+    "platform": "presto",
+    "matchup_with": []
+  },
+  {
     "player": "Connor Voss",
     "school": "Orange Coast College",
     "date_iso": "2027-02-10",
@@ -2769,6 +2788,25 @@
     "streaming_label": null,
     "streaming_url": null,
     "platform": "manual",
+    "matchup_with": []
+  },
+  {
+    "player": "Ethan Jordheim",
+    "school": "Olivet Nazarene University",
+    "date_iso": "2027-04-01",
+    "date_display": "April 1",
+    "time": "7:00 PM",
+    "tz": "America/Chicago",
+    "start_utc": "2027-04-02T00:00:00Z",
+    "home_away": "away",
+    "opponent": "St. Francis (IL)",
+    "location": "Joliet, Ill.",
+    "result": null,
+    "sets": null,
+    "status": null,
+    "streaming_label": null,
+    "streaming_url": null,
+    "platform": "presto",
     "matchup_with": []
   },
   {

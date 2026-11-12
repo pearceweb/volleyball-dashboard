@@ -606,6 +606,18 @@ DESCRIPTION:Colson Pearce - North Park University\nFull schedule: https://m
 LOCATION:Chicago\, IL
 END:VEVENT
 BEGIN:VEVENT
+UID:ethan-jordheim-2027-02-09-stfrancisil@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270210T010000Z
+DTEND:20270210T030000Z
+SUMMARY:Ethan Jordheim (Olivet Nazarene University) vs St. Francis (IL)
+DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nWatch: https://www
+ .onutigers.com/links/ncdanr\nFull schedule: https://mnselectboys.tuckerpea
+ rcecreative.com/?player=Ethan+Jordheim+-+Olivet+Nazarene+University&range=
+ all
+LOCATION:Bourbonnais\, Ill.
+END:VEVENT
+BEGIN:VEVENT
 UID:connor-voss-2027-02-10-elcamino@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270211T020000Z
@@ -1605,6 +1617,17 @@ DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
  lectboys.tuckerpearcecreative.com/?player=Connor+Voss+-+Orange+Coast+Colle
  ge&range=all
 LOCATION:Costa Mesa\, CA
+END:VEVENT
+BEGIN:VEVENT
+UID:ethan-jordheim-2027-04-01-stfrancisil@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270402T000000Z
+DTEND:20270402T020000Z
+SUMMARY:Ethan Jordheim (Olivet Nazarene University) @ St. Francis (IL)
+DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nFull schedule: htt
+ ps://mnselectboys.tuckerpearcecreative.com/?player=Ethan+Jordheim+-+Olivet
+ +Nazarene+University&range=all
+LOCATION:Joliet\, Ill.
 END:VEVENT
 BEGIN:VEVENT
 UID:ryan-michalak-2027-04-02-quincy@mnselectboys
