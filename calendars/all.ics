@@ -955,6 +955,17 @@ DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
 LOCATION:San Marcos\, CA
 END:VEVENT
 BEGIN:VEVENT
+UID:ryan-michalak-2027-02-27-parkuniversitymo@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270227
+DTEND;VALUE=DATE:20270228
+SUMMARY:Ryan Michalak (Rockhurst University) @ Park University (MO)
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Parkville\, MO
+END:VEVENT
+BEGIN:VEVENT
 UID:colin-nathan-2027-02-27-massachusettsinstituteoftechnology@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270227T210000Z

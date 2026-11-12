@@ -1642,6 +1642,25 @@
     "matchup_with": []
   },
   {
+    "player": "Ryan Michalak",
+    "school": "Rockhurst University",
+    "date_iso": "2027-02-27",
+    "date_display": "Feb 27",
+    "time": null,
+    "tz": "America/Chicago",
+    "start_utc": null,
+    "home_away": "away",
+    "opponent": "Park University (MO)",
+    "location": "Parkville, MO",
+    "result": null,
+    "sets": null,
+    "status": null,
+    "streaming_label": null,
+    "streaming_url": null,
+    "platform": "sidearm",
+    "matchup_with": []
+  },
+  {
     "player": "Colin Nathan",
     "school": "Vassar College",
     "date_iso": "2027-02-27",

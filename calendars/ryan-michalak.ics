@@ -153,6 +153,17 @@ DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
 LOCATION:Kansas City\, MO
 END:VEVENT
 BEGIN:VEVENT
+UID:ryan-michalak-2027-02-27-parkuniversitymo@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270227
+DTEND;VALUE=DATE:20270228
+SUMMARY:Ryan Michalak (Rockhurst University) @ Park University (MO)
+DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
+ selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
+ ersity&range=all
+LOCATION:Parkville\, MO
+END:VEVENT
+BEGIN:VEVENT
 UID:ryan-michalak-2027-03-05-universityofjamestown@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270305
