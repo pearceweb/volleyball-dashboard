@@ -20,6 +20,17 @@ DESCRIPTION:Colson Pearce - North Park University\nWatch: https://boxcast.t
 LOCATION:Chicago\, IL
 END:VEVENT
 BEGIN:VEVENT
+UID:drew-demarais-2027-01-08-mountolive@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270108T230000Z
+DTEND:20270109T010000Z
+SUMMARY:Drew Demarais (Long Island University) vs Mount Olive
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Brooklyn\, N.Y.
+END:VEVENT
+BEGIN:VEVENT
 UID:kaleb-mhiripiri-2027-01-10-universityofcharlestonwva@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270110T200000Z
@@ -42,6 +53,17 @@ DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
  s://mnselectboys.tuckerpearcecreative.com/?player=Kaleb+Mhiripiri+-+Centra
  l+State+University&range=all
 LOCATION:Highland Heights\, KY
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-01-13-stanford@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270114T020000Z
+DTEND:20270114T040000Z
+SUMMARY:Drew Demarais (Long Island University) @ Stanford
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Stanford\, Calif. (Venue TBD)
 END:VEVENT
 BEGIN:VEVENT
 UID:ryan-michalak-2027-01-14-manhattanuniversity@mnselectboys
@@ -88,6 +110,17 @@ DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nNeutral site\nFull
 LOCATION:Sioux City\, Iowa
 END:VEVENT
 BEGIN:VEVENT
+UID:drew-demarais-2027-01-15-menlo@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270116T020000Z
+DTEND:20270116T040000Z
+SUMMARY:Drew Demarais (Long Island University) @ Menlo
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Atherton\, Calif.
+END:VEVENT
+BEGIN:VEVENT
 UID:ryan-michalak-2027-01-16-newjerseyinstituteoftechnology@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART;VALUE=DATE:20270116
@@ -108,6 +141,17 @@ SUMMARY:Ethan Jordheim (Olivet Nazarene University) @ Dordt (IA)
 DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nFull schedule: htt
  ps://mnselectboys.tuckerpearcecreative.com/?player=Ethan+Jordheim+-+Olivet
  +Nazarene+University&range=all
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-01-16-menlo@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270116T210000Z
+DTEND:20270116T230000Z
+SUMMARY:Drew Demarais (Long Island University) @ Menlo
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Atherton\, Calif.
 END:VEVENT
 BEGIN:VEVENT
 UID:ryan-michalak-2027-01-17-fairleighdickinson@mnselectboys
@@ -200,6 +244,17 @@ DESCRIPTION:Colson Pearce - North Park University\nNeutral site\nFull sched
 LOCATION:Aurora\, IL
 END:VEVENT
 BEGIN:VEVENT
+UID:drew-demarais-2027-01-22-stthomasaquinas@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270122T230000Z
+DTEND:20270123T010000Z
+SUMMARY:Drew Demarais (Long Island University) vs St. Thomas Aquinas
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Brooklyn\, N.Y.
+END:VEVENT
+BEGIN:VEVENT
 UID:ethan-jordheim-2027-01-22-ushp@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270123T010000Z
@@ -264,6 +319,17 @@ DESCRIPTION:Colin Nathan - Vassar College\nFull schedule: https://mnselectb
  oys.tuckerpearcecreative.com/?player=Colin+Nathan+-+Vassar+College&range=a
  ll
 LOCATION:Poughkeepsie\, NY
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-01-24-njit@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270124T230000Z
+DTEND:20270125T010000Z
+SUMMARY:Drew Demarais (Long Island University) vs NJIT
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Brooklyn\, N.Y.
 END:VEVENT
 BEGIN:VEVENT
 UID:ethan-jordheim-2027-01-26-clarkeia@mnselectboys
@@ -469,6 +535,17 @@ DESCRIPTION:Treysen Cornillez - Mercy University\nFull schedule: https://mn
 LOCATION:Dobbs Ferry\, NY
 END:VEVENT
 BEGIN:VEVENT
+UID:drew-demarais-2027-02-04-monroe@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270204T230000Z
+DTEND:20270205T010000Z
+SUMMARY:Drew Demarais (Long Island University) @ Monroe
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:New Rochelle\, N.Y.
+END:VEVENT
+BEGIN:VEVENT
 UID:colson-pearce-2027-02-04-concordiauniversitychicago@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270205T010000Z
@@ -502,6 +579,17 @@ DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nFull schedule: htt
  ps://mnselectboys.tuckerpearcecreative.com/?player=Ethan+Jordheim+-+Olivet
  +Nazarene+University&range=all
 LOCATION:Bourbonnais\, Ill.
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-02-05-sacredheart@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270205T230000Z
+DTEND:20270206T010000Z
+SUMMARY:Drew Demarais (Long Island University) vs Sacred Heart
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Brooklyn\, N.Y.
 END:VEVENT
 BEGIN:VEVENT
 UID:ethan-jordheim-2027-02-05-benedictinemesaaz@mnselectboys
@@ -661,6 +749,17 @@ DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
 LOCATION:St Charles\, MO
 END:VEVENT
 BEGIN:VEVENT
+UID:drew-demarais-2027-02-12-stthomasaquinas@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270212T230000Z
+DTEND:20270213T010000Z
+SUMMARY:Drew Demarais (Long Island University) @ St. Thomas Aquinas
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Sparkill\, N.Y.
+END:VEVENT
+BEGIN:VEVENT
 UID:colin-nathan-2027-02-12-stevens@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270212T230000Z
@@ -726,6 +825,18 @@ DESCRIPTION:Colin Nathan - Vassar College\nFull schedule: https://mnselectb
  oys.tuckerpearcecreative.com/?player=Colin+Nathan+-+Vassar+College&range=a
  ll
 LOCATION:Poughkeepsie\, NY
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-02-13-mercy@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270213T230000Z
+DTEND:20270214T010000Z
+SUMMARY:Drew Demarais (Long Island University) @ Mercy
+DESCRIPTION:Drew Demarais - Long Island University\nMN Select matchup vs Tr
+ eysen Cornillez (Mercy University)\nFull schedule: https://mnselectboys.tu
+ ckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+University&rang
+ e=all
+LOCATION:Dobbs Ferry\, N.Y.
 END:VEVENT
 BEGIN:VEVENT
 UID:colson-pearce-2027-02-16-rockforduniversity@mnselectboys
@@ -794,6 +905,17 @@ DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
  selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
  ersity&range=all
 LOCATION:Kansas City\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-02-19-sacredheart@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270219T230000Z
+DTEND:20270220T010000Z
+SUMMARY:Drew Demarais (Long Island University) @ Sacred Heart
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Fairfield\, Conn.
 END:VEVENT
 BEGIN:VEVENT
 UID:colin-nathan-2027-02-19-purchasecollege@mnselectboys
@@ -875,6 +997,17 @@ DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
 LOCATION:Redding\, CA
 END:VEVENT
 BEGIN:VEVENT
+UID:drew-demarais-2027-02-20-monroe@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270220T230000Z
+DTEND:20270221T010000Z
+SUMMARY:Drew Demarais (Long Island University) vs Monroe
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Brooklyn\, N.Y.
+END:VEVENT
+BEGIN:VEVENT
 UID:colson-pearce-2027-02-20-californialutheranuniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270221T010000Z
@@ -921,6 +1054,18 @@ DESCRIPTION:Connor Voss - Orange Coast College\nFull schedule: https://mnse
 LOCATION:Costa Mesa\, CA
 END:VEVENT
 BEGIN:VEVENT
+UID:drew-demarais-2027-02-25-mercy@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270225T230000Z
+DTEND:20270226T010000Z
+SUMMARY:Drew Demarais (Long Island University) vs Mercy
+DESCRIPTION:Drew Demarais - Long Island University\nMN Select matchup vs Tr
+ eysen Cornillez (Mercy University)\nFull schedule: https://mnselectboys.tu
+ ckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+University&rang
+ e=all
+LOCATION:Brooklyn\, N.Y.
+END:VEVENT
+BEGIN:VEVENT
 UID:colin-nathan-2027-02-25-newpaltz@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270226T000000Z
@@ -942,6 +1087,17 @@ DESCRIPTION:Henry Hudson - Park University (Gilbert)\nFull schedule: https:
  //mnselectboys.tuckerpearcecreative.com/?player=Henry+Hudson+-+Park+Univer
  sity+(Gilbert)&range=all
 LOCATION:Mesa\, AZ
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-02-26-georgemason@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270226T230000Z
+DTEND:20270227T010000Z
+SUMMARY:Drew Demarais (Long Island University) vs George Mason
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Brooklyn\, N.Y.
 END:VEVENT
 BEGIN:VEVENT
 UID:connor-voss-2027-02-26-palomar@mnselectboys
@@ -1012,6 +1168,17 @@ DESCRIPTION:Ethan Jordheim - Olivet Nazarene University\nWatch: https://www
 LOCATION:Bourbonnais\, Ill.
 END:VEVENT
 BEGIN:VEVENT
+UID:drew-demarais-2027-03-03-hawaii@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270303T230000Z
+DTEND:20270304T010000Z
+SUMMARY:Drew Demarais (Long Island University) @ Hawaii
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Honolulu\, Hawaii
+END:VEVENT
+BEGIN:VEVENT
 UID:colson-pearce-2027-03-03-northcentralcollege@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270304T010000Z
@@ -1054,6 +1221,17 @@ DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
  selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
  ersity&range=all
 LOCATION:Kansas City\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-03-05-hawaii@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270305T230000Z
+DTEND:20270306T010000Z
+SUMMARY:Drew Demarais (Long Island University) @ Hawaii
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Honolulu\, Hawaii
 END:VEVENT
 BEGIN:VEVENT
 UID:colin-nathan-2027-03-05-russellsagecollege@mnselectboys
@@ -1178,15 +1356,15 @@ DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
 LOCATION:Kansas City\, MO
 END:VEVENT
 BEGIN:VEVENT
-UID:drew-demarais-2027-03-12-manhattanuniversity@mnselectboys
+UID:drew-demarais-2027-03-12-manhattan@mnselectboys
 DTSTAMP:20260101T000000Z
-DTSTART;VALUE=DATE:20270312
-DTEND;VALUE=DATE:20270313
-SUMMARY:Drew Demarais (Long Island University) vs Manhattan University
+DTSTART:20270312T230000Z
+DTEND:20270313T010000Z
+SUMMARY:Drew Demarais (Long Island University) vs Manhattan
 DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
  mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
  University&range=all
-LOCATION:Brooklyn\, NY
+LOCATION:Brooklyn\, N.Y.
 END:VEVENT
 BEGIN:VEVENT
 UID:ethan-jordheim-2027-03-12-sokaca@mnselectboys
@@ -1222,15 +1400,15 @@ DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
 LOCATION:Kansas City\, MO
 END:VEVENT
 BEGIN:VEVENT
-UID:drew-demarais-2027-03-13-manhattanuniversity@mnselectboys
+UID:drew-demarais-2027-03-13-manhattan@mnselectboys
 DTSTAMP:20260101T000000Z
-DTSTART;VALUE=DATE:20270313
-DTEND;VALUE=DATE:20270314
-SUMMARY:Drew Demarais (Long Island University) vs Manhattan University
+DTSTART:20270313T180000Z
+DTEND:20270313T200000Z
+SUMMARY:Drew Demarais (Long Island University) vs Manhattan
 DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
  mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
  University&range=all
-LOCATION:Brooklyn\, NY
+LOCATION:Brooklyn\, N.Y.
 END:VEVENT
 BEGIN:VEVENT
 UID:ben-devos-2027-03-13-milwaukeeschoolofengineering@mnselectboys
@@ -1312,6 +1490,17 @@ DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
 LOCATION:Bolivar\, MO
 END:VEVENT
 BEGIN:VEVENT
+UID:drew-demarais-2027-03-19-dyouville@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270319T220000Z
+DTEND:20270320T000000Z
+SUMMARY:Drew Demarais (Long Island University) @ D'Youville
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Buffalo\, N.Y.
+END:VEVENT
+BEGIN:VEVENT
 UID:henry-hudson-2027-03-19-hopeinternationaluniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270320T010000Z
@@ -1344,6 +1533,17 @@ DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
  selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
  ersity&range=all
 LOCATION:Bolivar\, MO
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-03-20-dyouville@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270320T160000Z
+DTEND:20270320T180000Z
+SUMMARY:Drew Demarais (Long Island University) @ D'Youville
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Buffalo\, N.Y.
 END:VEVENT
 BEGIN:VEVENT
 UID:colin-nathan-2027-03-20-buffalostate@mnselectboys
@@ -1412,16 +1612,15 @@ DESCRIPTION:Colson Pearce - North Park University\nNeutral site\nFull sched
 LOCATION:Naperville\, IL
 END:VEVENT
 BEGIN:VEVENT
-UID:drew-demarais-2027-03-20-robertswesleyanuniversity@mnselectboys
+UID:drew-demarais-2027-03-20-robertswesleyan@mnselectboys
 DTSTAMP:20260101T000000Z
-DTSTART:20270320T213000Z
-DTEND:20270320T233000Z
-SUMMARY:Drew Demarais (Long Island University) @ Roberts Wesleyan Universit
- y
+DTSTART:20270320T220000Z
+DTEND:20270321T000000Z
+SUMMARY:Drew Demarais (Long Island University) @ Roberts Wesleyan
 DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
  mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
  University&range=all
-LOCATION:Rochester\, NY
+LOCATION:Rochester\, N.Y.
 END:VEVENT
 BEGIN:VEVENT
 UID:ethan-jordheim-2027-03-20-viterbo@mnselectboys
@@ -1516,15 +1715,15 @@ DESCRIPTION:Colin Nathan - Vassar College\nFull schedule: https://mnselectb
 LOCATION:Poughkeepsie\, NY
 END:VEVENT
 BEGIN:VEVENT
-UID:drew-demarais-2027-03-26-daemenuniversity@mnselectboys
+UID:drew-demarais-2027-03-26-daemen@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270326T220000Z
 DTEND:20270327T000000Z
-SUMMARY:Drew Demarais (Long Island University) vs Daemen University
+SUMMARY:Drew Demarais (Long Island University) vs Daemen
 DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
  mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
  University&range=all
-LOCATION:Brooklyn\, NY
+LOCATION:Brooklyn\, N.Y.
 END:VEVENT
 BEGIN:VEVENT
 UID:kaleb-mhiripiri-2027-03-26-universityofcharlestonwva@mnselectboys
@@ -1561,15 +1760,15 @@ DESCRIPTION:Colin Nathan - Vassar College\nFull schedule: https://mnselectb
 LOCATION:Poughkeepsie\, NY
 END:VEVENT
 BEGIN:VEVENT
-UID:drew-demarais-2027-03-27-daemenuniversity@mnselectboys
+UID:drew-demarais-2027-03-27-daemen@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270327T170000Z
 DTEND:20270327T190000Z
-SUMMARY:Drew Demarais (Long Island University) vs Daemen University
+SUMMARY:Drew Demarais (Long Island University) vs Daemen
 DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
  mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
  University&range=all
-LOCATION:Brooklyn\, NY
+LOCATION:Brooklyn\, N.Y.
 END:VEVENT
 BEGIN:VEVENT
 UID:colson-pearce-2027-03-27-universityofcaliforniasantacruz@mnselectboys
@@ -1652,6 +1851,17 @@ DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
 LOCATION:Quincy\, IL
 END:VEVENT
 BEGIN:VEVENT
+UID:drew-demarais-2027-04-02-merrimack@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270402T220000Z
+DTEND:20270403T000000Z
+SUMMARY:Drew Demarais (Long Island University) @ Merrimack
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:North Andover\, Mass. (Venue TBD)
+END:VEVENT
+BEGIN:VEVENT
 UID:henry-hudson-2027-04-02-themastersuniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270403T010000Z
@@ -1683,6 +1893,17 @@ DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
  selectboys.tuckerpearcecreative.com/?player=Ryan+Michalak+-+Rockhurst+Univ
  ersity&range=all
 LOCATION:Quincy\, IL
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-04-03-merrimack@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270403T170000Z
+DTEND:20270403T190000Z
+SUMMARY:Drew Demarais (Long Island University) @ Merrimack
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:North Andover\, Mass. (Venue TBD)
 END:VEVENT
 BEGIN:VEVENT
 UID:colin-nathan-2027-04-03-newyorkuniversity@mnselectboys
@@ -1850,6 +2071,17 @@ DESCRIPTION:Ryan Michalak - Rockhurst University\nFull schedule: https://mn
 LOCATION:Chicago\, IL
 END:VEVENT
 BEGIN:VEVENT
+UID:drew-demarais-2027-04-16-fdu@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270416T220000Z
+DTEND:20270417T000000Z
+SUMMARY:Drew Demarais (Long Island University) @ FDU
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Hackensack\, N.J.
+END:VEVENT
+BEGIN:VEVENT
 UID:kaleb-mhiripiri-2027-04-16-benedictcollege@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270416T220000Z
@@ -1883,6 +2115,28 @@ DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
 LOCATION:Wilberforce\, OH
 END:VEVENT
 BEGIN:VEVENT
+UID:drew-demarais-2027-04-17-fdu@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270417T220000Z
+DTEND:20270418T000000Z
+SUMMARY:Drew Demarais (Long Island University) @ FDU
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Hackensack\, N.J.
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-04-23-marylandeasternshore@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270423T220000Z
+DTEND:20270424T000000Z
+SUMMARY:Drew Demarais (Long Island University) vs Maryland Eastern Shore
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Brooklyn\, N.Y.
+END:VEVENT
+BEGIN:VEVENT
 UID:kaleb-mhiripiri-2027-04-23-fortvalleystateuniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270423T220000Z
@@ -1893,6 +2147,17 @@ DESCRIPTION:Kaleb Mhiripiri - Central State University\nFull schedule: http
  s://mnselectboys.tuckerpearcecreative.com/?player=Kaleb+Mhiripiri+-+Centra
  l+State+University&range=all
 LOCATION:Fort Valley\, GA
+END:VEVENT
+BEGIN:VEVENT
+UID:drew-demarais-2027-04-24-marylandeasternshore@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270424T170000Z
+DTEND:20270424T190000Z
+SUMMARY:Drew Demarais (Long Island University) vs Maryland Eastern Shore
+DESCRIPTION:Drew Demarais - Long Island University\nFull schedule: https://
+ mnselectboys.tuckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+
+ University&range=all
+LOCATION:Brooklyn\, N.Y.
 END:VEVENT
 BEGIN:VEVENT
 UID:kaleb-mhiripiri-2027-04-24-fortvalleystateuniversity@mnselectboys
