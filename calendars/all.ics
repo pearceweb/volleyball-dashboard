@@ -839,6 +839,18 @@ DESCRIPTION:Drew Demarais - Long Island University\nMN Select matchup vs Tr
 LOCATION:Dobbs Ferry\, N.Y.
 END:VEVENT
 BEGIN:VEVENT
+UID:treysen-cornillez-2027-02-13-longislanduniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270213T230000Z
+DTEND:20270214T010000Z
+SUMMARY:Treysen Cornillez (Mercy University) vs Long Island University
+DESCRIPTION:Treysen Cornillez - Mercy University\nMN Select matchup vs Drew
+  Demarais (Long Island University)\nFull schedule: https://mnselectboys.tu
+ ckerpearcecreative.com/?player=Treysen+Cornillez+-+Mercy+University&range=
+ all
+LOCATION:Dobbs Ferry\, NY
+END:VEVENT
+BEGIN:VEVENT
 UID:colson-pearce-2027-02-16-rockforduniversity@mnselectboys
 DTSTAMP:20260101T000000Z
 DTSTART:20270217T010000Z
@@ -1064,6 +1076,18 @@ DESCRIPTION:Drew Demarais - Long Island University\nMN Select matchup vs Tr
  ckerpearcecreative.com/?player=Drew+Demarais+-+Long+Island+University&rang
  e=all
 LOCATION:Brooklyn\, N.Y.
+END:VEVENT
+BEGIN:VEVENT
+UID:treysen-cornillez-2027-02-25-longislanduniversity@mnselectboys
+DTSTAMP:20260101T000000Z
+DTSTART:20270225T230000Z
+DTEND:20270226T010000Z
+SUMMARY:Treysen Cornillez (Mercy University) @ Long Island University
+DESCRIPTION:Treysen Cornillez - Mercy University\nMN Select matchup vs Drew
+  Demarais (Long Island University)\nFull schedule: https://mnselectboys.tu
+ ckerpearcecreative.com/?player=Treysen+Cornillez+-+Mercy+University&range=
+ all
+LOCATION:Brooklyn\, NY
 END:VEVENT
 BEGIN:VEVENT
 UID:colin-nathan-2027-02-25-newpaltz@mnselectboys

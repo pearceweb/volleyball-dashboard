@@ -1449,6 +1449,32 @@
     "matchup_with": []
   },
   {
+    "player": "Treysen Cornillez",
+    "school": "Mercy University",
+    "date_iso": "2027-02-13",
+    "date_display": "Feb 13",
+    "time": "6:00 PM",
+    "tz": "America/New_York",
+    "start_utc": "2027-02-13T23:00:00Z",
+    "home_away": "home",
+    "opponent": "Long Island University",
+    "location": "Dobbs Ferry, NY",
+    "result": null,
+    "sets": null,
+    "status": null,
+    "streaming_label": null,
+    "streaming_url": null,
+    "platform": "manual",
+    "partial": true,
+    "source": "LIU's schedule",
+    "matchup_with": [
+      {
+        "player": "Drew Demarais",
+        "school": "Long Island University"
+      }
+    ]
+  },
+  {
     "player": "Colson Pearce",
     "school": "North Park University",
     "date_iso": "2027-02-16",
@@ -1878,6 +1904,32 @@
     "partial": true,
     "source": "Benedictine Mesa's schedule",
     "matchup_with": []
+  },
+  {
+    "player": "Treysen Cornillez",
+    "school": "Mercy University",
+    "date_iso": "2027-02-25",
+    "date_display": "Feb 25",
+    "time": "6:00 PM",
+    "tz": "America/New_York",
+    "start_utc": "2027-02-25T23:00:00Z",
+    "home_away": "away",
+    "opponent": "Long Island University",
+    "location": "Brooklyn, NY",
+    "result": null,
+    "sets": null,
+    "status": null,
+    "streaming_label": null,
+    "streaming_url": null,
+    "platform": "manual",
+    "partial": true,
+    "source": "LIU's schedule",
+    "matchup_with": [
+      {
+        "player": "Drew Demarais",
+        "school": "Long Island University"
+      }
+    ]
   },
   {
     "player": "Drew Demarais",

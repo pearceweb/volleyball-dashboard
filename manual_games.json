@@ -56,5 +56,7 @@
   {"school": "Orange Coast College", "date": "2027-03-31", "time": "6:00 PM", "home_away": "home", "opponent": "San Diego Miramar", "location": "Costa Mesa, CA", "until_schedule_posted": true},
   {"school": "Orange Coast College", "date": "2027-04-02", "time": "6:00 PM", "home_away": "away", "opponent": "Irvine Valley", "location": "Irvine, CA", "until_schedule_posted": true},
   {"school": "Orange Coast College", "date": "2027-04-07", "time": "6:00 PM", "home_away": "home", "opponent": "Santiago Canyon", "location": "Costa Mesa, CA", "until_schedule_posted": true},
-  {"school": "Orange Coast College", "date": "2027-04-09", "time": "6:00 PM", "home_away": "home", "opponent": "Golden West", "location": "Costa Mesa, CA", "until_schedule_posted": true}
+  {"school": "Orange Coast College", "date": "2027-04-09", "time": "6:00 PM", "home_away": "home", "opponent": "Golden West", "location": "Costa Mesa, CA", "until_schedule_posted": true},
+  {"school": "Mercy University", "date": "2027-02-13", "time": "6:00 PM", "home_away": "home", "opponent": "Long Island University", "location": "Dobbs Ferry, NY", "partial": true, "source": "LIU's schedule", "until_schedule_posted": true},
+  {"school": "Mercy University", "date": "2027-02-25", "time": "6:00 PM", "home_away": "away", "opponent": "Long Island University", "location": "Brooklyn, NY", "partial": true, "source": "LIU's schedule", "until_schedule_posted": true}
 ]
