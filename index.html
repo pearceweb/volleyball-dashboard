@@ -855,7 +855,10 @@ function render() {
 
   let inRange;
   if (currentDays === "all") {
-    inRange = playerFiltered.filter(g => g.date_iso);
+    // All players: upcoming games only (recent scores show in the
+    // "Recent results" box). A player's page keeps their whole season.
+    const todayIso = localTodayStr();
+    inRange = playerFiltered.filter(g => g.date_iso && (currentPlayer || g.date_iso >= todayIso));
     rangeLabel.textContent = `All available games${playerSuffix} \u00b7 ${inRange.length} game${inRange.length === 1 ? "" : "s"}`;
   } else {
     const end = new Date(today);
