@@ -82,6 +82,10 @@ Commits go straight to `main` (no pull-request workflow).
   page tags those games and explains on the player's page that it's only
   part of the season. Find more with the debug workflow's `opponents` mode
   (`scripts/scan_opponents.py`).
+- **Player headshots**: a square JPG at `photos/<player-slug>.jpg` (e.g.
+  `photos/treysen-cornillez.jpg`, ~256px, cropped on the face) shows as a
+  round photo in that player's page banner; the build adds `photo` to
+  `players.json` when the file exists. No file = no photo, page as before.
 - **MN Select matchups**: games where the opponent is another player's school
   are tagged (`matchup_with`) and shown on the page.
 
