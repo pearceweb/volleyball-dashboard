@@ -407,6 +407,7 @@
   }
   .score.win { color: var(--win); }
   .score.loss { color: var(--loss); }
+  .replay-link { margin-top: 6px; }
   .watch-link {
     display: inline-block;
     font-size: 12px;
@@ -939,6 +940,10 @@ function renderRow(g, idx) {
   if (played) {
     const cls = g.result === "W" ? "win" : "loss";
     resultHtml = `<div class="score ${cls}">${g.result} ${g.sets || ""}</div>`;
+    // Keep the stream link after the game: it usually becomes the replay.
+    if (g.streaming_url) {
+      resultHtml += `<a class="watch-link replay-link" href="${escapeAttr(g.streaming_url)}" target="_blank" rel="noopener" data-track="watch-replay">Replay</a>`;
+    }
   } else {
     resultHtml = watchHtml(g);
   }
