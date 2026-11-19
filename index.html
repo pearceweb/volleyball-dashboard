@@ -295,6 +295,11 @@
   #site-footer a:hover {
     text-decoration: underline;
   }
+  #site-footer .footer-note {
+    margin-top: 4px;
+    font-size: 11px;
+    opacity: 0.8;
+  }
   .quick-jump {
     margin-bottom: 18px;
   }
@@ -1423,7 +1428,8 @@ function hasGamesThisWeek() {
 function renderFooter() {
   const year = new Date().getFullYear();
   document.getElementById("site-footer").innerHTML =
-    `&copy; ${year} <a href="https://www.tuckerpearcecreative.com" target="_blank" rel="noopener">Tucker Pearce Creative</a>`;
+    `&copy; ${year} <a href="https://www.tuckerpearcecreative.com" target="_blank" rel="noopener">Tucker Pearce Creative</a>` +
+    `<div class="footer-note">Independent fan site. Not affiliated with or endorsed by Minnesota Select Volleyball Club.</div>`;
 }
 renderFooter();
 
