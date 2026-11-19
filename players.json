@@ -9,13 +9,15 @@
     "player": "Ben DeVos",
     "school": "UW-Stevens Point",
     "calendar": "calendars/ben-devos.ics",
-    "instagram": "https://www.instagram.com/uwspmvb/"
+    "instagram": "https://www.instagram.com/uwspmvb/",
+    "photo": "photos/ben-devos.jpg"
   },
   {
     "player": "Henry Hudson",
     "school": "Park University (Gilbert)",
     "calendar": "calendars/henry-hudson.ics",
-    "instagram": "https://www.instagram.com/parkugilbert_mvb/"
+    "instagram": "https://www.instagram.com/parkugilbert_mvb/",
+    "photo": "photos/henry-hudson.jpg"
   },
   {
     "player": "Ryan Michalak",
@@ -34,7 +36,8 @@
     "player": "Colson Pearce",
     "school": "North Park University",
     "calendar": "calendars/colson-pearce.ics",
-    "instagram": "https://www.instagram.com/npumensvb/"
+    "instagram": "https://www.instagram.com/npumensvb/",
+    "photo": "photos/colson-pearce.jpg"
   },
   {
     "player": "Treysen Cornillez",
@@ -47,7 +50,8 @@
     "player": "Kaleb Mhiripiri",
     "school": "Central State University",
     "calendar": "calendars/kaleb-mhiripiri.ics",
-    "instagram": "https://www.instagram.com/centralstatemvb/"
+    "instagram": "https://www.instagram.com/centralstatemvb/",
+    "photo": "photos/kaleb-mhiripiri.jpg"
   },
   {
     "player": "Ethan Jordheim",
@@ -59,6 +63,7 @@
     "player": "Connor Voss",
     "school": "Orange Coast College",
     "calendar": "calendars/connor-voss.ics",
-    "instagram": "https://www.instagram.com/occmvball/"
+    "instagram": "https://www.instagram.com/occmvball/",
+    "photo": "photos/connor-voss.jpg"
   }
 ]
