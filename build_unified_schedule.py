@@ -47,11 +47,12 @@ guessing - date_display is still populated so nothing is silently dropped.
 """
 
 import json
+import os
 import re
 from urllib.parse import urljoin
 from zoneinfo import ZoneInfo
 
-from build_calendars import write_calendars
+from build_calendars import player_slug, write_calendars
 from datetime import datetime
 
 SIDEARM_YEAR_RE = re.compile(r"/schedule/(\d{4})/?$")
@@ -424,6 +425,11 @@ def main():
         handle = SCHOOL_INSTAGRAM.get(p["school"])
         if handle:
             p["instagram"] = f"https://www.instagram.com/{handle}/"
+        # Headshot shown in the player's page banner: drop a square JPG in
+        # photos/ named after the player (photos/treysen-cornillez.jpg).
+        photo = f"photos/{player_slug(p['player'])}.jpg"
+        if os.path.exists(photo):
+            p["photo"] = photo
     print(f"Wrote {len(cal_paths) + 1} calendar feeds to calendars/")
 
     with open("players.json", "w", encoding="utf-8") as f:

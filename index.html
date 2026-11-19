@@ -83,6 +83,14 @@
   header .subtitle, header .team-record { color: rgba(255,255,255,0.85); }
   header .peek-note { color: rgba(255,255,255,0.9); }
   header .back-home, header .team-instagram { color: #fff; }
+  .player-hero { display: flex; align-items: center; gap: 14px; margin: 12px 0 10px; }
+  .player-hero[hidden] { display: none; }
+  .player-hero img {
+    width: 72px; height: 72px; border-radius: 50%; flex-shrink: 0;
+    object-fit: cover; border: 3px solid rgba(255,255,255,0.9); background: rgba(0,0,0,0.15);
+  }
+  .player-hero .hero-name { font-size: 20px; font-weight: 700; line-height: 1.2; }
+  .player-hero .hero-school { font-size: 13px; color: rgba(255,255,255,0.85); }
   .game-row, .next-up-card { box-shadow: var(--card-shadow); }
   h1 {
     font-size: 18px;
@@ -516,7 +524,8 @@
       margin-bottom: 14px;
     }
     header { background: none !important; padding: 0 0 12px; border-bottom: 1px solid #ccc; border-radius: 0; }
-    h1 { color: #111; }
+    h1, .player-hero { color: #111; }
+    .player-hero .hero-school, header .peek-note { color: #444; }
     .subtitle, .team-instagram { display: none; }
     .game-row, .next-up-card { box-shadow: none !important; }
     .day-label { color: #555; }
@@ -560,6 +569,10 @@
     <div>
       <a id="back-home" class="back-home" href="./" data-track="back-to-all-players" hidden>&larr; All players</a>
       <h1>25/26 MN Select 18-1 - College Schedule</h1>
+      <div id="player-hero" class="player-hero" hidden>
+        <img id="hero-photo" alt="">
+        <div><div class="hero-name" id="hero-name"></div><div class="hero-school" id="hero-school"></div></div>
+      </div>
       <div class="subtitle" id="range-label">Loading schedule...</div>
       <div class="subtitle team-record" id="team-record"></div>
       <div id="peek-note" class="peek-note" hidden></div>
@@ -621,6 +634,7 @@ let newProgramPlayers = [];
 // "Player - School" -> calendar feed path, from players.json
 let playerCalendars = {};
 let playerInstagram = {};
+let playerPhotos = {};
 
 function localTodayStr() {
   const d = new Date();
@@ -774,6 +788,22 @@ function renderBackHome() {
   document.getElementById("back-home").hidden = !currentPlayer;
 }
 
+function renderPlayerHero() {
+  // Player page with a headshot (photos/<player-slug>.jpg): photo + name
+  // in the banner. Players without one look as before.
+  const hero = document.getElementById("player-hero");
+  const photo = currentPlayer && playerPhotos[currentPlayer];
+  hero.hidden = !photo;
+  if (!photo) return;
+  const [name, ...school] = currentPlayer.split(" - ");
+  const img = document.getElementById("hero-photo");
+  img.src = photo;
+  img.alt = name;
+  img.onerror = () => { hero.hidden = true; };
+  document.getElementById("hero-name").textContent = name;
+  document.getElementById("hero-school").textContent = school.join(" - ");
+}
+
 function renderInstagram() {
   // Player pages: link to the team's men's volleyball Instagram, if known.
   const el = document.getElementById("team-instagram");
@@ -825,6 +855,7 @@ function render() {
   updateTitle();
   renderRecord();
   renderInstagram();
+  renderPlayerHero();
   renderPeekNote();
   renderBackHome();
   renderRecentResults();
@@ -1460,6 +1491,7 @@ fetch("unified_schedule.json", { cache: "no-cache" })
     for (const p of players) {
       if (p.calendar) playerCalendars[`${p.player} - ${p.school}`] = p.calendar;
       if (p.instagram) playerInstagram[`${p.player} - ${p.school}`] = p.instagram;
+      if (p.photo) playerPhotos[`${p.player} - ${p.school}`] = p.photo;
     }
     populatePlayerFilter(data, players);
     applyUrlState();
