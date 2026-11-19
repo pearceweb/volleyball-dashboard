@@ -34,7 +34,9 @@ Commits go straight to `main` (no pull-request workflow).
 3. **Health check** — `check_health.py` compares against the previous run;
    the workflow emails on problems (once when a problem starts, not every run).
 4. **Page** — `index.html` (single file, no build step) loads
-   `unified_schedule.json` + `players.json`.
+   `unified_schedule.json` + `players.json`. Colors are MN Select's club
+   crimson (#a31c30): light by default, dark when the visitor's device is in
+   dark mode (CSS variables in `:root` + a `prefers-color-scheme` block).
 
 ## Behaviours worth knowing
 
